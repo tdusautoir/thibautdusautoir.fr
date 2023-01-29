@@ -1,0 +1,127 @@
+@import url(./reset.css);
+@import url(./global.css);
+/* font awesome */
+@import url(../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css);
+@import url(../../node_modules/@fortawesome/fontawesome-free/css/brands.css);
+@import url(../../node_modules/@fortawesome/fontawesome-free/css/solid.css);
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 50px;
+  font-size: 18px;
+}
+.header__nav {
+  display: flex;
+  position: absolute;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  gap: 20px;
+}
+.header__nav__link__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-radius: 50px;
+  gap: 60px;
+  background: #eae7e7;
+}
+.header__nav__link__container .nav__link {
+  text-decoration: none;
+  color: black;
+}
+.header__nav__link__container .nav__link::before, .header__nav__link__container .nav__link::after {
+  position: absolute;
+  display: inline-block;
+  color: var(--dark-gray);
+  opacity: 0;
+  transition: 200ms;
+}
+.header__nav__link__container .nav__link::before {
+  content: "<";
+  transform: translateX(-30px);
+  margin-right: 4px;
+}
+.header__nav__link__container .nav__link::after {
+  content: "/>";
+  transform: translateX(10px);
+  margin-left: 4px;
+}
+.header__nav__link__container .nav__link:hover::after {
+  transform: translateX(0);
+  opacity: 1;
+}
+.header__nav__link__container .nav__link:hover::before {
+  transform: translateX(-15px);
+  opacity: 1;
+}
+.header__nav__link__work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 50px;
+  background: var(--main-color);
+}
+.header__nav__link__work i {
+  transform: translateX(40px);
+  position: absolute;
+  opacity: 0;
+  transition: 200ms;
+}
+.header__nav__link__work span {
+  transition: 200ms;
+}
+.header__nav__link__work:hover {
+  background: rgba(255, 191, 55, 0.7019607843);
+}
+.header__nav__link__work:hover span {
+  opacity: 0;
+}
+.header__nav__link__work:hover i {
+  transform: translateX(0);
+  opacity: 1;
+}
+.header__nav__phone {
+  display: none;
+}
+.header__nav__phone .nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+.header__icons {
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+}
+.header__icons__img {
+  height: 30px;
+  width: 30px;
+}
+.header__icons__img#nightmode_btn {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+.header--sticky {
+  opacity: 0;
+}
+.header--sticky__nav {
+  opacity: 1;
+}
+.header--sticky__nav__link__container:first-child {
+  transform: translateX(100px);
+}
+.header--sticky__nav__link__container:last-child {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */
