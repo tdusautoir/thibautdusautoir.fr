@@ -22,3 +22,21 @@ a {
     text-decoration: none;
     color: black;
 }
+
+strong {
+    font-weight: 600;
+}
+
+section h2 {
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 4px;
+    background: linear-gradient(to top, var(--main-color) 0%, var(--main-color) 4px, transparent 5px) no-repeat;
+    transition: ease 0.2s;
+    background-size: 100% 100%;
+}
+
+section:hover h2{
+    background-size: 50% 100%;
+    transition: ease 0.2s;
+}

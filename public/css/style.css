@@ -4,6 +4,9 @@
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css);
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/brands.css);
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/solid.css);
+/* variables */
+/* mixin */
+/* ================ */
 .header {
   position: sticky;
   display: flex;
@@ -11,6 +14,7 @@
   justify-content: space-between;
   top: 50px;
   font-size: 18px;
+  z-index: 1;
 }
 .header__nav {
   display: flex;
@@ -27,18 +31,27 @@
   align-items: center;
   padding: 20px 40px;
   border-radius: 50px;
-  gap: 60px;
   background: #eae7e7;
+  transition: 400ms;
+  z-index: 1;
+  gap: 60px;
 }
 .header__nav__link__container .nav__link {
   text-decoration: none;
   color: black;
+  transition: 200ms;
+}
+.header__nav__link__container .nav__link.disable {
+  opacity: 0.2 !important;
+}
+.header__nav__link__container .nav__link.active {
+  opacity: 1;
 }
 .header__nav__link__container .nav__link::before, .header__nav__link__container .nav__link::after {
+  opacity: 0;
   position: absolute;
   display: inline-block;
   color: var(--dark-gray);
-  opacity: 0;
   transition: 200ms;
 }
 .header__nav__link__container .nav__link::before {
@@ -66,6 +79,8 @@
   padding: 20px 30px;
   border-radius: 50px;
   background: var(--main-color);
+  transition: 200ms;
+  z-index: 0;
 }
 .header__nav__link__work i {
   transform: translateX(40px);
@@ -110,18 +125,107 @@
   visibility: hidden;
   opacity: 0;
 }
-.header--sticky {
+.header--sticky > a {
+  visibility: hidden;
   opacity: 0;
+  transition: 200ms;
 }
-.header--sticky__nav {
+.header--sticky .header__nav__link__container {
+  transform: translateX(100px);
+  transition: 400ms;
+}
+.header--sticky .header__nav__link__container .nav__link.unseen {
+  opacity: 0.2;
+}
+.header--sticky .header__nav__link__container .nav__link.unseen.active {
   opacity: 1;
 }
-.header--sticky__nav__link__container:first-child {
-  transform: translateX(100px);
-}
-.header--sticky__nav__link__container:last-child {
-  opacity: 0;
+.header--sticky .header__nav__link__work {
   visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 200ms;
+}
+.header--sticky .header__icons {
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 60px 0;
+  gap: 50px;
+}
+main section.profil h2 {
+  visibility: hidden;
+  opacity: 0;
+}
+main section.profil .profil__content {
+  padding: 30px;
+  border-radius: 5px;
+}
+main section.profil .profil__content p {
+  letter-spacing: 0.5px;
+  text-align: justify;
+  line-height: 26px;
+}
+main section.experiences {
+  background: rgba(0, 0, 0, 0.0196078431);
+  padding: 30px;
+}
+main section.experiences .experiences__content {
+  display: flex;
+  margin-top: 80px;
+}
+main section.experiences .experiences__content__timeline {
+  margin-left: 40px;
+  margin-top: 6px;
+}
+main section.experiences .experiences__content__timeline .dot {
+  width: 14px;
+  height: 14px;
+  background: var(--gray);
+  border-radius: 7px;
+}
+main section.experiences .experiences__content__timeline .line {
+  height: 170px;
+  width: 2px;
+  background: var(--gray);
+  margin-left: 5.3px;
+}
+main section.experiences .experiences__content__timeline .line:last-child {
+  height: 50px;
+}
+main section.experiences .experiences__content__card {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50px);
+  gap: 20px;
+}
+main section.experiences .experiences__content__card__content {
+  display: flex;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: 20px;
+  background: var(--light-gray);
+}
+main section.experiences .experiences__content__card__content__time {
+  flex-basis: 20%;
+  color: var(--dark-gray);
+}
+main section.experiences .experiences__content__card__content__description {
+  flex-basis: 80%;
+  line-height: 20px;
+}
+main section.experiences .experiences__content__card__content__description__title {
+  margin-bottom: 40px;
+  line-height: 20px;
+}
+main section.experiences .experiences__content__card__content__description__title p {
+  color: var(--dark-gray);
 }
 
 /*# sourceMappingURL=style.css.map */
