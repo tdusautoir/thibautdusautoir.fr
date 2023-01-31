@@ -80,25 +80,30 @@
   border-radius: 50px;
   background: var(--main-color);
   transition: 200ms;
+  cursor: pointer;
   z-index: 0;
 }
 .header__nav__link__work i {
   transform: translateX(40px);
   position: absolute;
+  visibility: hidden;
   opacity: 0;
   transition: 200ms;
 }
 .header__nav__link__work span {
   transition: 200ms;
+  cursor: pointer;
 }
 .header__nav__link__work:hover {
   background: rgba(255, 191, 55, 0.7019607843);
 }
 .header__nav__link__work:hover span {
+  visibility: hidden;
   opacity: 0;
 }
 .header__nav__link__work:hover i {
   transform: translateX(0);
+  visibility: visible;
   opacity: 1;
 }
 .header__nav__phone {
@@ -115,6 +120,7 @@
   height: 30px;
   width: 30px;
   overflow: hidden;
+  cursor: pointer;
 }
 .header__icons__img {
   height: 30px;
@@ -204,7 +210,7 @@ main section.experiences .experiences__content__card {
   transform: translateY(-50px);
   gap: 20px;
 }
-main section.experiences .experiences__content__card__content {
+main section.experiences .experiences__content__card .card__content {
   display: flex;
   height: fit-content;
   border-radius: 10px;
@@ -212,20 +218,61 @@ main section.experiences .experiences__content__card__content {
   margin-left: 20px;
   background: var(--light-gray);
 }
-main section.experiences .experiences__content__card__content__time {
+main section.experiences .experiences__content__card .card__content__time {
   flex-basis: 20%;
   color: var(--dark-gray);
 }
-main section.experiences .experiences__content__card__content__description {
+main section.experiences .experiences__content__card .card__content__description {
   flex-basis: 80%;
   line-height: 20px;
 }
-main section.experiences .experiences__content__card__content__description__title {
+main section.experiences .experiences__content__card .card__content__description__title {
   margin-bottom: 40px;
   line-height: 20px;
 }
-main section.experiences .experiences__content__card__content__description__title p {
+main section.experiences .experiences__content__card .card__content__description__title p {
   color: var(--dark-gray);
+}
+main section.experiences .experiences__content__card .card__content__stack {
+  display: flex;
+  position: absolute;
+  right: 20px;
+  gap: 10px;
+}
+main section.experiences .experiences__content__card .card__content__stack__language {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  max-width: 16px;
+  padding: 10px;
+  gap: 10px;
+  overflow: hidden;
+  transition: 600ms;
+}
+main section.experiences .experiences__content__card .card__content__stack__language::after {
+  visibility: hidden;
+  opacity: 0;
+  content: attr(data-language);
+  transition: 600ms;
+}
+main section.experiences .experiences__content__card .card__content__stack__language__icons {
+  width: 16px;
+  height: 16px;
+}
+main section.experiences .experiences__content__card .card__content__stack__language__icons img {
+  width: 16px;
+  height: 16px;
+}
+main section.experiences .experiences__content__card .card__content__stack__language:hover {
+  transition: 400ms;
+  max-width: 100px;
+}
+main section.experiences .experiences__content__card .card__content__stack__language:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transition: 200ms;
 }
 
 /*# sourceMappingURL=style.css.map */

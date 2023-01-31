@@ -9,6 +9,7 @@
 
 /* variables */
 
+$slow_transition: 600ms;
 $transition: 400ms;
 $fast_transition: 200ms;
 
@@ -17,6 +18,11 @@ $fast_transition: 200ms;
 @mixin hide {
     visibility: hidden;
     opacity: 0;
+}
+
+@mixin show {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* ================ */
@@ -105,29 +111,31 @@ $fast_transition: 200ms;
             border-radius: 50px;
             background: var(--main-color);
             transition: $fast_transition;
+            cursor: pointer;
             z-index: 0;
 
             i {
                 transform: translateX(40px);
                 position: absolute;
-                opacity: 0;
+                @include hide;
                 transition: $fast_transition;
             }
 
             span {
                 transition: $fast_transition;
+                cursor: pointer;
             }
 
             &:hover {
                 background: #ffbf37b3;
 
                 span {
-                    opacity: 0;
+                    @include hide;
                 }
 
                 i {
                     transform: translateX(0);
-                    opacity: 1;
+                    @include show;
                 }
             }
         }
@@ -149,6 +157,7 @@ $fast_transition: 200ms;
         height: 30px;
         width: 30px;
         overflow: hidden;
+        cursor: pointer;
 
         &__img {
             height: 30px;
@@ -258,7 +267,7 @@ main {
                     transform: translateY(-50px);
                     gap: 20px;
 
-                    &__content {
+                    .card__content {
                         display: flex;
                         height: fit-content;
                         border-radius: 10px;
@@ -281,6 +290,52 @@ main {
 
                                 p {
                                     color: var(--dark-gray);
+                                }
+                            }
+                        }
+
+                        &__stack {
+                            display: flex;
+                            position: absolute;
+                            right: 20px;
+                            gap: 10px;
+
+                            &__language {
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                background: white;
+                                border-radius: 50px;
+                                max-width: 16px;
+                                padding: 10px;
+                                gap: 10px;
+                                overflow: hidden;
+                                transition: $slow_transition;
+
+                                &::after {
+                                    @include hide;
+                                    content: attr(data-language);
+                                    transition: $slow_transition;
+                                }
+
+                                &__icons {
+                                    width: 16px;
+                                    height: 16px;
+
+                                    img {
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+                                }
+
+                                &:hover {
+                                    transition: $transition;
+                                    max-width: 100px;
+
+                                    &::after {
+                                        @include show;
+                                        transition: $fast_transition;
+                                    }
                                 }
                             }
                         }
