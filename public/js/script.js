@@ -1,15 +1,17 @@
 /* CONST */
 
 const header = document.querySelector('header');
+const headerNav = document.querySelector('.header__nav');
 const headerNavLinks = document.getElementsByClassName('nav__link');
-const sections = document.querySelectorAll('section')
+const sections = document.querySelectorAll('section');
 
 /* HEADER */
 
 window.addEventListener(
     "scroll",
     function () {
-        header.classList.toggle("header--sticky", window.scrollY > 40);
+        header.classList.toggle("unseen", window.scrollY > 40);
+        headerNav.classList.toggle("header__nav--sticky", window.scrollY > 40);
     }
 );
 

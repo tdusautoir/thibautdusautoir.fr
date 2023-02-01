@@ -4,26 +4,20 @@
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css);
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/brands.css);
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/solid.css);
+@import url(../../node_modules/@fortawesome/fontawesome-free/css/regular.css);
 /* variables */
 /* mixin */
 /* ================ */
-.header {
-  position: sticky;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  top: 50px;
-  font-size: 18px;
-  z-index: 1;
-}
 .header__nav {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: fit-content;
+  top: 38px;
   left: 0;
   right: 0;
   margin: 0 auto;
   gap: 20px;
+  z-index: 1;
 }
 .header__nav__link__container {
   display: flex;
@@ -58,11 +52,13 @@
   content: "<";
   transform: translateX(-30px);
   margin-right: 4px;
+  pointer-events: none;
 }
 .header__nav__link__container .nav__link::after {
   content: "/>";
   transform: translateX(10px);
   margin-left: 4px;
+  pointer-events: none;
 }
 .header__nav__link__container .nav__link:hover::after {
   transform: translateX(0);
@@ -116,6 +112,42 @@
   width: 30px;
   height: 30px;
 }
+.header__nav--sticky > a {
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms;
+}
+.header__nav--sticky .header__nav__link__container {
+  transform: translateX(100px);
+  transition: 400ms;
+}
+.header__nav--sticky .header__nav__link__container .nav__link.unseen {
+  opacity: 0.2;
+}
+.header__nav--sticky .header__nav__link__container .nav__link.unseen.active {
+  opacity: 1;
+}
+.header__nav--sticky .header__nav__link__work {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 200ms;
+}
+.header__nav--sticky .header__icons {
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms;
+}
+
+.header {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 50px;
+  font-size: 18px;
+  transition: 200ms;
+}
 .header__icons {
   height: 30px;
   width: 30px;
@@ -131,31 +163,10 @@
   visibility: hidden;
   opacity: 0;
 }
-.header--sticky > a {
+.header.unseen {
+  transition: 200ms;
   visibility: hidden;
   opacity: 0;
-  transition: 200ms;
-}
-.header--sticky .header__nav__link__container {
-  transform: translateX(100px);
-  transition: 400ms;
-}
-.header--sticky .header__nav__link__container .nav__link.unseen {
-  opacity: 0.2;
-}
-.header--sticky .header__nav__link__container .nav__link.unseen.active {
-  opacity: 1;
-}
-.header--sticky .header__nav__link__work {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: 200ms;
-}
-.header--sticky .header__icons {
-  visibility: hidden;
-  opacity: 0;
-  transition: 200ms;
 }
 
 main {
@@ -257,22 +268,35 @@ main section.experiences .experiences__content__card .card__content__stack__lang
   content: attr(data-language);
   transition: 600ms;
 }
-main section.experiences .experiences__content__card .card__content__stack__language__icons {
+main section.experiences .experiences__content__card .card__content__stack__language img {
   width: 16px;
   height: 16px;
-}
-main section.experiences .experiences__content__card .card__content__stack__language__icons img {
-  width: 16px;
-  height: 16px;
+  filter: invert(30%) sepia(1%) saturate(571%) hue-rotate(340deg) brightness(101%) contrast(95%);
 }
 main section.experiences .experiences__content__card .card__content__stack__language:hover {
   transition: 400ms;
-  max-width: 100px;
+  max-width: 140px;
 }
 main section.experiences .experiences__content__card .card__content__stack__language:hover::after {
   visibility: visible;
   opacity: 1;
   transition: 200ms;
+}
+main section.skills .skills__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 50px 15%;
+}
+main section.skills .skills__container i {
+  font-size: 70px;
+  color: var(--black);
+}
+main section.skills .skills__container img {
+  width: 70px;
+  height: 70px;
+  filter: invert(30%) sepia(1%) saturate(571%) hue-rotate(340deg) brightness(101%) contrast(95%);
 }
 
 /*# sourceMappingURL=style.css.map */
