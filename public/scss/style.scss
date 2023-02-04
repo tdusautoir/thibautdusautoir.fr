@@ -400,4 +400,51 @@ main {
             }
         }
     }
+
+    .see_my_work {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        p {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 30px;
+            border-radius: 50px;
+            background: var(--light-main-color);
+            transition: $fast_transition;
+            cursor: pointer;
+            width: fit-content;
+    
+            i {
+                transform: translateX(40px) rotate(180deg);
+                position: absolute;
+                @include hide;
+                transition: $fast_transition;
+            }
+    
+            span {
+                transition: $fast_transition;
+                cursor: pointer;
+            }
+    
+            &:hover {
+                span {
+                    @include hide;
+                }
+    
+                i {
+                    transform: translateX(0);
+                    @include show;
+                }
+            }
+        }
+    }
 }

@@ -320,5 +320,46 @@ main section.formations .formations__container__card__description {
 main section.formations .formations__container__card__description h3 {
   font-weight: 600;
 }
+main .see_my_work {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+main .see_my_work p {
+  font-weight: 600;
+  font-size: 24px;
+}
+main .see_my_work a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 50px;
+  background: var(--light-main-color);
+  transition: 200ms;
+  cursor: pointer;
+  width: fit-content;
+}
+main .see_my_work a i {
+  transform: translateX(40px) rotate(180deg);
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 200ms;
+}
+main .see_my_work a span {
+  transition: 200ms;
+  cursor: pointer;
+}
+main .see_my_work a:hover span {
+  visibility: hidden;
+  opacity: 0;
+}
+main .see_my_work a:hover i {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+}
 
 /*# sourceMappingURL=style.css.map */
