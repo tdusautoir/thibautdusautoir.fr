@@ -371,5 +371,33 @@ main {
                 }
             }
         }
+
+        &.formations {
+            .formations__container {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                padding: 60px 40px;
+
+                &__card {
+                    display: flex;
+                    background-color: var(--light-main-color);
+                    width: 100%;
+                    padding: 20px;
+                    border-radius: 10px;
+                    gap: 20px;
+
+                    &__description {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        h3 {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

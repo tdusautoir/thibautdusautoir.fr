@@ -298,5 +298,27 @@ main section.skills .skills__container img {
   height: 70px;
   filter: invert(30%) sepia(1%) saturate(571%) hue-rotate(340deg) brightness(101%) contrast(95%);
 }
+main section.formations .formations__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 60px 40px;
+}
+main section.formations .formations__container__card {
+  display: flex;
+  background-color: var(--light-main-color);
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+}
+main section.formations .formations__container__card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main section.formations .formations__container__card__description h3 {
+  font-weight: 600;
+}
 
 /*# sourceMappingURL=style.css.map */

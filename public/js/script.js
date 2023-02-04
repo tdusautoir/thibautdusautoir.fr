@@ -15,6 +15,9 @@ window.addEventListener(
     }
 );
 
+header.classList.toggle("unseen", window.scrollY > 40);
+headerNav.classList.toggle("header__nav--sticky", window.scrollY > 40);
+
 /* header opacity animation */
 for(let i = 0; i < headerNavLinks.length; i++){
     headerNavLinks[i].addEventListener('mouseover', (e) => {
