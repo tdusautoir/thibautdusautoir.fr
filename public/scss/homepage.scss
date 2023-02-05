@@ -55,6 +55,10 @@ $fast_transition: 200ms;
             color: black;
             transition: $fast_transition;
 
+            i {
+                display: none;
+            }
+
             &.disable {
                 opacity: 0.2!important;
             }
@@ -156,7 +160,7 @@ $fast_transition: 200ms;
 
         .header__nav {
             &__link__container {
-                transform: translateX(100px);
+                transform: translateX(70px);
                 transition: $transition;
 
                 .nav__link {
@@ -234,7 +238,6 @@ main {
 
                 p {
                     letter-spacing: 0.5px;
-                    text-align: justify;
                     line-height: 26px;
                 }
             }
@@ -242,40 +245,17 @@ main {
 
         &.experiences {
             background: #00000005;
+            border-radius: 5px;
             padding: 30px;
 
             .experiences__content {
                 display: flex;
-                margin-top: 80px;
-
-                &__timeline {
-                    display: none;
-                    margin-left: 40px;
-                    margin-top: 6px;
-
-                    .dot {
-                        width: 14px;
-                        height: 14px;
-                        background: var(--gray);
-                        border-radius: 7px;
-                    }
-
-                    .line {
-                        height: 170px;
-                        width: 2px;
-                        background: var(--gray);
-                        margin-left: 5.3px;
-
-                        &:last-child {
-                            height: 50px;
-                        }
-                    }
-                }
 
                 &__cards {
                     display: flex;
                     flex-direction: column;
-                    transform: translateY(-50px);
+                    position: relative;
+                    margin-top: 30px;
                     gap: 20px;
 
                     .card {
@@ -283,7 +263,6 @@ main {
                         height: fit-content;
                         border-radius: 10px;
                         padding: 20px;
-                        margin-left: 20px;
                         background: var(--light-gray);
 
                         &__time {
@@ -476,4 +455,134 @@ footer {
             gap: 10px;
         }
     }
+}
+
+@media screen and (max-width: 1124px) {
+    .header__nav {
+        gap: 0;
+
+        &__link__work {
+            padding: 28px 56px;
+            position: absolute;
+            right: -60px;
+
+            span {
+                display: none;
+            }
+
+            i {
+                transform: inherit;
+                right: 28px;
+                @include show();
+            }
+        }
+
+        &--sticky {
+            .header__nav {
+                &__link__container {
+                    transform: inherit;
+
+                }
+            }
+        }
+    }
+
+    main {
+        section {
+            &.experiences {
+                .experiences__content {
+                    &__cards {
+                        .card {
+                            flex-direction: column;
+                            gap: 20px;
+                        }
+                    }
+                }
+            }
+
+            &.formations {
+                .formations__container {
+                    flex-direction: column;
+
+                    &__card {
+                        width: inherit;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .header__nav {
+        transition: $transition;
+        top: inherit;
+        bottom: 20px;
+        transform: translateX(-32px);
+
+        &__link__container {
+            .nav__link {
+                i {
+                    display: block;
+                }
+
+                &:hover {
+                    &::after {
+                        transform: inherit;
+                        opacity: 0;
+                    }
+        
+                    &::before {
+                        transform: inherit;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        &--sticky {
+            transform: inherit;
+        }
+    }
+
+    main {
+        margin: 0 0 60px 0;
+
+        section {
+            &.experiences {
+                .experiences__content {
+                    &__cards {
+                        .card {
+                            &__stack {
+                                position: inherit;
+                                flex-wrap: wrap;
+
+                                &__language {
+                                    max-width: 140px;
+                                    
+                                    &::after {
+                                        @include show;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.skills {
+                .skills__container {
+                    margin: 50px 10%;
+                }
+            }
+        }
+    }
+    
+    footer {
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
 }

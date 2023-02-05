@@ -35,6 +35,9 @@
   color: black;
   transition: 200ms;
 }
+.header__nav__link__container .nav__link i {
+  display: none;
+}
 .header__nav__link__container .nav__link.disable {
   opacity: 0.2 !important;
 }
@@ -118,7 +121,7 @@
   transition: 200ms;
 }
 .header__nav--sticky .header__nav__link__container {
-  transform: translateX(100px);
+  transform: translateX(70px);
   transition: 400ms;
 }
 .header__nav--sticky .header__nav__link__container .nav__link.unseen {
@@ -185,41 +188,21 @@ main section.profil .profil__content {
 }
 main section.profil .profil__content p {
   letter-spacing: 0.5px;
-  text-align: justify;
   line-height: 26px;
 }
 main section.experiences {
   background: rgba(0, 0, 0, 0.0196078431);
+  border-radius: 5px;
   padding: 30px;
 }
 main section.experiences .experiences__content {
   display: flex;
-  margin-top: 80px;
-}
-main section.experiences .experiences__content__timeline {
-  display: none;
-  margin-left: 40px;
-  margin-top: 6px;
-}
-main section.experiences .experiences__content__timeline .dot {
-  width: 14px;
-  height: 14px;
-  background: var(--gray);
-  border-radius: 7px;
-}
-main section.experiences .experiences__content__timeline .line {
-  height: 170px;
-  width: 2px;
-  background: var(--gray);
-  margin-left: 5.3px;
-}
-main section.experiences .experiences__content__timeline .line:last-child {
-  height: 50px;
 }
 main section.experiences .experiences__content__cards {
   display: flex;
   flex-direction: column;
-  transform: translateY(-50px);
+  position: relative;
+  margin-top: 30px;
   gap: 20px;
 }
 main section.experiences .experiences__content__cards .card {
@@ -227,7 +210,6 @@ main section.experiences .experiences__content__cards .card {
   height: fit-content;
   border-radius: 10px;
   padding: 20px;
-  margin-left: 20px;
   background: var(--light-gray);
 }
 main section.experiences .experiences__content__cards .card__time {
@@ -388,4 +370,79 @@ footer .footer__links a {
   gap: 10px;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 1124px) {
+  .header__nav {
+    gap: 0;
+  }
+  .header__nav__link__work {
+    padding: 28px 56px;
+    position: absolute;
+    right: -60px;
+  }
+  .header__nav__link__work span {
+    display: none;
+  }
+  .header__nav__link__work i {
+    transform: inherit;
+    right: 28px;
+    visibility: visible;
+    opacity: 1;
+  }
+  .header__nav--sticky .header__nav__link__container {
+    transform: inherit;
+  }
+  main section.experiences .experiences__content__cards .card {
+    flex-direction: column;
+    gap: 20px;
+  }
+  main section.formations .formations__container {
+    flex-direction: column;
+  }
+  main section.formations .formations__container__card {
+    width: inherit;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__nav {
+    transition: 400ms;
+    top: inherit;
+    bottom: 20px;
+    transform: translateX(-32px);
+  }
+  .header__nav__link__container .nav__link i {
+    display: block;
+  }
+  .header__nav__link__container .nav__link:hover::after {
+    transform: inherit;
+    opacity: 0;
+  }
+  .header__nav__link__container .nav__link:hover::before {
+    transform: inherit;
+    opacity: 0;
+  }
+  .header__nav--sticky {
+    transform: inherit;
+  }
+  main {
+    margin: 0 0 60px 0;
+  }
+  main section.experiences .experiences__content__cards .card__stack {
+    position: inherit;
+    flex-wrap: wrap;
+  }
+  main section.experiences .experiences__content__cards .card__stack__language {
+    max-width: 140px;
+  }
+  main section.experiences .experiences__content__cards .card__stack__language::after {
+    visibility: visible;
+    opacity: 1;
+  }
+  main section.skills .skills__container {
+    margin: 50px 10%;
+  }
+  footer {
+    margin-bottom: 100px;
+  }
+}
+
+/*# sourceMappingURL=homepage.css.map */

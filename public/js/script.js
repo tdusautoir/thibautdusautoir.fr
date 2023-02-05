@@ -70,3 +70,17 @@ sections.forEach(observed => {
         observer.observe(observed);
     }
 });
+
+/* RESPONSIVE */
+
+// window.addEventListener("resize", (event) => {
+//   if(headerNav.classList.contains('header__nav--phone')) {
+//     if(window.innerWidth > 768) {
+//       headerNav.classList.remove('header__nav--phone');
+//     }
+//   } else {
+//     if(window.innerWidth <= 768) {
+//       headerNav.classList.add('header__nav--phone');
+//     }
+//   }
+// });
