@@ -33,6 +33,15 @@ strong {
     font-weight: 600;
 }
 
+section.active{
+    opacity: 0;
+    transition: 400ms;
+}
+
+section {
+    transition: 400ms;
+}
+
 section h2 {
     font-size: 18px;
     display: inline-block;
