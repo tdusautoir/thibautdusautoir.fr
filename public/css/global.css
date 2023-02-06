@@ -164,3 +164,15 @@ main img, main i {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 20px 30px;
+    }
+
+    footer .footer__links {
+        gap: 30px!important;
+    }
+}

@@ -232,7 +232,7 @@ main {
                 @include hide;
             }
 
-            .profil__content {
+            .profil-container {
                 padding: 30px;
                 border-radius: 5px;
 
@@ -248,7 +248,7 @@ main {
             border-radius: 5px;
             padding: 30px;
 
-            .experiences__content {
+            .experiences-container {
                 display: flex;
 
                 &__cards {
@@ -331,8 +331,10 @@ main {
         }
 
         &.skills {
+            margin-top: -50px;
+            padding-top: 50px;
 
-            .skills__container {
+            .skills-container {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -353,13 +355,16 @@ main {
         }
 
         &.formations {
-            .formations__container {
+            margin-top: -50px;
+            padding-top: 50px;
+
+            .formations-container {
                 display: flex;
                 justify-content: space-between;
                 gap: 20px;
                 padding: 60px 40px;
 
-                &__card {
+                .card {
                     display: flex;
                     background-color: var(--light-main-color);
                     width: 100%;
@@ -381,7 +386,7 @@ main {
         }
     }
 
-    .see_my_work {
+    .see-my-work {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -390,6 +395,7 @@ main {
         p {
             font-weight: 600;
             font-size: 24px;
+            text-align: center;
         }
 
         a {
@@ -490,7 +496,7 @@ footer {
     main {
         section {
             &.experiences {
-                .experiences__content {
+                .experiences-container {
                     &__cards {
                         .card {
                             flex-direction: column;
@@ -501,10 +507,10 @@ footer {
             }
 
             &.formations {
-                .formations__container {
+                .formations-container {
                     flex-direction: column;
 
-                    &__card {
+                    .card {
                         width: inherit;
                     }
                 }
@@ -524,6 +530,10 @@ footer {
             .nav__link {
                 i {
                     display: block;
+                }
+
+                span {
+                    display: none;
                 }
 
                 &:hover {
@@ -550,7 +560,7 @@ footer {
 
         section {
             &.experiences {
-                .experiences__content {
+                .experiences-container {
                     &__cards {
                         .card {
                             &__stack {
@@ -571,7 +581,7 @@ footer {
             }
 
             &.skills {
-                .skills__container {
+                .skills-container {
                     margin: 50px 10%;
                 }
             }
@@ -584,5 +594,72 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    main {
+        section {
+            &.profil {
+                margin-top: 40px;
+                    
+                .profil-container {
+                    padding: 20px;
+                }
+            }
 
+            &.experiences {
+                padding: 20px;
+
+                .experiences-container {
+                    &__cards {
+                        .card {
+                            &__description {
+                                &__title {
+                                    margin-bottom: 30px;
+                                }
+                            }
+
+                            &__stack {
+                                gap: 5px;
+    
+                                &__language {
+                                    font-size: 14px;
+                                    padding: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.skills {
+                .skills-container {
+                    margin: 50px 5%;
+
+                    i {
+                        font-size: 60px;
+                    }
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+
+            &.formations {
+                .formations-container {
+                    padding: 40px 20px;
+
+                    .card {
+                        flex-direction: column;
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+
+        .see-my-work {
+            p {
+                font-size: 20px;
+            }
+        }
+    }
 }

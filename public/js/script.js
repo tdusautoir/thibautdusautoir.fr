@@ -26,8 +26,8 @@ for(let i = 0; i < headerNavLinks.length; i++){
             headerNavLinks[j].classList.remove('active');
         }
 
-        e.target.classList.remove('disable');
-        e.target.classList.add('active');
+        headerNavLinks[i].classList.remove('disable');
+        headerNavLinks[i].classList.add('active');
     })
 
     headerNavLinks[i].addEventListener('mouseleave', (e) => {
@@ -70,17 +70,3 @@ sections.forEach(observed => {
         observer.observe(observed);
     }
 });
-
-/* RESPONSIVE */
-
-// window.addEventListener("resize", (event) => {
-//   if(headerNav.classList.contains('header__nav--phone')) {
-//     if(window.innerWidth > 768) {
-//       headerNav.classList.remove('header__nav--phone');
-//     }
-//   } else {
-//     if(window.innerWidth <= 768) {
-//       headerNav.classList.add('header__nav--phone');
-//     }
-//   }
-// });

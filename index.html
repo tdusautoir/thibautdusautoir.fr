@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bonjour, je m'appelle Thibaut, j'ai 20 ans et je suis passionné par le développement web ! ">
-    <meta name="keywords" content="Thibaut, Dusautoir, Développeur">
+    <meta name="keywords" content="Thibaut, Dusautoir, Développeur, Web, Alternance">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Thibaut Dusautoir - Développeur web junior">
@@ -19,21 +19,11 @@
     <title>Thibaut Dusautoir</title>
 </head>
 <body>
-    <!-- <nav class="header__nav__phone">
-        <ul class="header__nav__link__container">
-            <li><a class="nav__link" href="#experiences"><i class="fa-solid fa-suitcase"></i></a></li>
-            <li><a class="nav__link" href="#skills"><i class="fa-solid fa-book"></i></a></li>
-            <li><a class="nav__link" href="#formations"><i class="fa-solid fa-graduation-cap"></i></a></li>
-        </ul>
-        <ul class="header__nav__link__container">
-            <li><a href="#"><span>My work</span></a></li>
-        </ul>
-    </nav> -->
     <nav class="header__nav">
         <ul class="header__nav__link__container">
-            <li><a class="nav__link" href="#experiences">Expérience<i class="fa-solid fa-suitcase"></i></a></li>
-            <li><a class="nav__link" href="#skills">Compétences<i class="fa-solid fa-book"></i></a></li>
-            <li><a class="nav__link" href="#formations">Formations<i class="fa-solid fa-graduation-cap"></i></a></li>
+            <li><a class="nav__link" href="#experiences"><span>Expérience</span><i class="fa-solid fa-suitcase"></i></a></li>
+            <li><a class="nav__link" href="#skills"><span>Compétences</span><i class="fa-solid fa-book"></i></a></li>
+            <li><a class="nav__link" href="#formations"><span>Formations</span><i class="fa-solid fa-graduation-cap"></i></a></li>
         </ul>
         <a class="header__nav__link__work">
             <span>My work</span><i class="fa-regular fa-folder" title="portfolio"></i>
@@ -52,15 +42,15 @@
         <main>
             <section id="profil" class="profil">
                 <h2>Mon profil</h2>
-                <div class="profil__content">
+                <div class="profil-container">
                     <p>Bonjour, je m'appelle <strong>Thibaut</strong>, j'ai 20 ans et je suis passionné par le développement web ! </p>
                     <p>Actuellement développeur full-stack chez Webreathe, je suis à la recherche d'une entreprise dans laquelle je pourrais m'epanouir durant ma formation.</p>
                 </div>
             </section>
             <section id="experiences" class="experiences">
                 <h2>Expérience</h2>
-                <div class="experiences__content">
-                    <div class="experiences__content__cards">
+                <div class="experiences-container">
+                    <div class="experiences-container__cards">
                         <div class="card">
                             <p class="card__time">Actuellement</p>
                             <div class="card__description">
@@ -164,7 +154,7 @@
             </section>
             <section id="skills" class="skills">
                 <h2>Compétences</h2>
-                <div class="skills__container">
+                <div class="skills-container">
                     <i class="devicon-css3-plain" title="css"></i>
                     <i class="devicon-html5-plain" title="html"></i>
                     <i class="devicon-javascript-plain" title="javascript"></i>
@@ -189,24 +179,24 @@
             </section>
             <section id="formations" class="formations">
                 <h2>Formations</h2>
-                <div class="formations__container">
-                    <div class="formations__container__card">
-                        <div class="formations__container__card__time">2020-2023</div>
-                        <div class="formations__container__card__description">
+                <div class="formations-container">
+                    <div class="card">
+                        <div class="card__time">2020-2023</div>
+                        <div class="card__description">
                             <h3>3eme Année – École supérieure d’informatique</h3>
                             <p>École ESGI – 59777 Lille</p>
                         </div>
                     </div>
-                    <div class="formations__container__card">
-                        <div class="formations__container__card__time">2020</div>
-                        <div class="formations__container__card__description">
+                    <div class="card">
+                        <div class="card__time">2020</div>
+                        <div class="card__description">
                             <h3>Bac S spécialité ISN – Mention Bien</h3>
                             <p>Lycée Ernest Couteaux – 59230 Saint-Amand-Les-Eaux</p>
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="see_my_work">
+            <div class="see-my-work">
                 <p>N'hesitez pas à aller voir mes différents projets !</p>
                 <a><span>My work</span><i class="fa-regular fa-folder" title="portfolio"></i></a>
             </div>

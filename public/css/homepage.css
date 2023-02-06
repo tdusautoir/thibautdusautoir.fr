@@ -182,11 +182,11 @@ main section.profil h2 {
   visibility: hidden;
   opacity: 0;
 }
-main section.profil .profil__content {
+main section.profil .profil-container {
   padding: 30px;
   border-radius: 5px;
 }
-main section.profil .profil__content p {
+main section.profil .profil-container p {
   letter-spacing: 0.5px;
   line-height: 26px;
 }
@@ -195,45 +195,45 @@ main section.experiences {
   border-radius: 5px;
   padding: 30px;
 }
-main section.experiences .experiences__content {
+main section.experiences .experiences-container {
   display: flex;
 }
-main section.experiences .experiences__content__cards {
+main section.experiences .experiences-container__cards {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-top: 30px;
   gap: 20px;
 }
-main section.experiences .experiences__content__cards .card {
+main section.experiences .experiences-container__cards .card {
   display: flex;
   height: fit-content;
   border-radius: 10px;
   padding: 20px;
   background: var(--light-gray);
 }
-main section.experiences .experiences__content__cards .card__time {
+main section.experiences .experiences-container__cards .card__time {
   flex-basis: 20%;
   color: var(--dark-gray);
 }
-main section.experiences .experiences__content__cards .card__description {
+main section.experiences .experiences-container__cards .card__description {
   flex-basis: 80%;
   line-height: 20px;
 }
-main section.experiences .experiences__content__cards .card__description__title {
+main section.experiences .experiences-container__cards .card__description__title {
   margin-bottom: 40px;
   line-height: 20px;
 }
-main section.experiences .experiences__content__cards .card__description__title p {
+main section.experiences .experiences-container__cards .card__description__title p {
   color: var(--dark-gray);
 }
-main section.experiences .experiences__content__cards .card__stack {
+main section.experiences .experiences-container__cards .card__stack {
   display: flex;
   position: absolute;
   right: 20px;
   gap: 10px;
 }
-main section.experiences .experiences__content__cards .card__stack__language {
+main section.experiences .experiences-container__cards .card__stack__language {
   position: relative;
   display: flex;
   align-items: center;
@@ -245,49 +245,57 @@ main section.experiences .experiences__content__cards .card__stack__language {
   overflow: hidden;
   transition: 600ms;
 }
-main section.experiences .experiences__content__cards .card__stack__language::after {
+main section.experiences .experiences-container__cards .card__stack__language::after {
   visibility: hidden;
   opacity: 0;
   content: attr(data-language);
   transition: 600ms;
 }
-main section.experiences .experiences__content__cards .card__stack__language img {
+main section.experiences .experiences-container__cards .card__stack__language img {
   width: 16px;
   height: 16px;
   filter: invert(30%) sepia(1%) saturate(571%) hue-rotate(340deg) brightness(101%) contrast(95%);
 }
-main section.experiences .experiences__content__cards .card__stack__language:hover {
+main section.experiences .experiences-container__cards .card__stack__language:hover {
   transition: 400ms;
   max-width: 140px;
 }
-main section.experiences .experiences__content__cards .card__stack__language:hover::after {
+main section.experiences .experiences-container__cards .card__stack__language:hover::after {
   visibility: visible;
   opacity: 1;
   transition: 200ms;
 }
-main section.skills .skills__container {
+main section.skills {
+  margin-top: -50px;
+  padding-top: 50px;
+}
+main section.skills .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
   margin: 50px 15%;
 }
-main section.skills .skills__container i {
+main section.skills .skills-container i {
   font-size: 70px;
   color: var(--black);
 }
-main section.skills .skills__container img {
+main section.skills .skills-container img {
   width: 70px;
   height: 70px;
   filter: invert(30%) sepia(1%) saturate(571%) hue-rotate(340deg) brightness(101%) contrast(95%);
 }
-main section.formations .formations__container {
+main section.formations {
+  margin-top: -50px;
+  padding-top: 50px;
+}
+main section.formations .formations-container {
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding: 60px 40px;
 }
-main section.formations .formations__container__card {
+main section.formations .formations-container .card {
   display: flex;
   background-color: var(--light-main-color);
   width: 100%;
@@ -295,25 +303,26 @@ main section.formations .formations__container__card {
   border-radius: 10px;
   gap: 20px;
 }
-main section.formations .formations__container__card__description {
+main section.formations .formations-container .card__description {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-main section.formations .formations__container__card__description h3 {
+main section.formations .formations-container .card__description h3 {
   font-weight: 600;
 }
-main .see_my_work {
+main .see-my-work {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
-main .see_my_work p {
+main .see-my-work p {
   font-weight: 600;
   font-size: 24px;
+  text-align: center;
 }
-main .see_my_work a {
+main .see-my-work a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,22 +333,22 @@ main .see_my_work a {
   cursor: pointer;
   width: fit-content;
 }
-main .see_my_work a i {
+main .see-my-work a i {
   transform: translateX(40px) rotate(180deg);
   position: absolute;
   visibility: hidden;
   opacity: 0;
   transition: 200ms;
 }
-main .see_my_work a span {
+main .see-my-work a span {
   transition: 200ms;
   cursor: pointer;
 }
-main .see_my_work a:hover span {
+main .see-my-work a:hover span {
   visibility: hidden;
   opacity: 0;
 }
-main .see_my_work a:hover i {
+main .see-my-work a:hover i {
   transform: translateX(0);
   visibility: visible;
   opacity: 1;
@@ -391,14 +400,14 @@ footer .footer__links a {
   .header__nav--sticky .header__nav__link__container {
     transform: inherit;
   }
-  main section.experiences .experiences__content__cards .card {
+  main section.experiences .experiences-container__cards .card {
     flex-direction: column;
     gap: 20px;
   }
-  main section.formations .formations__container {
+  main section.formations .formations-container {
     flex-direction: column;
   }
-  main section.formations .formations__container__card {
+  main section.formations .formations-container .card {
     width: inherit;
   }
 }
@@ -411,6 +420,9 @@ footer .footer__links a {
   }
   .header__nav__link__container .nav__link i {
     display: block;
+  }
+  .header__nav__link__container .nav__link span {
+    display: none;
   }
   .header__nav__link__container .nav__link:hover::after {
     transform: inherit;
@@ -426,22 +438,63 @@ footer .footer__links a {
   main {
     margin: 0 0 60px 0;
   }
-  main section.experiences .experiences__content__cards .card__stack {
+  main section.experiences .experiences-container__cards .card__stack {
     position: inherit;
     flex-wrap: wrap;
   }
-  main section.experiences .experiences__content__cards .card__stack__language {
+  main section.experiences .experiences-container__cards .card__stack__language {
     max-width: 140px;
   }
-  main section.experiences .experiences__content__cards .card__stack__language::after {
+  main section.experiences .experiences-container__cards .card__stack__language::after {
     visibility: visible;
     opacity: 1;
   }
-  main section.skills .skills__container {
+  main section.skills .skills-container {
     margin: 50px 10%;
   }
   footer {
     margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  main section.profil {
+    margin-top: 40px;
+  }
+  main section.profil .profil-container {
+    padding: 20px;
+  }
+  main section.experiences {
+    padding: 20px;
+  }
+  main section.experiences .experiences-container__cards .card__description__title {
+    margin-bottom: 30px;
+  }
+  main section.experiences .experiences-container__cards .card__stack {
+    gap: 5px;
+  }
+  main section.experiences .experiences-container__cards .card__stack__language {
+    font-size: 14px;
+    padding: 6px;
+  }
+  main section.skills .skills-container {
+    margin: 50px 5%;
+  }
+  main section.skills .skills-container i {
+    font-size: 60px;
+  }
+  main section.skills .skills-container img {
+    width: 60px;
+    height: 60px;
+  }
+  main section.formations .formations-container {
+    padding: 40px 20px;
+  }
+  main section.formations .formations-container .card {
+    flex-direction: column;
+    padding: 15px;
+  }
+  main .see-my-work p {
+    font-size: 20px;
   }
 }
 
