@@ -4,6 +4,8 @@ const header = document.querySelector('header');
 const headerNav = document.querySelector('.header__nav');
 const headerNavLinks = document.getElementsByClassName('nav__link');
 const sections = document.querySelectorAll('section');
+const lightmodeBtn = document.getElementById('lightmode_btn');
+const nightmodeBtn = document.getElementById('nightmode_btn');
 
 /* HEADER */
 
@@ -69,4 +71,14 @@ sections.forEach(observed => {
     if(observed){
         observer.observe(observed);
     }
+});
+
+/* DARKMODE */
+
+lightmodeBtn.addEventListener('click', () => {
+  document.body.classList.add('night');
+});
+
+nightmodeBtn.addEventListener('click', () => {
+  document.body.classList.remove('night');
 });

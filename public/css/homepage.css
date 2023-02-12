@@ -7,6 +7,15 @@
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/regular.css);
 /* variables */
 /* mixin */
+/* nightmode */
+.night .formations-container .card * {
+  color: black;
+}
+
+.see-my-work a * {
+  color: black;
+}
+
 /* ================ */
 .header__nav {
   display: flex;
@@ -160,6 +169,7 @@
 .header__icons__img {
   height: 30px;
   width: 30px;
+  transition: 200ms;
 }
 .header__icons__img#nightmode_btn {
   position: absolute;
@@ -211,6 +221,7 @@ main section.experiences .experiences-container__cards .card {
   border-radius: 10px;
   padding: 20px;
   background: var(--light-gray);
+  transition: background 400ms;
 }
 main section.experiences .experiences-container__cards .card__time {
   flex-basis: 20%;
@@ -237,19 +248,19 @@ main section.experiences .experiences-container__cards .card__stack__language {
   position: relative;
   display: flex;
   align-items: center;
-  background: white;
+  background: var(--background);
   border-radius: 50px;
   max-width: 16px;
   padding: 10px;
   gap: 10px;
   overflow: hidden;
-  transition: 600ms;
+  transition: 400ms;
 }
 main section.experiences .experiences-container__cards .card__stack__language::after {
   visibility: hidden;
   opacity: 0;
   content: attr(data-language);
-  transition: 600ms;
+  transition: 400ms;
 }
 main section.experiences .experiences-container__cards .card__stack__language img {
   width: 16px;

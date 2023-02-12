@@ -26,6 +26,16 @@ $fast_transition: 200ms;
     opacity: 1;
 }
 
+/* nightmode */
+
+.night .formations-container .card * {
+    color: black;
+}
+
+.see-my-work a * {
+    color: black;
+}
+
 /* ================ */
 
 .header__nav {
@@ -206,6 +216,7 @@ $fast_transition: 200ms;
         &__img {
             height: 30px;
             width: 30px;
+            transition: $fast_transition;
 
             &#nightmode_btn {
                 position: absolute;
@@ -264,6 +275,7 @@ main {
                         border-radius: 10px;
                         padding: 20px;
                         background: var(--light-gray);
+                        transition: background $transition;
 
                         &__time {
                             flex-basis: 20%;
@@ -294,18 +306,18 @@ main {
                                 position: relative;
                                 display: flex;
                                 align-items: center;
-                                background: white;
+                                background: var(--background);
                                 border-radius: 50px;
                                 max-width: 16px;
                                 padding: 10px;
                                 gap: 10px;
                                 overflow: hidden;
-                                transition: $slow_transition;
+                                transition: $transition;
 
                                 &::after {
                                     @include hide;
                                     content: attr(data-language);
-                                    transition: $slow_transition;
+                                    transition: $transition;
                                 }
 
                                 img {
