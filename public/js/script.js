@@ -75,10 +75,26 @@ sections.forEach(observed => {
 
 /* DARKMODE */
 
+
+var theme = localStorage.getItem('theme');
+if(theme) {
+  var css = "*{transition: none!important}";
+  var style = document.createElement('style');
+
+  style.id = 'transition-none';
+  style.appendChild(document.createTextNode(css));
+  document.head.appendChild(style);
+  theme === 'night' ? document.body.classList.add('night') : document.body.classList.remove('night');
+  
+  setTimeout(() => {document.getElementById('transition-none').remove()}, 100);
+}
+
 lightmodeBtn.addEventListener('click', () => {
   document.body.classList.add('night');
+  localStorage.setItem('theme', 'night');
 });
 
 nightmodeBtn.addEventListener('click', () => {
   document.body.classList.remove('night');
+  localStorage.setItem('theme', 'light');
 });
