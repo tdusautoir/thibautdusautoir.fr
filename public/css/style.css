@@ -280,7 +280,7 @@ main section.experiences .experiences-container__cards .card__stack__language:ho
 }
 main section.skills {
   margin-top: -50px;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 main section.skills .skills-container {
   display: flex;
@@ -336,7 +336,8 @@ main section.portfolio .filters {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
 }
 main section.portfolio .filters__btn {
   background-color: gray;
@@ -374,9 +375,10 @@ main section.portfolio .filters__btn::after {
 main section.portfolio .portfolio-container {
   display: flex;
   flex-wrap: wrap;
-  width: 1136px;
+  max-width: 1136px;
   margin: 0 auto;
   gap: 40px;
+  transition: 400ms;
 }
 main section.portfolio .portfolio-container .card {
   width: 350px;
@@ -532,6 +534,17 @@ footer.bottom {
   main section.formations .formations-container .card {
     width: inherit;
   }
+  main section.portfolio {
+    margin-top: 60px;
+  }
+  main section.portfolio .portfolio-container {
+    max-width: 744px;
+    justify-content: center;
+  }
+  main section.portfolio .portfolio-container .card {
+    width: 280px;
+    height: 200px;
+  }
 }
 @media screen and (max-width: 768px) {
   .header__nav {
@@ -574,8 +587,16 @@ footer.bottom {
   main section.skills .skills-container {
     margin: 50px 10%;
   }
+  main section.portfolio .portfolio-container {
+    max-width: 744px;
+  }
   footer {
     margin-bottom: 100px;
+  }
+  footer.bottom {
+    margin-bottom: 0;
+    margin-top: 100px;
+    position: inherit;
   }
 }
 @media screen and (max-width: 480px) {

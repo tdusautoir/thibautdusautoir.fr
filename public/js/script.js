@@ -26,7 +26,7 @@ if(headerNav) {
 
 /* header opacity animation */
 if(headerNavLinks.length > 0) {
-  for(let ii = 0; i < headerNavLinks.length; i++){
+  for(let i = 0; i < headerNavLinks.length; i++){
       headerNavLinks[i].addEventListener('mouseover', (e) => {
           for(let j = 0; j < headerNavLinks.length; j++){
               headerNavLinks[j].classList.add('disable');
@@ -141,16 +141,5 @@ for(let i = 0; i < filter_btns.length; i++) {
 
       e.target.classList.add('selected');
     }
-
-    // let filter_btn_selected = document.querySelector('.filters__btn.selected');
-
-    // if(filter_btn_selected) {
-    //   if(filter_btn_selected.dataset.filter !== e.target.dataset.filter) {
-    //     filter_btn_selected.classList.remove('selected');
-    //     e.target.classList.add('selected');
-    //   }
-    // } else {
-    //   e.target.classList.add('selected');
-    // }
   })
 }

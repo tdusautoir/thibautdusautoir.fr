@@ -347,7 +347,7 @@ main {
 
         &.skills {
             margin-top: -50px;
-            padding-top: 50px;
+            padding-top: 80px;
 
             .skills-container {
                 display: flex;
@@ -414,7 +414,8 @@ main {
                 display: flex;
                 justify-content: center;
                 gap: 10px;
-                margin-bottom: 40px;
+                margin-bottom: 60px;
+                flex-wrap: wrap;
 
                 &__btn {
                     background-color: gray;
@@ -458,9 +459,10 @@ main {
             .portfolio-container {
                 display: flex;
                 flex-wrap: wrap;
-                width: 1136px;
+                max-width: 1136px;
                 margin: 0 auto;
                 gap: 40px;
+                transition: $transition;
 
                 .card {
                     width: 350px;
@@ -661,6 +663,20 @@ footer {
                     }
                 }
             }
+
+            &.portfolio {
+                margin-top: 60px;
+
+                .portfolio-container {
+                    max-width: 744px;
+                    justify-content: center;
+
+                    .card {
+                        width: 280px;
+                        height: 200px;
+                    }
+                }
+            }
         }
     } 
 }
@@ -731,11 +747,23 @@ footer {
                     margin: 50px 10%;
                 }
             }
+
+            &.portfolio {
+                .portfolio-container {
+                    max-width: 744px;
+                }
+            }
         }
     }
     
     footer {
         margin-bottom: 100px;
+
+        &.bottom {
+            margin-bottom: 0;
+            margin-top: 100px;
+            position: inherit;
+        }
     }
 }
 
