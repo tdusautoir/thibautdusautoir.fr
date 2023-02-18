@@ -122,92 +122,92 @@ main img, main i {
     filter: invert(55%) sepia(80%) saturate(3773%) hue-rotate(328deg) brightness(110%) contrast(91%)!important;
 }
 
-.card__stack__language[data-language="css"]:hover i, i:hover.devicon-css3-plain {
+.card__stack__language[data-language="css"]:hover i, i:hover.devicon-css3-plain, .filters__btn:hover i.devicon-css3-plain {
     transition: 200ms;
     color: #2465f1!important;
 }
 
-.card__stack__language[data-language="html"]:hover i, i:hover.devicon-html5-plain {
+.card__stack__language[data-language="html"]:hover i, i:hover.devicon-html5-plain, .filters__btn:hover i.devicon-html5-plain {
     transition: 200ms;
     color: #f26524!important;
 }
 
-.card__stack__language[data-language="javascript"]:hover i, i:hover.devicon-javascript-plain {
+.card__stack__language[data-language="javascript"]:hover i, i:hover.devicon-javascript-plain, .filters__btn:hover i.devicon-javascript-plain {
     transition: 200ms;
     color: #ffd739!important;
 }
 
-.card__stack__language[data-language="mySql"]:hover i, i:hover.devicon-mysql-plain {
+.card__stack__language[data-language="mySql"]:hover i, i:hover.devicon-mysql-plain, .filters__btn:hover i.devicon-mysql-plain {
     transition: 200ms;
     color: #016089!important;
 }
 
-.card__stack__language[data-language="php"]:hover i, i:hover.devicon-php-plain {
+.card__stack__language[data-language="php"]:hover i, i:hover.devicon-php-plain, .filters__btn:hover i.devicon-php-plain {
     transition: 200ms;
     color: #787cb4!important;
 }
 
-.card__stack__language[data-language="scss"]:hover i, i:hover.devicon-sass-original {
+.card__stack__language[data-language="scss"]:hover i, i:hover.devicon-sass-original, .filters__btn:hover i.devicon-sass-original {
     transition: 200ms;
     color: #f06292!important;
 }
 
-.card__stack__language[data-language="gitlab"]:hover i, i:hover.devicon-gitlab-plain {
+.card__stack__language[data-language="gitlab"]:hover i, i:hover.devicon-gitlab-plain, .filters__btn:hover i.devicon-gitlab-plain{
     transition: 200ms;
     color: #fc6d25!important;
 }
 
-.card__stack__language[data-language="woocommerce"]:hover i, i:hover.devicon-woocommerce-plain {
+.card__stack__language[data-language="woocommerce"]:hover i, i:hover.devicon-woocommerce-plain, .filters__btn:hover i.devicon-woocommerce-plain {
     transition: 200ms;
     color: #8053b4!important;
 }
 
-.card__stack__language[data-language="wordpress"]:hover i, i:hover.devicon-wordpress-plain {
+.card__stack__language[data-language="wordpress"]:hover i, i:hover.devicon-wordpress-plain, .filters__btn:hover i.devicon-wordpress-plain {
     transition: 200ms;
     color: #1b769c!important;
 }
 
-.card__stack__language[data-language="jQuery"]:hover i, i:hover.devicon-jquery-plain {
+.card__stack__language[data-language="jQuery"]:hover i, i:hover.devicon-jquery-plain, .filters__btn:hover i.devicon-jquery-plain {
     transition: 200ms;
     color: #1168ae!important;
 }
 
-.card__stack__language[data-language="nodejs"]:hover i, i:hover.devicon-nodejs-plain {
+.card__stack__language[data-language="nodejs"]:hover i, i:hover.devicon-nodejs-plain, .filters__btn:hover i.devicon-nodejs-plain {
     transition: 200ms;
     color: #68a063!important;
 }
 
-.card__stack__language[data-language="react"]:hover i, i:hover.devicon-react-original {
+.card__stack__language[data-language="react"]:hover i, i:hover.devicon-react-original, .filters__btn:hover i.devicon-react-original {
     transition: 200ms;
     color: #60dbfb!important;
 }
 
-.card__stack__language[data-language="bootstrap"]:hover i, i:hover.devicon-bootstrap-plain {
+.card__stack__language[data-language="bootstrap"]:hover i, i:hover.devicon-bootstrap-plain, .filters__btn:hover i.devicon-bootstrap-plain {
     transition: 200ms;
     color: #7f09f9!important;
 }
 
-.card__stack__language[data-language="git"]:hover i, i:hover.devicon-git-plain {
+.card__stack__language[data-language="git"]:hover i, i:hover.devicon-git-plain, .filters__btn:hover i.devicon-git-plain {
     transition: 200ms;
     color: #f44d27!important;
 }
 
-.card__stack__language[data-language="linux"]:hover i, i:hover.devicon-linux-plain {
+.card__stack__language[data-language="linux"]:hover i, i:hover.devicon-linux-plain, .filters__btn:hover i.devicon-linux-plain {
     transition: 200ms;
     color: #f9c220!important;
 }
 
-.card__stack__language[data-language="npm"]:hover i, i:hover.devicon-npm-original-wordmark {
+.card__stack__language[data-language="npm"]:hover i, i:hover.devicon-npm-original-wordmark, .filters__btn:hover i.devicon-npm-original-wordmark {
     transition: 200ms;
     color: #cc3533!important;
 }
 
-.card__stack__language[data-language="docker"]:hover i, i:hover.devicon-docker-plain {
+.card__stack__language[data-language="docker"]:hover i, i:hover.devicon-docker-plain, .filters__btn:hover i.devicon-docker-plain {
     transition: 200ms;
     color: #2597ec!important;
 }
 
-.card__stack__language[data-language="npm"]:hover i, i:hover.devicon-figma-plain {
+.card__stack__language[data-language="npm"]:hover i, i:hover.devicon-figma-plain, .filters__btn:hover i.devicon-figma-plain {
     transition: 200ms;
     background: linear-gradient(180deg, rgba(10,201,127,1) 0%, rgba(157,86,246,1) 50%, rgba(248,109,96,1) 100%);
     background-clip: border-box;

@@ -19,16 +19,6 @@
     <title>Thibaut Dusautoir - portfolio</title>
 </head>
 <body>
-    <nav class="header__nav">
-        <ul class="header__nav__link__container">
-            <li><a class="nav__link" href="#experiences"><span>Expérience</span><i class="fa-solid fa-suitcase"></i></a></li>
-            <li><a class="nav__link" href="#skills"><span>Compétences</span><i class="fa-solid fa-book"></i></a></li>
-            <li><a class="nav__link" href="#formations"><span>Formations</span><i class="fa-solid fa-graduation-cap"></i></a></li>
-        </ul>
-        <a href="./works.html" class="header__nav__link__work">
-            <span>My work</span><i class="fa-regular fa-folder" title="portfolio"></i>
-        </a>
-    </nav>
     <div class="main-container">
         <header class="header">
                 <a href="./index.html">
@@ -40,6 +30,24 @@
                 </div>
         </header>
         <main>
+            <section class="portfolio">
+                <h2>Mes projets</h2>
+                <div class="filters">
+                    <div class="filters__btn" data-filter="html"><i class="devicon-html5-plain" title="html"></i></div>
+                    <div class="filters__btn" data-filter="css"><i class="devicon-css3-plain" title="css"></i></div>
+                    <div class="filters__btn" data-filter="javascript"><i class="devicon-javascript-plain" title="javascript"></i></div>
+                    <div class="filters__btn" data-filter="mysql"><i class="devicon-mysql-plain" title="mySql"></i></div>
+                    <div class="filters__btn" data-filter="php"><i class="devicon-php-plain" title="php"></i></div>
+                    <div class="filters__btn" data-filter="sass"><i class="devicon-sass-original" title="sass"></i></div>
+                    <div class="filters__btn" data-filter="nodejs"><i class="devicon-nodejs-plain" title="node.js"></i></div>
+                    <div class="filters__btn" data-filter="react"><i class="devicon-react-original" title="react"></i></div>
+                </div>
+                <div class="portfolio-container">
+                    <div class="card" data-stack="['html', 'css']">
+                        <img src="./public/images/portfolio/aupaysdescomptines.png" alt="aupaysdescomptines">
+                    </div>
+                </div>
+            </section>
         </main>
         <footer>
             <img src="./public/images/me_squared_100px.png" alt="photo de thibaut dusautoir">
