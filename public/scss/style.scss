@@ -235,7 +235,10 @@ main {
     display: flex;
     flex-direction: column;
     margin: 60px 0;
-    gap: 50px;
+
+    &.work {
+        margin: 20px 0;
+    }
 
     section {
         &.profil {
@@ -425,7 +428,16 @@ main {
                     gap: 10px;
                     overflow: hidden;
                     transition: $transition;
+                    border: none;
+                    font-family: inherit;
+                    font-size: 16px;
                     cursor: pointer;
+
+                    &.selected {
+                        transition: none;
+                        outline: 1px solid var(--main-color);
+                        background: transparent;
+                    }
 
                     img {
                         width: 16px;
@@ -445,6 +457,9 @@ main {
 
             .portfolio-container {
                 display: flex;
+                flex-wrap: wrap;
+                width: 1136px;
+                margin: 0 auto;
                 gap: 40px;
 
                 .card {
@@ -453,6 +468,7 @@ main {
                     border-radius: 10px;
                     border: 1px solid var(--gray);
                     overflow: hidden;
+                    position: relative;
 
                     img {
                         transition: $fast_transition;
@@ -460,12 +476,43 @@ main {
                         height: 100%;
                     }
 
-                    &:hover {
-                        img {
-                            margin-left: -2%;
-                            width: 105%;
-                            height: 105%;
+                    &__info {
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgb(0 0 0 / 60%);
+                        transition: $fast_transition;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 18px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        cursor: pointer;
+
+                        i {
+                            margin-right: 6px;
+                            color: inherit;
                         }
+
+                        @include hide;
+                    }
+
+                    &:hover {
+                        .card__info {
+                            @include show;
+                        }
+
+                        img {
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    &.notshow {
+                        display: none;
                     }
                 }
             }
@@ -552,6 +599,13 @@ footer {
             flex-direction: row;
             gap: 10px;
         }
+    }
+
+    &.bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 40px;
     }
 }
 

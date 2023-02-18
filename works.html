@@ -29,27 +29,48 @@
                     <img id="nightmode_btn" class="header__icons__img" src="./public/icons/moon.png" title="darkmode button" alt="moon icon">
                 </div>
         </header>
-        <main>
+        <main class="work">
             <section class="portfolio">
                 <h2>Mes projets</h2>
                 <div class="filters">
-                    <div class="filters__btn" data-filter="html"><i class="devicon-html5-plain" title="html"></i></div>
-                    <div class="filters__btn" data-filter="css"><i class="devicon-css3-plain" title="css"></i></div>
-                    <div class="filters__btn" data-filter="javascript"><i class="devicon-javascript-plain" title="javascript"></i></div>
-                    <div class="filters__btn" data-filter="mysql"><i class="devicon-mysql-plain" title="mySql"></i></div>
-                    <div class="filters__btn" data-filter="php"><i class="devicon-php-plain" title="php"></i></div>
-                    <div class="filters__btn" data-filter="sass"><i class="devicon-sass-original" title="sass"></i></div>
-                    <div class="filters__btn" data-filter="nodejs"><i class="devicon-nodejs-plain" title="node.js"></i></div>
-                    <div class="filters__btn" data-filter="react"><i class="devicon-react-original" title="react"></i></div>
+                    <button class="filters__btn" data-filter="html"><i class="devicon-html5-plain" title="html"></i></button>
+                    <button class="filters__btn" data-filter="css"><i class="devicon-css3-plain" title="css"></i></button>
+                    <button class="filters__btn" data-filter="javascript"><i class="devicon-javascript-plain" title="javascript"></i></button>
+                    <button class="filters__btn" data-filter="mysql"><i class="devicon-mysql-plain" title="mySql"></i></button>
+                    <button class="filters__btn" data-filter="php"><i class="devicon-php-plain" title="php"></i></button>
+                    <button class="filters__btn" data-filter="sass"><i class="devicon-sass-original" title="sass"></i></button>
+                    <button class="filters__btn" data-filter="nodejs"><i class="devicon-nodejs-plain" title="node.js"></i></button>
+                    <button class="filters__btn" data-filter="react"><i class="devicon-react-original" title="react"></i></button>
                 </div>
                 <div class="portfolio-container">
-                    <div class="card" data-stack="['html', 'css']">
+                    <div class="card" data-stack="['html', 'css', 'php', 'javascript']">
                         <img src="./public/images/portfolio/aupaysdescomptines.png" alt="aupaysdescomptines">
+                        <a href="./project/aupaysdescomptines.html" class="card__info">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus
+                        </a>
+                    </div>
+                    <div class="card" data-stack="['html', 'css', 'sass', 'javascript', 'php']">
+                        <img src="./public/images/portfolio/ourges.png" alt="ourges">
+                        <a href="./project/ourges.html" class="card__info">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus
+                        </a>
+                    </div>
+                    <div class="card" data-stack="['html', 'css', 'javascript', 'php']">
+                        <img src="./public/images/portfolio/asbeuvrylaforet.png" alt="asbeuvrylaforet">
+                        <a href="./project/asbeuvrylaforet.html" class="card__info">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus
+                        </a>
+                    </div>
+                    <div class="card" data-stack="['react', 'sass']">
+                        <img src="./public/images/portfolio/notes.png" alt="notes">
+                        <a href="./project/notes.html" class="card__info">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> En savoir plus
+                        </a>
                     </div>
                 </div>
             </section>
         </main>
-        <footer>
+        <footer class="bottom">
             <img src="./public/images/me_squared_100px.png" alt="photo de thibaut dusautoir">
             <div class="footer__links">
                 <a href="https://github.com/tdusautoir"><i class="fa-brands fa-github"></i><span>tdusautoir</span></a>
