@@ -161,17 +161,30 @@
   transition: 200ms;
 }
 .header__icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__icons__contact {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.header__icons__theme {
   height: 30px;
   width: 30px;
   overflow: hidden;
   cursor: pointer;
 }
-.header__icons__img {
+.header__icons__theme__img {
   height: 30px;
   width: 30px;
   transition: 200ms;
 }
-.header__icons__img#nightmode_btn {
+.header__icons__theme__img#nightmode_btn {
   position: absolute;
   visibility: hidden;
   opacity: 0;

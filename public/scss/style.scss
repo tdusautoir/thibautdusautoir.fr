@@ -208,19 +208,34 @@ $fast_transition: 200ms;
     transition: $fast_transition;
 
     &__icons {
-        height: 30px;
-        width: 30px;
-        overflow: hidden;
-        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-        &__img {
+        &__contact {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+        }
+
+        &__theme {
             height: 30px;
             width: 30px;
-            transition: $fast_transition;
-
-            &#nightmode_btn {
-                position: absolute;
-                @include hide;
+            overflow: hidden;
+            cursor: pointer;
+    
+            &__img {
+                height: 30px;
+                width: 30px;
+                transition: $fast_transition;
+    
+                &#nightmode_btn {
+                    position: absolute;
+                    @include hide;
+                }
             }
         }
     }

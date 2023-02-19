@@ -89,13 +89,13 @@ section:hover h2{
     color: black;
 }
 
-.night .header__icons__img#nightmode_btn {
+.night .header__icons__theme__img#nightmode_btn {
     transform: translateX(-30px);
     visibility: visible;
     opacity: 1;
 }
 
-.night .header__icons__img#lightmode_btn {
+.night .header__icons__theme__img#lightmode_btn {
     visibility: hidden;
     opacity: 0;
 }
