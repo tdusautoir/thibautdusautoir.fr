@@ -442,6 +442,93 @@ main section.portfolio .portfolio-container .card.notshow {
 main section.portfolio:hover h2 {
   background-size: 100% 100%;
 }
+main section.about-me {
+  margin-bottom: 200px;
+}
+main section.about-me h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+main section.contact h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+main section.contact .contact-form {
+  margin-top: 40px;
+  padding: 40px;
+}
+main section.contact .contact-form__inputs {
+  display: flex;
+  gap: 40px;
+}
+main section.contact .contact-form__inputs__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+main section.contact .contact-form__inputs__header div {
+  display: flex;
+  position: relative;
+  border-radius: 100px;
+}
+main section.contact .contact-form__inputs__header div input {
+  width: 100%;
+  padding: 20px;
+  background: var(--light-gray);
+  border: none;
+  border-radius: 100px;
+  font-size: 18px;
+  padding: 20px 20px;
+  transition: 200ms;
+}
+main section.contact .contact-form__inputs__header div input::placeholder {
+  opacity: 0.6;
+}
+main section.contact .contact-form__inputs__header div input:focus-visible {
+  outline: 2px solid var(--main-color);
+  background: transparent;
+}
+main section.contact .contact-form__inputs__header div label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 200ms;
+  font-size: 18px;
+}
+main section.contact .contact-form__inputs__header div.empty label {
+  opacity: 0;
+}
+main section.contact .contact-form__inputs__header div.empty.focus label {
+  opacity: 0;
+  transition: none;
+}
+main section.contact .contact-form__inputs__header div.focus input {
+  padding: 20px 40px;
+}
+main section.contact .contact-form__inputs__header div.focus label {
+  left: 40px;
+  opacity: 0.4;
+}
+main section.contact .contact-form__inputs__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main section.contact .contact-form__inputs__content textarea {
+  resize: none;
+  height: 100%;
+  padding: 20px;
+  background: var(--light-gray);
+  border: none;
+  border-radius: 20px;
+  opacity: 0.6;
+}
+main section.contact .contact-form__inputs__content textarea:focus-visible {
+  outline: 2px solid var(--main-color);
+  background: transparent;
+}
 main .see-my-work {
   display: flex;
   flex-direction: column;

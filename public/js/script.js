@@ -143,3 +143,27 @@ for(let i = 0; i < filter_btns.length; i++) {
     }
   })
 }
+
+/* CONTACT */
+
+const contact_inputs = document.querySelectorAll('.contact-form input');
+
+for(let i = 0; i < contact_inputs.length; i++) {
+  contact_inputs[i].addEventListener('focusin', (e) => {
+    e.target.parentNode.classList.add('focus');
+  });
+
+  contact_inputs[i].addEventListener('keyup', (e) => {
+    e.target.parentNode.classList.add('empty');
+  });
+
+  contact_inputs[i].addEventListener('focusout', (e) => {
+    e.target.parentNode.classList.remove('focus');
+
+    if(e.target.value != "") {
+      e.target.parentNode.classList.add('empty');
+    } else {
+      e.target.parentNode.classList.remove('empty');
+    }
+  })
+}
