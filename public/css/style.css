@@ -44,6 +44,9 @@
   color: black;
   transition: 200ms;
 }
+.header__nav__link__container .nav__link span {
+  transition: 400ms;
+}
 .header__nav__link__container .nav__link i {
   display: none;
 }
@@ -159,6 +162,9 @@
   top: 50px;
   font-size: 18px;
   transition: 200ms;
+}
+.header h1 {
+  transition: 400ms;
 }
 .header__icons {
   display: flex;
@@ -480,7 +486,7 @@ main section.contact .contact-form__inputs__header div input {
   border-radius: 100px;
   font-size: 18px;
   padding: 20px 20px;
-  transition: 200ms;
+  transition: background 400ms, color 400ms;
 }
 main section.contact .contact-form__inputs__header div input::placeholder {
   opacity: 0.6;
@@ -494,27 +500,31 @@ main section.contact .contact-form__inputs__header div label {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  transition: 200ms;
+  transition: 200ms ease;
   font-size: 18px;
+  opacity: 0.6;
 }
-main section.contact .contact-form__inputs__header div.empty label {
-  opacity: 0;
+main section.contact .contact-form__inputs__header div.not-empty input {
+  padding: 20px;
 }
-main section.contact .contact-form__inputs__header div.empty.focus label {
-  opacity: 0;
-  transition: none;
+main section.contact .contact-form__inputs__header div.not-empty label {
+  opacity: 0.3;
+  left: 95%;
+  transform: translateY(-50%) translate(-95%, 0);
 }
 main section.contact .contact-form__inputs__header div.focus input {
-  padding: 20px 40px;
+  padding: 20px 20px 20px 40px;
 }
 main section.contact .contact-form__inputs__header div.focus label {
-  left: 40px;
-  opacity: 0.4;
+  opacity: 0.3;
+  left: 95%;
+  transform: translateY(-50%) translate(-95%, 0);
 }
 main section.contact .contact-form__inputs__content {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 main section.contact .contact-form__inputs__content textarea {
   resize: none;
@@ -524,6 +534,7 @@ main section.contact .contact-form__inputs__content textarea {
   border: none;
   border-radius: 20px;
   opacity: 0.6;
+  transition: 400ms;
 }
 main section.contact .contact-form__inputs__content textarea:focus-visible {
   outline: 2px solid var(--main-color);
@@ -681,6 +692,7 @@ footer.bottom {
     max-width: 140px;
   }
   main section.experiences .experiences-container__cards .card__stack__language::after {
+    transition: none;
     visibility: visible;
     opacity: 1;
   }

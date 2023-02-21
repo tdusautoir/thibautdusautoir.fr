@@ -65,6 +65,10 @@ $fast_transition: 200ms;
             color: black;
             transition: $fast_transition;
 
+            span {
+                transition: $transition;
+            }
+
             i {
                 display: none;
             }
@@ -206,6 +210,10 @@ $fast_transition: 200ms;
     top: 50px;
     font-size: 18px;
     transition: $fast_transition;
+
+    h1 {
+        transition: $transition;
+    }
 
     &__icons {
         display: flex;
@@ -583,7 +591,7 @@ main {
                                 border-radius: 100px;
                                 font-size: 18px;
                                 padding: 20px 20px;
-                                transition: $fast_transition;
+                                transition: background $transition, color $transition;
 
                                 &::placeholder {
                                     opacity: 0.6;
@@ -600,31 +608,32 @@ main {
                                 left: 20px;
                                 top: 50%;
                                 transform: translateY(-50%);  
-                                transition: $fast_transition;  
-                                font-size: 18px;                     
+                                transition: $fast_transition ease;  
+                                font-size: 18px;   
+                                opacity: 0.6;                  
                             }
 
-                            &.empty {
-                                label {
-                                    opacity: 0;
+                            &.not-empty {
+                                input {
+                                    padding: 20px;
                                 }
-                            }
 
-                            &.empty.focus {
                                 label {
-                                    opacity: 0;
-                                    transition: none;
+                                    opacity: 0.3;  
+                                    left: 95%; 
+                                    transform: translateY(-50%) translate(-95%, 0); 
                                 }
                             }
 
                             &.focus {
                                 input {
-                                    padding: 20px 40px;
+                                    padding: 20px 20px 20px 40px;
                                 }
 
-                                label {
-                                    left: 40px;           
-                                    opacity: 0.4;     
+                                label {         
+                                    opacity: 0.3;  
+                                    left: 95%; 
+                                    transform: translateY(-50%) translate(-95%, 0);
                                 }
                             }
                         }
@@ -634,6 +643,17 @@ main {
                         width: 100%;
                         display: flex;
                         flex-direction: column;
+                        position: relative;
+
+                        // label {
+                        //     position: absolute;
+                        //     left: 20px;
+                        //     top: 50%;
+                        //     transform: translateY(-50%);  
+                        //     transition: $fast_transition ease;  
+                        //     font-size: 18px;   
+                        //     opacity: 0.6;                  
+                        // }
 
                         textarea {
                             resize: none;
@@ -643,6 +663,7 @@ main {
                             border: none;
                             border-radius: 20px;
                             opacity: 0.6;
+                            transition: $transition;
 
                             &:focus-visible {
                                 outline: 2px solid var(--main-color);
@@ -861,6 +882,7 @@ footer {
                                     max-width: 140px;
                                     
                                     &::after {
+                                        transition: none;
                                         @include show;
                                     }
                                 }

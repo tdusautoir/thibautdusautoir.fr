@@ -154,16 +154,17 @@ for(let i = 0; i < contact_inputs.length; i++) {
   });
 
   contact_inputs[i].addEventListener('keyup', (e) => {
-    e.target.parentNode.classList.add('empty');
+    console.log(e.target.value);
+    e.target.parentNode.classList.add('not-empty');
   });
 
   contact_inputs[i].addEventListener('focusout', (e) => {
     e.target.parentNode.classList.remove('focus');
 
     if(e.target.value != "") {
-      e.target.parentNode.classList.add('empty');
+      e.target.parentNode.classList.add('not-empty');
     } else {
-      e.target.parentNode.classList.remove('empty');
+      e.target.parentNode.classList.remove('not-empty');
     }
   })
 }
