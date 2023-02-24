@@ -58,12 +58,23 @@ $fast_transition: 200ms;
         background: #eae7e7;
         transition: $transition;
         z-index: 1;
-        gap: 60px;
+        gap: 30px;
+
+        #nav-highlight {
+            height: 5px;
+            top: 58px;
+            position: absolute;
+            border-radius: 100px;
+            background: var(--main-color);
+            transition: width $fast_transition, left $transition;
+            z-index: -1;
+        }
 
         .nav__link {
             text-decoration: none;
             color: black;
             transition: $fast_transition;
+            padding: 15px;
 
             span {
                 transition: $transition;
@@ -591,7 +602,7 @@ main {
                                 border-radius: 100px;
                                 font-size: 18px;
                                 padding: 20px 20px;
-                                transition: background $transition, color $transition;
+                                transition: background $transition, color $transition, padding $transition;
 
                                 &::placeholder {
                                     opacity: 0.6;
@@ -838,7 +849,12 @@ footer {
         transform: translateX(-32px);
 
         &__link__container {
+            padding: 10px 30px;
+
             .nav__link {
+                display: inline-block;
+                padding: 10px;
+
                 i {
                     display: block;
                 }
@@ -849,13 +865,11 @@ footer {
 
                 &:hover {
                     &::after {
-                        transform: inherit;
-                        opacity: 0;
+                        display: none;
                     }
         
                     &::before {
-                        transform: inherit;
-                        opacity: 0;
+                        display: none;
                     }
                 }
             }

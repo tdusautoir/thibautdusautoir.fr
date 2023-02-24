@@ -60,6 +60,7 @@ section:hover h2{
 }
 
 /* darkmode */
+
 .night * {
     color: white;
     transition: color 400ms;

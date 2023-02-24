@@ -37,12 +37,22 @@
   background: #eae7e7;
   transition: 400ms;
   z-index: 1;
-  gap: 60px;
+  gap: 30px;
+}
+.header__nav__link__container #nav-highlight {
+  height: 5px;
+  top: 58px;
+  position: absolute;
+  border-radius: 100px;
+  background: var(--main-color);
+  transition: width 200ms, left 400ms;
+  z-index: -1;
 }
 .header__nav__link__container .nav__link {
   text-decoration: none;
   color: black;
   transition: 200ms;
+  padding: 15px;
 }
 .header__nav__link__container .nav__link span {
   transition: 400ms;
@@ -486,7 +496,7 @@ main section.contact .contact-form__inputs__header div input {
   border-radius: 100px;
   font-size: 18px;
   padding: 20px 20px;
-  transition: background 400ms, color 400ms;
+  transition: background 400ms, color 400ms, padding 400ms;
 }
 main section.contact .contact-form__inputs__header div input::placeholder {
   opacity: 0.6;
@@ -664,6 +674,13 @@ footer.bottom {
     bottom: 20px;
     transform: translateX(-32px);
   }
+  .header__nav__link__container {
+    padding: 10px 30px;
+  }
+  .header__nav__link__container .nav__link {
+    display: inline-block;
+    padding: 10px;
+  }
   .header__nav__link__container .nav__link i {
     display: block;
   }
@@ -671,12 +688,10 @@ footer.bottom {
     display: none;
   }
   .header__nav__link__container .nav__link:hover::after {
-    transform: inherit;
-    opacity: 0;
+    display: none;
   }
   .header__nav__link__container .nav__link:hover::before {
-    transform: inherit;
-    opacity: 0;
+    display: none;
   }
   .header__nav--sticky {
     transform: inherit;
