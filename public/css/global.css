@@ -8,6 +8,9 @@
     --light-gray: #f3f3f3;
     --black: #4f4f4f;
     --background: white;
+
+    --success: #028e00;
+    --danger: #d90000;
 }
 
 html {
@@ -80,6 +83,9 @@ section:hover h2{
     --light-gray: #293340;
     --black: #ffffff;
     --background: #1c2633;
+
+    --success: #03c500;
+    --danger: #ff0000;
 }
 
 .night .header__nav__link__container {

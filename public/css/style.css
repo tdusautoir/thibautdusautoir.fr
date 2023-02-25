@@ -225,6 +225,65 @@
   opacity: 0;
 }
 
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  background: white;
+  padding: 10px;
+  border-radius: 100px;
+  z-index: 1;
+}
+.toast--success {
+  border: 2px solid var(--success);
+  background: rgba(3, 197, 0, 0.3725490196);
+}
+.toast--success p {
+  color: var(--success);
+}
+.toast--success .checkmark {
+  stroke: var(--success);
+}
+.toast--success .checkmark__circle {
+  stroke: var(--success);
+}
+.toast--danger {
+  border: 2px solid var(--danger);
+  background: rgba(255, 0, 0, 0.2);
+}
+.toast--danger p {
+  color: var(--danger);
+}
+.toast--danger .checkmark {
+  stroke: var(--danger);
+}
+.toast--danger .checkmark__circle {
+  stroke: var(--danger);
+}
+.toast .checkmark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+.toast .checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 0;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  fill: none;
+}
+.toast .checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -574,10 +633,10 @@ main section.contact .contact-form__inputs__content textarea {
   padding: 20px;
   font-size: 16px;
   background: var(--light-gray);
-  border: none;
+  border: 2px solid var(--background);
   border-radius: 20px;
   font-size: 16px;
-  transition: background 400ms, color 400ms, padding 400ms;
+  transition: 400ms;
 }
 main section.contact .contact-form__inputs__content textarea:focus-visible {
   outline: none;

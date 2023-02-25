@@ -282,6 +282,77 @@ $fast_transition: 200ms;
     }
 }
 
+.toast {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 120px;
+    right: 40px;
+    background: white;
+    padding: 10px;
+    border-radius: 100px;
+    z-index: 1;
+
+    &--success {
+        border: 2px solid var(--success);
+        background: #03c5005f;
+
+        p {
+            color: var(--success);
+        }
+
+        .checkmark {
+            stroke: var(--success);
+
+            &__circle {
+                stroke: var(--success);
+            }
+        }
+    }
+
+    &--danger {
+        border: 2px solid var(--danger);
+        background: #ff000033;
+
+        p {
+            color: var(--danger);
+        }
+
+
+        .checkmark {
+            stroke: var(--danger);
+
+            &__circle {
+                stroke: var(--danger);
+            }
+        }
+    }
+
+    .checkmark {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 4;
+        stroke-miterlimit: 10;
+
+        &__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 0;
+            stroke-width: 4;
+            stroke-miterlimit: 10;
+            fill: none;
+        }
+
+        &__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 0;
+        }
+    }
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -700,10 +771,10 @@ main {
                             padding: 20px;
                             font-size: 16px;
                             background: var(--light-gray);
-                            border: none;
+                            border: 2px solid var(--background);
                             border-radius: 20px;
                             font-size: 16px;
-                            transition: background $transition, color $transition, padding $transition;
+                            transition: $transition;
 
                             &:focus-visible {
                                 outline: none;
