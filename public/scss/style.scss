@@ -604,47 +604,51 @@ main {
                                 padding: 20px 20px;
                                 transition: background $transition, color $transition, padding $transition;
 
-                                &::placeholder {
-                                    opacity: 0.6;
-                                }
-
                                 &:focus-visible {
-                                    outline: 2px solid var(--main-color);
+                                    outline: 1px solid var(--main-color);
                                     background: transparent;
                                 }
                             }
 
                             label {
                                 position: absolute;
-                                left: 20px;
+                                left: 0px;
+                                pointer-events: none;
+                                opacity: 0.6;
                                 top: 50%;
                                 transform: translateY(-50%);  
-                                transition: $fast_transition ease;  
-                                font-size: 18px;   
-                                opacity: 0.6;                  
+                                transition: left $fast_transition, background $transition;
+                                font-size: 18px;    
+                                padding: 13px 20px;      
+                                color: inherit;
+                            }
+
+                            &.not-empty, &.focus {
+                                label {
+                                    left: var(--left-value);
+                                    border-radius: 100px;
+                                    opacity: 1;
+                                }
                             }
 
                             &.not-empty {
-                                input {
-                                    padding: 20px;
+                                label {
+                                    background: var(--background);
+                                    z-index: 1;
                                 }
 
-                                label {
-                                    opacity: 0.3;  
-                                    left: 95%; 
-                                    transform: translateY(-50%) translate(-95%, 0); 
+                                input {
+                                    padding: 20px 130px 20px 20px;
                                 }
                             }
 
                             &.focus {
-                                input {
-                                    padding: 20px 20px 20px 40px;
+                                label {
+                                    background: var(--main-color);
                                 }
 
-                                label {         
-                                    opacity: 0.3;  
-                                    left: 95%; 
-                                    transform: translateY(-50%) translate(-95%, 0);
+                                input {
+                                    padding: 20px 130px 20px 40px;
                                 }
                             }
                         }
@@ -656,17 +660,21 @@ main {
                         flex-direction: column;
                         position: relative;
 
-                        // label {
-                        //     position: absolute;
-                        //     left: 20px;
-                        //     top: 50%;
-                        //     transform: translateY(-50%);  
-                        //     transition: $fast_transition ease;  
-                        //     font-size: 18px;   
-                        //     opacity: 0.6;                  
-                        // }
+                        label {
+                            position: absolute;
+                            bottom: 10px;
+                            left: 0px;
+                            transition: left $fast_transition, background $transition;
+                            font-size: 18px;   
+                            padding: 13px 20px;
+                            z-index: 1;     
+                            opacity: 0.6;
+                            color: inherit;          
+                        }
 
                         textarea {
+                            font-family: inherit;
+                            font-size: inherit;
                             resize: none;
                             height: 100%;
                             padding: 20px;
@@ -674,11 +682,40 @@ main {
                             border: none;
                             border-radius: 20px;
                             opacity: 0.6;
-                            transition: $transition;
+                            transition: background $transition, color $transition, padding $transition;
 
                             &:focus-visible {
-                                outline: 2px solid var(--main-color);
+                                outline: 1px solid var(--main-color);
                                 background: transparent;
+                            }
+                        }
+
+                        &.not-empty, &.focus {
+                            label { 
+                                opacity: 1;
+                                left: var(--left-value);
+                                background: var(--main-color);
+                                border-radius: 10px;
+                            }
+                        }
+
+                        &.not-empty {
+                            label {
+                                background: var(--background);
+                            }
+
+                            textarea {
+                                padding: 20px 20px 60px 20px;
+                            }
+                        }
+
+                        &.focus {
+                            label {
+                                background: var(--main-color);
+                            }
+
+                            textarea {
+                                padding: 20px 20px 60px 40px;
                             }
                         }
                     }

@@ -498,37 +498,39 @@ main section.contact .contact-form__inputs__header div input {
   padding: 20px 20px;
   transition: background 400ms, color 400ms, padding 400ms;
 }
-main section.contact .contact-form__inputs__header div input::placeholder {
-  opacity: 0.6;
-}
 main section.contact .contact-form__inputs__header div input:focus-visible {
-  outline: 2px solid var(--main-color);
+  outline: 1px solid var(--main-color);
   background: transparent;
 }
 main section.contact .contact-form__inputs__header div label {
   position: absolute;
-  left: 20px;
+  left: 0px;
+  pointer-events: none;
+  opacity: 0.6;
   top: 50%;
   transform: translateY(-50%);
-  transition: 200ms ease;
+  transition: left 200ms, background 400ms;
   font-size: 18px;
-  opacity: 0.6;
+  padding: 13px 20px;
+  color: inherit;
 }
-main section.contact .contact-form__inputs__header div.not-empty input {
-  padding: 20px;
+main section.contact .contact-form__inputs__header div.not-empty label, main section.contact .contact-form__inputs__header div.focus label {
+  left: var(--left-value);
+  border-radius: 100px;
+  opacity: 1;
 }
 main section.contact .contact-form__inputs__header div.not-empty label {
-  opacity: 0.3;
-  left: 95%;
-  transform: translateY(-50%) translate(-95%, 0);
+  background: var(--background);
+  z-index: 1;
 }
-main section.contact .contact-form__inputs__header div.focus input {
-  padding: 20px 20px 20px 40px;
+main section.contact .contact-form__inputs__header div.not-empty input {
+  padding: 20px 130px 20px 20px;
 }
 main section.contact .contact-form__inputs__header div.focus label {
-  opacity: 0.3;
-  left: 95%;
-  transform: translateY(-50%) translate(-95%, 0);
+  background: var(--main-color);
+}
+main section.contact .contact-form__inputs__header div.focus input {
+  padding: 20px 130px 20px 40px;
 }
 main section.contact .contact-form__inputs__content {
   width: 100%;
@@ -536,7 +538,20 @@ main section.contact .contact-form__inputs__content {
   flex-direction: column;
   position: relative;
 }
+main section.contact .contact-form__inputs__content label {
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  transition: left 200ms, background 400ms;
+  font-size: 18px;
+  padding: 13px 20px;
+  z-index: 1;
+  opacity: 0.6;
+  color: inherit;
+}
 main section.contact .contact-form__inputs__content textarea {
+  font-family: inherit;
+  font-size: inherit;
   resize: none;
   height: 100%;
   padding: 20px;
@@ -544,11 +559,29 @@ main section.contact .contact-form__inputs__content textarea {
   border: none;
   border-radius: 20px;
   opacity: 0.6;
-  transition: 400ms;
+  transition: background 400ms, color 400ms, padding 400ms;
 }
 main section.contact .contact-form__inputs__content textarea:focus-visible {
-  outline: 2px solid var(--main-color);
+  outline: 1px solid var(--main-color);
   background: transparent;
+}
+main section.contact .contact-form__inputs__content.not-empty label, main section.contact .contact-form__inputs__content.focus label {
+  opacity: 1;
+  left: var(--left-value);
+  background: var(--main-color);
+  border-radius: 10px;
+}
+main section.contact .contact-form__inputs__content.not-empty label {
+  background: var(--background);
+}
+main section.contact .contact-form__inputs__content.not-empty textarea {
+  padding: 20px 20px 60px 20px;
+}
+main section.contact .contact-form__inputs__content.focus label {
+  background: var(--main-color);
+}
+main section.contact .contact-form__inputs__content.focus textarea {
+  padding: 20px 20px 60px 40px;
 }
 main .see-my-work {
   display: flex;

@@ -16,9 +16,21 @@
     <link rel="stylesheet" href="./public/css/style.css">
     <link rel="stylesheet" href="./public/lib/devicon/devicon.min.css">
     <script src="./public/js/script.js" defer></script>
+    <script src="./public/js/contact.js" defer></script>
     <title>Thibaut Dusautoir - portfolio</title>
 </head>
 <body>
+    <nav class="header__nav">
+        <ul class="header__nav__link__container">
+            <span id="nav-highlight"></span>
+            <li><a class="nav__link" href="./index.html#experiences"><span>Expérience</span><i class="fa-solid fa-suitcase"></i></a></li>
+            <li><a class="nav__link" href="./index.html#skills"><span>Compétences</span><i class="fa-solid fa-book"></i></a></li>
+            <li><a class="nav__link" href="./index.html#formations"><span>Formations</span><i class="fa-solid fa-graduation-cap"></i></a></li>
+        </ul>
+        <a href="./works.html" class="header__nav__link__work">
+            <span>My work</span><i class="fa-regular fa-folder" title="portfolio"></i>
+        </a>
+    </nav>
     <div class="main-container">
         <header class="header">
                 <a href="./index.html">
@@ -42,16 +54,16 @@
                     <div class="contact-form__inputs">
                         <div class="contact-form__inputs__header">
                             <div class="contact-form__inputs__header__firstname">
-                                <input type="text" name="firstname" maxlength="20">
+                                <input type="text" name="firstname">
                                 <label for="firstname">Prénom</label>
                             </div>
                             <div class="contact-form__inputs__header__lastname">
                                 <label for="lastname">Nom</label>
-                                <input type="text" name="lastname" maxlength="20">
+                                <input type="text" name="lastname">
                             </div>
-                            <div class="contact-form__inputs__header__lastname">
+                            <div class="contact-form__inputs__header__subject">
                                 <label for="subject">Sujet</label>
-                                <input type="text" name="subject" maxlength="20">
+                                <input type="text" name="subject">
                             </div>
                         </div>
                         <div class="contact-form__inputs__content">

@@ -7,15 +7,19 @@ const headerNavHighlight = document.getElementById('nav-highlight');
 const headerNavLinks = document.getElementsByClassName("nav__link");
 
 window.addEventListener("scroll", function () {
+  if(header) {
+    header.classList.toggle("unseen", window.scrollY > 40);
+    if (headerNav) {
+      headerNav.classList.toggle("header__nav--sticky", window.scrollY > 40);
+    }
+  }
+});
+
+if(header) {
   header.classList.toggle("unseen", window.scrollY > 40);
   if (headerNav) {
     headerNav.classList.toggle("header__nav--sticky", window.scrollY > 40);
   }
-});
-
-header.classList.toggle("unseen", window.scrollY > 40);
-if (headerNav) {
-  headerNav.classList.toggle("header__nav--sticky", window.scrollY > 40);
 }
 
 /* header opacity animation */
@@ -125,66 +129,3 @@ nightmodeBtn.addEventListener("click", () => {
   document.body.classList.remove("night");
   localStorage.setItem("theme", "light");
 });
-
-/* PORTFOLIO */
-
-const filter_btns = document.querySelectorAll(".filters__btn");
-const portfolio_cards = document.querySelectorAll(".portfolio-container .card");
-const portfolio_cards_btn = document.querySelectorAll(".portfolio-container .card button");
-const project_sections = document.querySelectorAll("section.project");
-
-for (let i = 0; i < filter_btns.length; i++) {
-  filter_btns[i].addEventListener("click", (e) => {
-    if (e.target.classList.contains("selected")) {
-      for (let j = 0; j < portfolio_cards.length; j++) {
-        portfolio_cards[j].classList.remove("notshow");
-      }
-
-      e.target.classList.remove("selected");
-    } else {
-      for (let j = 0; j < portfolio_cards.length; j++) {
-        let portfolio_card = portfolio_cards[j];
-        if (
-          JSON.parse(
-            portfolio_card.dataset.stack.includes(e.target.dataset.filter)
-          )
-        ) {
-          portfolio_card.classList.remove("notshow");
-        } else {
-          portfolio_card.classList.add("notshow");
-        }
-      }
-
-      for (let j = 0; j < filter_btns.length; j++) {
-        filter_btns[j].classList.remove("selected");
-      }
-
-      e.target.classList.add("selected");
-    }
-  });
-}
-
-/* CONTACT */
-
-const contact_inputs = document.querySelectorAll(".contact-form input");
-
-for (let i = 0; i < contact_inputs.length; i++) {
-  contact_inputs[i].addEventListener("focusin", (e) => {
-    e.target.parentNode.classList.add("focus");
-  });
-
-  contact_inputs[i].addEventListener("keyup", (e) => {
-    console.log(e.target.value);
-    e.target.parentNode.classList.add("not-empty");
-  });
-
-  contact_inputs[i].addEventListener("focusout", (e) => {
-    e.target.parentNode.classList.remove("focus");
-
-    if (e.target.value != "") {
-      e.target.parentNode.classList.add("not-empty");
-    } else {
-      e.target.parentNode.classList.remove("not-empty");
-    }
-  });
-}
