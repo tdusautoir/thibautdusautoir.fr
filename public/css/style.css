@@ -491,10 +491,10 @@ main section.contact .contact-form__inputs__header div {
 main section.contact .contact-form__inputs__header div input {
   width: 100%;
   padding: 20px;
+  font-size: 16px;
   background: var(--light-gray);
   border: none;
   border-radius: 100px;
-  font-size: 18px;
   padding: 20px 20px;
   transition: background 400ms, color 400ms, padding 400ms;
 }
@@ -507,16 +507,16 @@ main section.contact .contact-form__inputs__header div label {
   left: 0px;
   pointer-events: none;
   opacity: 0.6;
+  font-size: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition: left 200ms, background 400ms;
-  font-size: 18px;
   padding: 13px 20px;
   color: inherit;
+  border-radius: 100px;
 }
 main section.contact .contact-form__inputs__header div.not-empty label, main section.contact .contact-form__inputs__header div.focus label {
   left: var(--left-value);
-  border-radius: 100px;
   opacity: 1;
 }
 main section.contact .contact-form__inputs__header div.not-empty label {
@@ -540,14 +540,15 @@ main section.contact .contact-form__inputs__content {
 }
 main section.contact .contact-form__inputs__content label {
   position: absolute;
+  font-size: 16px;
   bottom: 10px;
   left: 0px;
   transition: left 200ms, background 400ms;
-  font-size: 18px;
   padding: 13px 20px;
   z-index: 1;
   opacity: 0.6;
   color: inherit;
+  border-radius: 10px;
 }
 main section.contact .contact-form__inputs__content textarea {
   font-family: inherit;
@@ -555,10 +556,11 @@ main section.contact .contact-form__inputs__content textarea {
   resize: none;
   height: 100%;
   padding: 20px;
+  font-size: 16px;
   background: var(--light-gray);
   border: none;
   border-radius: 20px;
-  opacity: 0.6;
+  font-size: 16px;
   transition: background 400ms, color 400ms, padding 400ms;
 }
 main section.contact .contact-form__inputs__content textarea:focus-visible {
@@ -569,7 +571,6 @@ main section.contact .contact-form__inputs__content.not-empty label, main sectio
   opacity: 1;
   left: var(--left-value);
   background: var(--main-color);
-  border-radius: 10px;
 }
 main section.contact .contact-form__inputs__content.not-empty label {
   background: var(--background);
@@ -582,6 +583,54 @@ main section.contact .contact-form__inputs__content.focus label {
 }
 main section.contact .contact-form__inputs__content.focus textarea {
   padding: 20px 20px 60px 40px;
+}
+main section.contact .contact-form__inputs__submit {
+  position: relative;
+  width: 200px;
+  height: 58.5px;
+  margin-top: 20px;
+  border-radius: 100px;
+  float: right;
+}
+main section.contact .contact-form__inputs__submit button {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  border: none;
+  padding: 0;
+  background: var(--main-color);
+  cursor: pointer;
+}
+main section.contact .contact-form__inputs__submit button:focus-visible {
+  outline: none;
+}
+main section.contact .contact-form__inputs__submit__arrow {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  left: var(--left-value);
+  top: 50%;
+  width: 100%;
+  height: 40px;
+  max-width: 40px;
+  margin: 0px 10px;
+  transform: translateY(-50%);
+  transition: 400ms;
+  overflow: hidden;
+  font-weight: 600;
+  pointer-events: none;
+}
+main section.contact .contact-form__inputs__submit__arrow i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 14px;
+  width: fit-content;
+  transform: translateY(-50%);
+}
+main section.contact .contact-form__inputs__submit.hover div {
+  backdrop-filter: blur(2px);
+  max-width: 90%;
 }
 main .see-my-work {
   display: flex;
