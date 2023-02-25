@@ -26,6 +26,23 @@ $fast_transition: 200ms;
     opacity: 1;
 }
 
+/* animation */
+
+@keyframes rotate {
+    from {
+      transform: translateY(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
 /* nightmode */
 
 .night .formations-container .card * {
@@ -457,21 +474,21 @@ main {
                     display: flex;
                     align-items: center;
                     background: var(--light-gray);
+                    border: 2px solid var(--background);
                     border-radius: 50px;
                     max-width: 140px;
                     padding: 10px;
                     gap: 10px;
                     overflow: hidden;
                     transition: $transition;
-                    border: none;
                     font-family: inherit;
                     font-size: 16px;
                     cursor: pointer;
 
                     &.selected {
                         transition: none;
-                        outline: 1px solid var(--main-color);
-                        background: transparent;
+                        outline: none;
+                        border: 2px solid var(--main-color);
                     }
 
                     img {
@@ -599,13 +616,14 @@ main {
                                 padding: 20px;
                                 font-size: 16px;
                                 background: var(--light-gray);
-                                border: none;
+                                border: 2px solid var(--background);
                                 border-radius: 100px;
                                 padding: 20px 20px;
-                                transition: background $transition, color $transition, padding $transition;
+                                transition: $transition;
 
                                 &:focus-visible {
-                                    outline: 1px solid var(--main-color);
+                                    outline: none;
+                                    border: 2px solid var(--main-color);
                                     background: transparent;
                                 }
                             }
@@ -659,6 +677,7 @@ main {
                         display: flex;
                         flex-direction: column;
                         position: relative;
+                        border-radius: 20px;
 
                         label {
                             position: absolute;
@@ -687,7 +706,8 @@ main {
                             transition: background $transition, color $transition, padding $transition;
 
                             &:focus-visible {
-                                outline: 1px solid var(--main-color);
+                                outline: none;
+                                border: 2px solid var(--main-color);
                                 background: transparent;
                             }
                         }
@@ -737,6 +757,7 @@ main {
                             padding: 0;
                             background: var(--main-color);
                             cursor: pointer;
+                            font-size: 16px;
 
                             &:focus-visible {
                                 outline: none;
@@ -747,14 +768,14 @@ main {
                             position: absolute;
                             background-color: rgba(255, 255, 255, 0.5);
                             border-radius: 100px;
-                            left: var(--left-value);
+                            left: 0px;
                             top: 50%;
                             width: 100%;
                             height: 40px;
                             max-width: 40px;
                             margin: 0px 10px;
                             transform: translateY(-50%);
-                            transition: $transition;
+                            transition: $fast_transition;
                             overflow: hidden;
                             font-weight: 600;
                             pointer-events: none;
@@ -763,16 +784,90 @@ main {
                                 position: absolute;
                                 top: 50%;
                                 right: 0;
-                                padding: 14px;
+                                padding: 12px;
                                 width: fit-content;
                                 transform: translateY(-50%);
+
+                                &.fa-spinner {
+                                    animation: rotate 2s infinite linear;
+                                    display: none;
+                                }
+
+                                &.fa-check {
+                                    display: none;
+                                }
+                            }
+
+                            .checkmark {
+                                @include hide;
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                display: block;
+                                stroke-width: 4;
+                                stroke: var(--black);
+                                stroke-miterlimit: 10;
+
+                                &__circle {
+                                    stroke-dasharray: 166;
+                                    stroke-dashoffset: 166;
+                                    stroke-width: 4;
+                                    stroke-miterlimit: 10;
+                                    stroke: var(--black);
+                                    fill: none;
+                                }
+
+                                &__check {
+                                    transform-origin: 50% 50%;
+                                    stroke-dasharray: 48;
+                                    stroke-dashoffset: 48;
+                                }
                             }
                         }
                          
                         &.hover {
                             div {
+                                left: 0px;
                                 backdrop-filter: blur(2px);
                                 max-width: 90%;
+                            }
+                        }
+
+                        &.pending {
+                            div {
+                                left: 140px;
+                                max-width: 40px;
+
+                                i {
+                                    display: none;
+
+                                    &.fa-spinner {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.success {
+                            div {
+                                left: 140px;
+                                max-width: 40px;
+
+                                i {
+                                    display: none
+                                }
+
+                                .checkmark {
+                                    @include show;
+
+                                    &__circle {
+                                        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+                                    }
+
+                                    &__check {
+                                        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+                                    }
+                                }
                             }
                         }
                     }

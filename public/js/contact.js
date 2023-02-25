@@ -31,12 +31,8 @@ if(contact_inputs.length > 0 && contact_submit) {
         contact_submit.classList.add('hover');
         
         window.resizeArrow = setTimeout(() => {
-            contact_inputs_arrow.style = 'max-width: 40px; left: 140px;';
-
-            setTimeout(() => {
-                contact_inputs_arrow.style = 'opacity: 1; max-width: 40px; left: 140px;';
-            }, 100);
-        }, 400);
+            contact_inputs_arrow.style = 'max-width: 40px; left: 140px';
+        }, 300);
     }
 
     function arrowOut() {
@@ -46,7 +42,7 @@ if(contact_inputs.length > 0 && contact_submit) {
             window.clearTimeout(resizeArrow);
         }
 
-        contact_inputs_arrow.style = 'left: 0px;';
+        contact_inputs_arrow.style = '';
     }
 
     contact_submit_btn.addEventListener("mouseenter", () => {
@@ -63,6 +59,28 @@ if(contact_inputs.length > 0 && contact_submit) {
 
     contact_submit_btn.addEventListener("focusout", () => {
         arrowOut();
+    });
+
+    contact_submit_btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        contact_submit.classList.add('pending');
+
+        fetch('./back/contact.php').then((response) => response.json()).then((result) => {
+            if(result.success) {
+                setTimeout(() => {
+                    contact_submit.classList.remove('pending');
+                    contact_submit.classList.add('success');
+
+                    setTimeout(() => {
+                        contact_submit.classList.remove('success');
+                    }, 4000);
+                }, 400);
+            } else {
+                setTimeout(() => {
+                    contact_submit.classList.remove('pending');
+                }, 400);
+            }
+        });
     });
 }
 

@@ -7,6 +7,20 @@
 @import url(../../node_modules/@fortawesome/fontawesome-free/css/regular.css);
 /* variables */
 /* mixin */
+/* animation */
+@keyframes rotate {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 /* nightmode */
 .night .formations-container .card * {
   color: black;
@@ -374,21 +388,21 @@ main section.portfolio .filters__btn {
   display: flex;
   align-items: center;
   background: var(--light-gray);
+  border: 2px solid var(--background);
   border-radius: 50px;
   max-width: 140px;
   padding: 10px;
   gap: 10px;
   overflow: hidden;
   transition: 400ms;
-  border: none;
   font-family: inherit;
   font-size: 16px;
   cursor: pointer;
 }
 main section.portfolio .filters__btn.selected {
   transition: none;
-  outline: 1px solid var(--main-color);
-  background: transparent;
+  outline: none;
+  border: 2px solid var(--main-color);
 }
 main section.portfolio .filters__btn img {
   width: 16px;
@@ -493,13 +507,14 @@ main section.contact .contact-form__inputs__header div input {
   padding: 20px;
   font-size: 16px;
   background: var(--light-gray);
-  border: none;
+  border: 2px solid var(--background);
   border-radius: 100px;
   padding: 20px 20px;
-  transition: background 400ms, color 400ms, padding 400ms;
+  transition: 400ms;
 }
 main section.contact .contact-form__inputs__header div input:focus-visible {
-  outline: 1px solid var(--main-color);
+  outline: none;
+  border: 2px solid var(--main-color);
   background: transparent;
 }
 main section.contact .contact-form__inputs__header div label {
@@ -537,6 +552,7 @@ main section.contact .contact-form__inputs__content {
   display: flex;
   flex-direction: column;
   position: relative;
+  border-radius: 20px;
 }
 main section.contact .contact-form__inputs__content label {
   position: absolute;
@@ -564,7 +580,8 @@ main section.contact .contact-form__inputs__content textarea {
   transition: background 400ms, color 400ms, padding 400ms;
 }
 main section.contact .contact-form__inputs__content textarea:focus-visible {
-  outline: 1px solid var(--main-color);
+  outline: none;
+  border: 2px solid var(--main-color);
   background: transparent;
 }
 main section.contact .contact-form__inputs__content.not-empty label, main section.contact .contact-form__inputs__content.focus label {
@@ -600,6 +617,7 @@ main section.contact .contact-form__inputs__submit button {
   padding: 0;
   background: var(--main-color);
   cursor: pointer;
+  font-size: 16px;
 }
 main section.contact .contact-form__inputs__submit button:focus-visible {
   outline: none;
@@ -608,14 +626,14 @@ main section.contact .contact-form__inputs__submit__arrow {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 100px;
-  left: var(--left-value);
+  left: 0px;
   top: 50%;
   width: 100%;
   height: 40px;
   max-width: 40px;
   margin: 0px 10px;
   transform: translateY(-50%);
-  transition: 400ms;
+  transition: 200ms;
   overflow: hidden;
   font-weight: 600;
   pointer-events: none;
@@ -624,13 +642,72 @@ main section.contact .contact-form__inputs__submit__arrow i {
   position: absolute;
   top: 50%;
   right: 0;
-  padding: 14px;
+  padding: 12px;
   width: fit-content;
   transform: translateY(-50%);
 }
+main section.contact .contact-form__inputs__submit__arrow i.fa-spinner {
+  animation: rotate 2s infinite linear;
+  display: none;
+}
+main section.contact .contact-form__inputs__submit__arrow i.fa-check {
+  display: none;
+}
+main section.contact .contact-form__inputs__submit__arrow .checkmark {
+  visibility: hidden;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke: var(--black);
+  stroke-miterlimit: 10;
+}
+main section.contact .contact-form__inputs__submit__arrow .checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  stroke: var(--black);
+  fill: none;
+}
+main section.contact .contact-form__inputs__submit__arrow .checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+}
 main section.contact .contact-form__inputs__submit.hover div {
+  left: 0px;
   backdrop-filter: blur(2px);
   max-width: 90%;
+}
+main section.contact .contact-form__inputs__submit.pending div {
+  left: 140px;
+  max-width: 40px;
+}
+main section.contact .contact-form__inputs__submit.pending div i {
+  display: none;
+}
+main section.contact .contact-form__inputs__submit.pending div i.fa-spinner {
+  display: block;
+}
+main section.contact .contact-form__inputs__submit.success div {
+  left: 140px;
+  max-width: 40px;
+}
+main section.contact .contact-form__inputs__submit.success div i {
+  display: none;
+}
+main section.contact .contact-form__inputs__submit.success div .checkmark {
+  visibility: visible;
+  opacity: 1;
+}
+main section.contact .contact-form__inputs__submit.success div .checkmark__circle {
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+main section.contact .contact-form__inputs__submit.success div .checkmark__check {
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
 main .see-my-work {
   display: flex;

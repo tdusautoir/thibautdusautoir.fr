@@ -29,7 +29,7 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
 }
 
 strong {
@@ -78,7 +78,7 @@ section:hover h2{
     --gray : #dedede;
     --littledark-gray: #131b24;
     --light-gray: #293340;
-    --black: #4f4f4f;
+    --black: #ffffff;
     --background: #1c2633;
 }
 
