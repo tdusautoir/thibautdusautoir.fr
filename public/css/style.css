@@ -16,6 +16,25 @@
     transform: translateY(-50%) rotate(360deg);
   }
 }
+@keyframes slideIn {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-40px);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
 @keyframes stroke {
   100% {
     stroke-dashoffset: 0;
@@ -236,6 +255,8 @@
   padding: 10px;
   border-radius: 100px;
   z-index: 1;
+  transition: 400ms;
+  animation: slideIn 600ms;
 }
 .toast--success {
   border: 2px solid var(--success);
@@ -282,6 +303,9 @@
   transform-origin: 50% 50%;
   stroke-dasharray: 48;
   stroke-dashoffset: 0;
+}
+.toast.remove {
+  animation: slideOut 600ms ease-in-out;
 }
 
 main {

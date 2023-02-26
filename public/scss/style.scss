@@ -37,6 +37,27 @@ $fast_transition: 200ms;
     }
 }
 
+@keyframes slideIn {
+    from {
+      transform: translateX(500px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0px);
+    }
+    75%{
+        transform: translateX(-40px);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
 @keyframes stroke {
     100% {
         stroke-dashoffset: 0;
@@ -293,6 +314,8 @@ $fast_transition: 200ms;
     padding: 10px;
     border-radius: 100px;
     z-index: 1;
+    transition: $transition;
+    animation: slideIn $slow_transition;
 
     &--success {
         border: 2px solid var(--success);
@@ -350,6 +373,10 @@ $fast_transition: 200ms;
             stroke-dasharray: 48;
             stroke-dashoffset: 0;
         }
+    }
+
+    &.remove {
+        animation: slideOut $slow_transition ease-in-out;
     }
 }
 
@@ -927,6 +954,7 @@ main {
                                 i {
                                     display: none
                                 }
+
 
                                 .checkmark {
                                     @include show;
