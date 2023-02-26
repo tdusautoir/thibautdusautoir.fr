@@ -245,7 +245,7 @@
 }
 
 .toast {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 20px;
   position: absolute;
@@ -256,9 +256,10 @@
   border-radius: 100px;
   z-index: 1;
   transition: 400ms;
-  animation: slideIn 600ms;
 }
 .toast--success {
+  display: flex;
+  animation: slideIn 600ms;
   border: 2px solid var(--success);
   background: rgba(3, 197, 0, 0.3725490196);
 }
@@ -272,6 +273,8 @@
   stroke: var(--success);
 }
 .toast--danger {
+  display: flex;
+  animation: slideIn 600ms;
   border: 2px solid var(--danger);
   background: rgba(255, 0, 0, 0.2);
 }

@@ -304,7 +304,7 @@ $fast_transition: 200ms;
 }
 
 .toast {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 20px;
     position: absolute;
@@ -315,9 +315,10 @@ $fast_transition: 200ms;
     border-radius: 100px;
     z-index: 1;
     transition: $transition;
-    animation: slideIn $slow_transition;
 
     &--success {
+        display: flex;
+        animation: slideIn $slow_transition;
         border: 2px solid var(--success);
         background: #03c5005f;
 
@@ -335,6 +336,8 @@ $fast_transition: 200ms;
     }
 
     &--danger {
+        display: flex;
+        animation: slideIn $slow_transition;
         border: 2px solid var(--danger);
         background: #ff000033;
 
