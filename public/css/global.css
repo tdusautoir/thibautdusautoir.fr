@@ -112,6 +112,10 @@ section:hover h2{
     filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(235deg) brightness(106%) contrast(109%);
 }
 
+.night main section.contact .contact-form__inputs__submit__arrow {
+    background-color: #1c26338a;
+}
+
 /* icons */
 
 main img, main i {

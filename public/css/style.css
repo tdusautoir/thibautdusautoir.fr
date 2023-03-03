@@ -559,11 +559,51 @@ main section.portfolio:hover h2 {
   background-size: 100% 100%;
 }
 main section.about-me {
-  margin-bottom: 200px;
+  margin-bottom: 40px;
 }
 main section.about-me h2 {
   font-size: 26px;
   font-weight: 600;
+}
+main section.about-me .slideshow {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+main section.about-me .slideshow__imgs {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  gap: 20px;
+}
+main section.about-me .slideshow__imgs__img {
+  height: 100%;
+  border-radius: 10px;
+}
+main section.about-me .slideshow__locations {
+  position: absolute;
+  margin: 10px;
+  padding: 10px;
+  bottom: 0;
+  border-radius: 5px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 20px;
+  background: var(--light-gray);
+  transition: background 400ms, max-width 400ms;
+}
+main section.about-me .slideshow__locations__location {
+  width: fit-content;
+  white-space: nowrap;
+  transition: opacity 400ms color 400ms;
+  visibility: hidden;
+  opacity: 0;
+}
+main section.about-me .slideshow__locations__location.visible {
+  visibility: visible;
+  opacity: 1;
 }
 main section.contact h2 {
   font-size: 26px;

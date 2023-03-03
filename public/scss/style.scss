@@ -679,11 +679,55 @@ main {
         }
 
         &.about-me {
-            margin-bottom: 200px;
+            margin-bottom: 40px;
 
             h2 {
                 font-size: 26px;
                 font-weight: 600;
+            }
+
+            .slideshow {
+                position: relative;
+                overflow: hidden;
+                height: 400px;
+
+                &__imgs {
+                    height: 100%;
+                    display: flex;
+                    overflow: hidden;
+                    gap: 20px;
+
+                    &__img {
+                        height: 100%;
+                        border-radius: 10px;
+                    }
+                }
+
+                &__locations {
+                    position: absolute;
+                    margin: 10px;
+                    padding: 10px;
+                    bottom: 0;
+                    border-radius: 5px;
+                    height: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    gap: 20px;
+                    background: var(--light-gray);
+                    transition: background $transition, max-width $transition;
+
+                    &__location {
+                        width: fit-content;
+                        white-space: nowrap;
+                        transition: opacity $transition color $transition;
+                        @include hide;
+
+                        &.visible {
+                            @include show;
+                        }
+                    }
+                }
             }
         }
 
