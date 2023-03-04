@@ -565,10 +565,21 @@ main section.about-me h2 {
   font-size: 26px;
   font-weight: 600;
 }
+main section.about-me .resume {
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 10px;
+  line-height: 26px;
+}
 main section.about-me .slideshow {
   position: relative;
   overflow: hidden;
   height: 400px;
+  border-radius: 10px;
+  transition: 400ms;
+}
+main section.about-me .slideshow:hover {
+  box-shadow: 0 0 0 8px var(--background), 0 0 0 11px var(--main-color);
 }
 main section.about-me .slideshow__imgs {
   height: 100%;
@@ -1002,6 +1013,25 @@ footer.bottom {
   main section.portfolio .portfolio-container {
     max-width: 744px;
   }
+  main section.about-me {
+    margin-top: 100px;
+  }
+  main section.about-me .slideshow {
+    height: 300px;
+  }
+  main section.contact .contact-form {
+    padding: 20px;
+  }
+  main section.contact .contact-form__inputs {
+    flex-direction: column;
+    gap: 30px;
+  }
+  main section.contact .contact-form__inputs__header {
+    gap: 30px;
+  }
+  main section.contact .contact-form__inputs__content {
+    height: 200px;
+  }
   footer {
     margin-bottom: 100px;
   }
@@ -1047,6 +1077,9 @@ footer.bottom {
   main section.formations .formations-container .card {
     flex-direction: column;
     padding: 15px;
+  }
+  main section.about-me .slideshow {
+    height: 200px;
   }
   main .see-my-work p {
     font-size: 20px;

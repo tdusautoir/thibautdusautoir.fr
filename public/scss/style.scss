@@ -686,10 +686,23 @@ main {
                 font-weight: 600;
             }
 
+            .resume {
+                margin: 20px 0;
+                padding: 30px;
+                border-radius: 10px;
+                line-height: 26px;
+            }
+
             .slideshow {
                 position: relative;
                 overflow: hidden;
                 height: 400px;
+                border-radius: 10px;
+                transition: $transition;
+
+                &:hover {
+                    box-shadow: 0 0 0 8px var(--background), 0 0 0 11px var(--main-color);
+                }
 
                 &__imgs {
                     height: 100%;
@@ -1252,6 +1265,33 @@ footer {
                     max-width: 744px;
                 }
             }
+
+            &.about-me {
+                margin-top: 100px;
+
+                .slideshow {
+                    height: 300px;
+                }
+            }
+
+            &.contact {
+                .contact-form {
+                    padding: 20px;
+
+                    &__inputs {
+                        flex-direction: column;
+                        gap: 30px;
+
+                        &__header {
+                            gap: 30px;
+                        }
+
+                        &__content {
+                            height: 200px;
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -1327,6 +1367,13 @@ footer {
                     }
                 }
             }
+
+            &.about-me {
+                .slideshow {
+                    height: 200px;
+                }
+            }
+
         }
 
         .see-my-work {
