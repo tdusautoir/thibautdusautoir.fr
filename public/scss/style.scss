@@ -260,8 +260,13 @@ $fast_transition: 200ms;
     font-size: 18px;
     transition: $fast_transition;
 
-    h1 {
-        transition: $transition;
+    &__breadcrumb {
+        font-weight: 600;
+        display: flex;
+
+        a {
+            font-weight: 400;
+        }
     }
 
     &__icons {
@@ -394,6 +399,8 @@ main {
 
     section {
         &.profil {
+            height: 80vh;
+
             h2 {
                 @include hide;
             }
@@ -499,7 +506,7 @@ main {
 
         &.skills {
             margin-top: -50px;
-            padding-top: 80px;
+            padding-top: 100px;
 
             .skills-container {
                 display: flex;
@@ -523,7 +530,7 @@ main {
 
         &.formations {
             margin-top: -50px;
-            padding-top: 50px;
+            padding-top: 80px;
 
             .formations-container {
                 display: flex;

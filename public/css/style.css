@@ -206,8 +206,12 @@
   font-size: 18px;
   transition: 200ms;
 }
-.header h1 {
-  transition: 400ms;
+.header__breadcrumb {
+  font-weight: 600;
+  display: flex;
+}
+.header__breadcrumb a {
+  font-weight: 400;
 }
 .header__icons {
   display: flex;
@@ -319,6 +323,9 @@ main {
 main.work {
   margin: 20px 0;
 }
+main section.profil {
+  height: 80vh;
+}
 main section.profil h2 {
   visibility: hidden;
   opacity: 0;
@@ -409,7 +416,7 @@ main section.experiences .experiences-container__cards .card__stack__language:ho
 }
 main section.skills {
   margin-top: -50px;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 main section.skills .skills-container {
   display: flex;
@@ -429,7 +436,7 @@ main section.skills .skills-container img {
 }
 main section.formations {
   margin-top: -50px;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 main section.formations .formations-container {
   display: flex;
