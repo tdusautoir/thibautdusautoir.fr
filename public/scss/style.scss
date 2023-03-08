@@ -416,12 +416,13 @@ main {
     section {
         &.profil {
             transition: 400ms;
+
             .profil-container {
                 display: flex;
                 flex-direction: column;
                 gap: 26px;
                 border-radius: 5px;
-                font-size: 42px;
+                font-size: 36px;
                 font-weight: 500;
                 text-align: center;
                 align-items: center;
@@ -1233,6 +1234,18 @@ footer {
 
     main {
         section {
+            &.profil {
+                .profil-container {
+                    font-size: 32px;
+                    
+                    .profil-container__text {
+                        strong {
+                            font-size: 42px;
+                        }
+                    }
+                }
+            }
+
             &.experiences {
                 .experiences-container {
                     &__cards {
@@ -1316,6 +1329,18 @@ footer {
         margin: 0 0 60px 0;
 
         section {
+            &.profil {
+                .profil-container {
+                    font-size: 24px;
+
+                    .profil-container__text {
+                        strong {
+                            font-size: 36px;
+                        }
+                    }
+                }
+            }
+
             &.experiences {
                 .experiences-target {
                     top: -40px;
@@ -1403,7 +1428,22 @@ footer {
                 margin-top: 40px;
                     
                 .profil-container {
-                    padding: 20px;
+                    .profil-container__text {
+                        strong {
+                            display: block;
+                        }
+                    }
+                }
+
+                .blur-circle-1 {
+                    width: 150px;
+                    height: 150px;
+                    left: 0;
+                    filter: blur(75px);
+                }
+
+                .blur-circle-1 {
+                    right: 0;
                 }
             }
 

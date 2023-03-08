@@ -342,7 +342,7 @@ main section.profil .profil-container {
   flex-direction: column;
   gap: 26px;
   border-radius: 5px;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 500;
   text-align: center;
   align-items: center;
@@ -1015,6 +1015,12 @@ footer.bottom {
   .header__nav--sticky .header__nav__link__container {
     transform: inherit;
   }
+  main section.profil .profil-container {
+    font-size: 32px;
+  }
+  main section.profil .profil-container .profil-container__text strong {
+    font-size: 42px;
+  }
   main section.experiences .experiences-container__cards .card {
     flex-direction: column;
     gap: 20px;
@@ -1068,6 +1074,12 @@ footer.bottom {
   }
   main {
     margin: 0 0 60px 0;
+  }
+  main section.profil .profil-container {
+    font-size: 24px;
+  }
+  main section.profil .profil-container .profil-container__text strong {
+    font-size: 36px;
   }
   main section.experiences .experiences-target {
     top: -40px;
@@ -1125,8 +1137,17 @@ footer.bottom {
   main section.profil {
     margin-top: 40px;
   }
-  main section.profil .profil-container {
-    padding: 20px;
+  main section.profil .profil-container .profil-container__text strong {
+    display: block;
+  }
+  main section.profil .blur-circle-1 {
+    width: 150px;
+    height: 150px;
+    left: 0;
+    filter: blur(75px);
+  }
+  main section.profil .blur-circle-1 {
+    right: 0;
   }
   main section.experiences {
     padding: 20px;
