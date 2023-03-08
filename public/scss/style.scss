@@ -85,7 +85,7 @@ $fast_transition: 200ms;
     right: 0;
     margin: 0 auto;
     gap: 20px;
-    z-index: 1;
+    z-index: 2;
 
     &__link__container {
         display: flex;
@@ -95,7 +95,7 @@ $fast_transition: 200ms;
         border-radius: 50px;
         background: #eae7e7;
         transition: $transition;
-        z-index: 1;
+        z-index: 2;
         gap: 30px;
 
         #nav-highlight {
@@ -249,6 +249,14 @@ $fast_transition: 200ms;
             transition: $fast_transition;
         }
     }
+
+    &--work {
+        .header__nav {
+            &__link__container {
+                transform: translateX(0px)!important;
+            }
+        }
+    }
 }
 
 .header {
@@ -393,25 +401,90 @@ main {
     flex-direction: column;
     margin: 60px 0;
 
-    &.work {
-        margin: 20px 0;
+    h1 {
+        @include hide;
+    }
+
+    .hero-banner {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
 
     section {
         &.profil {
-            height: 80vh;
+            transition: 400ms;
+            .profil-container {
+                display: flex;
+                flex-direction: column;
+                gap: 26px;
+                border-radius: 5px;
+                font-size: 42px;
+                font-weight: 500;
+                text-align: center;
+                align-items: center;
+                gap: 100px;
 
-            h2 {
-                @include hide;
+                &__text {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 10px;
+                    z-index: 1;
+
+                    strong {
+                        font-weight: 700;
+                        font-size: 48px;
+                        border-radius: 10px;
+                        color: var(--main-color);
+                    }
+                }
+
+                &__memoji {
+                    width: 100px;
+                    height: 100px;
+                    padding: 0;
+                    margin: 0;
+                    border-radius: 120px;
+                    border: none;
+                    background: var(--light-main-color);
+                    transition: $transition;
+                    cursor: pointer;
+                    z-index: 1;
+                    
+                    &:hover {
+                        box-shadow: 0 0 0 8px var(--background), 0 0 0 11px var(--light-main-color);
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
 
-            .profil-container {
-                padding: 30px;
-                border-radius: 5px;
+            .blur-circle {
+                position: absolute;
+                border-radius: 100px;
+                background: var(--main-color);
 
-                p {
-                    letter-spacing: 0.5px;
-                    line-height: 26px;
+                &-1 {
+                    width: 250px;
+                    height: 250px;
+                    bottom: 20%;
+                    left: 15%;
+                    filter: blur(125px);
+                }
+
+                &-2 {
+                    width: 150px;
+                    height: 150px;
+                    right: 20%;
+                    top: 5%;
+                    filter: blur(75px);
                 }
             }
         }
@@ -420,6 +493,16 @@ main {
             background: #00000005;
             border-radius: 5px;
             padding: 30px;
+            position: relative;
+
+            .experiences-target {
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                display: block;
+                top: -100px;
+                @include hide;
+            }
 
             .experiences-container {
                 display: flex;
@@ -506,7 +589,7 @@ main {
 
         &.skills {
             margin-top: -50px;
-            padding-top: 100px;
+            padding-top: 120px;
 
             .skills-container {
                 display: flex;
@@ -530,7 +613,7 @@ main {
 
         &.formations {
             margin-top: -50px;
-            padding-top: 80px;
+            padding-top: 100px;
 
             .formations-container {
                 display: flex;
@@ -560,12 +643,12 @@ main {
         }
 
         &.portfolio {
+            margin-top: 40px;
+
             h2 {
                 display: block;
                 width: fit-content;
                 margin: 0 auto;
-                font-size: 32px;
-                font-weight: 600;
                 margin-bottom: 40px;
             }
 
@@ -686,12 +769,8 @@ main {
         }
 
         &.about-me {
+            margin-top: 40px;
             margin-bottom: 40px;
-
-            h2 {
-                font-size: 26px;
-                font-weight: 600;
-            }
 
             .resume {
                 margin: 20px 0;
@@ -752,11 +831,6 @@ main {
         }
 
         &.contact {
-            h2 {
-                font-size: 26px;
-                font-weight: 600;
-            }
-
             .contact-form {
                 margin-top: 40px;
                 padding: 40px;
@@ -1047,6 +1121,7 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        margin: 40px 0;
 
         p {
             font-weight: 600;
@@ -1180,8 +1255,6 @@ footer {
             }
 
             &.portfolio {
-                margin-top: 60px;
-
                 .portfolio-container {
                     max-width: 744px;
                     justify-content: center;
@@ -1202,6 +1275,10 @@ footer {
         top: inherit;
         bottom: 20px;
         transform: translateX(-32px);
+
+        &--work {
+            transform: none;
+        }
 
         &__link__container {
             padding: 10px 30px;
@@ -1240,6 +1317,10 @@ footer {
 
         section {
             &.experiences {
+                .experiences-target {
+                    top: -40px;
+                }
+
                 .experiences-container {
                     &__cards {
                         .card {
@@ -1268,6 +1349,8 @@ footer {
             }
 
             &.portfolio {
+                margin-top: 100px;
+
                 .portfolio-container {
                     max-width: 744px;
                 }

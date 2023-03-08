@@ -59,7 +59,7 @@
   right: 0;
   margin: 0 auto;
   gap: 20px;
-  z-index: 1;
+  z-index: 2;
 }
 .header__nav__link__container {
   display: flex;
@@ -69,7 +69,7 @@
   border-radius: 50px;
   background: #eae7e7;
   transition: 400ms;
-  z-index: 1;
+  z-index: 2;
   gap: 30px;
 }
 .header__nav__link__container #nav-highlight {
@@ -196,6 +196,9 @@
   opacity: 0;
   transition: 200ms;
 }
+.header__nav--work .header__nav__link__container {
+  transform: translateX(0px) !important;
+}
 
 .header {
   position: sticky;
@@ -320,28 +323,97 @@ main {
   flex-direction: column;
   margin: 60px 0;
 }
-main.work {
-  margin: 20px 0;
-}
-main section.profil {
-  height: 80vh;
-}
-main section.profil h2 {
+main h1 {
   visibility: hidden;
   opacity: 0;
 }
-main section.profil .profil-container {
-  padding: 30px;
-  border-radius: 5px;
+main .hero-banner {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-main section.profil .profil-container p {
-  letter-spacing: 0.5px;
-  line-height: 26px;
+main section.profil {
+  transition: 400ms;
+}
+main section.profil .profil-container {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  border-radius: 5px;
+  font-size: 42px;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
+  gap: 100px;
+}
+main section.profil .profil-container__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+main section.profil .profil-container__text strong {
+  font-weight: 700;
+  font-size: 48px;
+  border-radius: 10px;
+  color: var(--main-color);
+}
+main section.profil .profil-container__memoji {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  border-radius: 120px;
+  border: none;
+  background: var(--light-main-color);
+  transition: 400ms;
+  cursor: pointer;
+  z-index: 1;
+}
+main section.profil .profil-container__memoji:hover {
+  box-shadow: 0 0 0 8px var(--background), 0 0 0 11px var(--light-main-color);
+}
+main section.profil .profil-container__memoji img {
+  width: 100%;
+  height: 100%;
+}
+main section.profil .blur-circle {
+  position: absolute;
+  border-radius: 100px;
+  background: var(--main-color);
+}
+main section.profil .blur-circle-1 {
+  width: 250px;
+  height: 250px;
+  bottom: 20%;
+  left: 15%;
+  filter: blur(125px);
+}
+main section.profil .blur-circle-2 {
+  width: 150px;
+  height: 150px;
+  right: 20%;
+  top: 5%;
+  filter: blur(75px);
 }
 main section.experiences {
   background: rgba(0, 0, 0, 0.0196078431);
   border-radius: 5px;
   padding: 30px;
+  position: relative;
+}
+main section.experiences .experiences-target {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  display: block;
+  top: -100px;
+  visibility: hidden;
+  opacity: 0;
 }
 main section.experiences .experiences-container {
   display: flex;
@@ -416,7 +488,7 @@ main section.experiences .experiences-container__cards .card__stack__language:ho
 }
 main section.skills {
   margin-top: -50px;
-  padding-top: 100px;
+  padding-top: 120px;
 }
 main section.skills .skills-container {
   display: flex;
@@ -436,7 +508,7 @@ main section.skills .skills-container img {
 }
 main section.formations {
   margin-top: -50px;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 main section.formations .formations-container {
   display: flex;
@@ -460,12 +532,13 @@ main section.formations .formations-container .card__description {
 main section.formations .formations-container .card__description h3 {
   font-weight: 600;
 }
+main section.portfolio {
+  margin-top: 40px;
+}
 main section.portfolio h2 {
   display: block;
   width: fit-content;
   margin: 0 auto;
-  font-size: 32px;
-  font-weight: 600;
   margin-bottom: 40px;
 }
 main section.portfolio .filters {
@@ -566,11 +639,8 @@ main section.portfolio:hover h2 {
   background-size: 100% 100%;
 }
 main section.about-me {
+  margin-top: 40px;
   margin-bottom: 40px;
-}
-main section.about-me h2 {
-  font-size: 26px;
-  font-weight: 600;
 }
 main section.about-me .resume {
   margin: 20px 0;
@@ -622,10 +692,6 @@ main section.about-me .slideshow__locations__location {
 main section.about-me .slideshow__locations__location.visible {
   visibility: visible;
   opacity: 1;
-}
-main section.contact h2 {
-  font-size: 26px;
-  font-weight: 600;
 }
 main section.contact .contact-form {
   margin-top: 40px;
@@ -858,6 +924,7 @@ main .see-my-work {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin: 40px 0;
 }
 main .see-my-work p {
   font-weight: 600;
@@ -958,9 +1025,6 @@ footer.bottom {
   main section.formations .formations-container .card {
     width: inherit;
   }
-  main section.portfolio {
-    margin-top: 60px;
-  }
   main section.portfolio .portfolio-container {
     max-width: 744px;
     justify-content: center;
@@ -976,6 +1040,9 @@ footer.bottom {
     top: inherit;
     bottom: 20px;
     transform: translateX(-32px);
+  }
+  .header__nav--work {
+    transform: none;
   }
   .header__nav__link__container {
     padding: 10px 30px;
@@ -1002,6 +1069,9 @@ footer.bottom {
   main {
     margin: 0 0 60px 0;
   }
+  main section.experiences .experiences-target {
+    top: -40px;
+  }
   main section.experiences .experiences-container__cards .card__stack {
     position: inherit;
     flex-wrap: wrap;
@@ -1016,6 +1086,9 @@ footer.bottom {
   }
   main section.skills .skills-container {
     margin: 50px 10%;
+  }
+  main section.portfolio {
+    margin-top: 100px;
   }
   main section.portfolio .portfolio-container {
     max-width: 744px;
