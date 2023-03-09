@@ -49,7 +49,7 @@ section {
     transition: 400ms;
 }
 
-section h2 {
+section h2, h1 {
     font-size: 18px;
     display: inline-block;
     margin-bottom: 4px;

@@ -439,11 +439,11 @@ main section.experiences .experiences-container__cards .card__time {
 }
 main section.experiences .experiences-container__cards .card__description {
   flex-basis: 80%;
-  line-height: 20px;
+  line-height: 1.4;
 }
 main section.experiences .experiences-container__cards .card__description__title {
   margin-bottom: 40px;
-  line-height: 20px;
+  line-height: 1.4;
 }
 main section.experiences .experiences-container__cards .card__description__title p {
   color: var(--dark-gray);
@@ -534,12 +534,15 @@ main section.formations .formations-container .card__description h3 {
 }
 main section.portfolio {
   margin-top: 40px;
+  min-height: 60vh;
 }
-main section.portfolio h2 {
+main section.portfolio h1 {
   display: block;
   width: fit-content;
   margin: 0 auto;
   margin-bottom: 40px;
+  visibility: visible;
+  opacity: 1;
 }
 main section.portfolio .filters {
   display: flex;
@@ -643,12 +646,13 @@ main section.about-me {
   margin-bottom: 40px;
 }
 main section.about-me .resume {
-  margin: 20px 0;
+  display: none;
   padding: 30px;
   border-radius: 10px;
-  line-height: 26px;
+  line-height: 1.4;
 }
 main section.about-me .slideshow {
+  margin-top: 40px;
   position: relative;
   overflow: hidden;
   height: 400px;
@@ -918,6 +922,138 @@ main section.contact .contact-form__inputs__submit.success div .checkmark__circl
 }
 main section.contact .contact-form__inputs__submit.success div .checkmark__check {
   animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+main section.project {
+  margin-top: 40px;
+}
+main section.project h1 {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+main section.project .project-stacks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+main section.project .project-stacks__language {
+  background-color: gray;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--light-gray);
+  border: 2px solid var(--background);
+  border-radius: 50px;
+  max-width: 140px;
+  padding: 10px;
+  gap: 10px;
+  overflow: hidden;
+  transition: 400ms;
+  font-family: inherit;
+  font-size: 16px;
+}
+main section.project .project-stacks__language::after {
+  content: attr(data-filter);
+}
+main section.project .project-info__resume {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+main section.project .project-info__resume__site {
+  width: 70%;
+}
+main section.project .project-info__resume__site p {
+  line-height: 1.4;
+}
+main section.project .project-info__resume__site a {
+  text-decoration: underline;
+}
+main section.project .project-info__resume__features {
+  width: 30%;
+  background-color: var(--light-main-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+main section.project .project-info__resume__features h2 {
+  background: none;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+main section.project .project-info__resume__features ul {
+  line-height: 1.4;
+}
+main section.project .project-info__resume__features ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main section.project .project-info__resume__features ul li::before {
+  content: "";
+  display: block;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+main section.project .project-info__site {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+main section.project .project-info__site__images {
+  height: 450px;
+  width: 750px;
+  border: 2px solid var(--light-gray);
+  border-radius: 10px;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.project .project-info__site__images img {
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  max-height: 0;
+  transition: 400ms;
+}
+main section.project .project-info__site__images img.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+  max-height: fit-content;
+}
+main section.project .project-info__site__navigation {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  gap: 40px;
+  margin-left: 40px;
+}
+main section.project .project-info__site__navigation button {
+  font-size: 18px;
+  padding: 0px;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  width: fit-content;
+  padding-bottom: 4px;
+  background-color: var(--light-gray);
+  padding: 10px 20px;
+  border-radius: 100px;
+  transition: 200ms;
+}
+main section.project .project-info__site__navigation button.selected {
+  background-color: var(--light-main-color);
 }
 main .see-my-work {
   display: flex;

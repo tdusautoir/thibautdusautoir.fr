@@ -530,11 +530,11 @@ main {
 
                         &__description {
                             flex-basis: 80%;
-                            line-height: 20px;
+                            line-height: 1.4;
 
                             &__title {
                                 margin-bottom: 40px;
-                                line-height: 20px;
+                                line-height: 1.4;
 
                                 p {
                                     color: var(--dark-gray);
@@ -645,12 +645,14 @@ main {
 
         &.portfolio {
             margin-top: 40px;
+            min-height: 60vh;
 
-            h2 {
+            h1 {
                 display: block;
                 width: fit-content;
                 margin: 0 auto;
                 margin-bottom: 40px;
+                @include show;
             }
 
             .filters {
@@ -774,13 +776,14 @@ main {
             margin-bottom: 40px;
 
             .resume {
-                margin: 20px 0;
+                display: none;
                 padding: 30px;
                 border-radius: 10px;
-                line-height: 26px;
+                line-height: 1.4;
             }
 
             .slideshow {
+                margin-top: 40px;
                 position: relative;
                 overflow: hidden;
                 height: 400px;
@@ -1109,6 +1112,162 @@ main {
                                         animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
                                     }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.project {
+            margin-top: 40px;
+
+            h1 {
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+                margin-bottom: 40px;
+                @include show;
+            }
+            
+            .project-stacks {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 60px;
+                flex-wrap: wrap;
+
+                &__language {
+                    background-color: gray;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    background: var(--light-gray);
+                    border: 2px solid var(--background);
+                    border-radius: 50px;
+                    max-width: 140px;
+                    padding: 10px;
+                    gap: 10px;
+                    overflow: hidden;
+                    transition: $transition;
+                    font-family: inherit;
+                    font-size: 16px;
+
+                    &::after {
+                        content: attr(data-filter);
+                    }
+                }
+            }
+
+            .project-info {
+
+                &__resume {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 40px;
+
+                    &__site {
+                        width: 70%;
+
+                        p {
+                            line-height: 1.4;
+                        }
+    
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &__features {
+                        width: 30%;
+                        background-color: var(--light-main-color);
+                        padding: 20px;
+                        border-radius: 10px;
+                        
+                        h2 {
+                            background: none;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                            font-size: 16px;
+                        }
+    
+                        ul {
+                            line-height: 1.4;
+                            
+                            li {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    background-color: black;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__site {
+                    margin-top: 60px;
+                    display: flex;
+                    justify-content: center;
+                    
+                    &__images {
+                        height: 450px;
+                        width: 750px;
+                        border: 2px solid var(--light-gray);
+                        border-radius: 10px;
+                        overflow: scroll;
+                        display: flex;
+                        flex-wrap: wrap;
+    
+                        img {
+                            width: 100%;
+                            @include hide;
+                            transform: translateY(-20px);
+                            max-height: 0;
+                            transition: $transition;
+
+                            &.show {
+                                @include show;
+                                transform: translateY(0px);
+                                max-height: fit-content;
+                            }
+                        }
+                    }
+
+                    &__navigation {
+                        width: 20%;
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding: 10px;
+                        gap: 40px;
+                        margin-left: 40px;
+
+                        button {
+                            font-size: 18px;
+                            padding: 0px;
+                            border: none;
+                            text-align: left;
+                            cursor: pointer;
+                            width: fit-content;
+                            padding-bottom: 4px;
+                            background-color: var(--light-gray);
+                            padding: 10px 20px;
+                            border-radius: 100px;
+                            // background: linear-gradient(to top, var(--main-color) 0%, var(--main-color) 2px, transparent 2px) no-repeat;
+                            // background-size: 100% 100%;
+                            transition: $fast_transition;
+
+                            &.selected {
+                                // border: 2px solid var(--light-main-color);
+                                background-color: var(--light-main-color);
                             }
                         }
                     }
