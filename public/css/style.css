@@ -207,7 +207,7 @@
   justify-content: space-between;
   top: 50px;
   font-size: 18px;
-  transition: 200ms;
+  transition: opacity 400ms;
 }
 .header__breadcrumb {
   font-weight: 600;
@@ -215,6 +215,10 @@
 }
 .header__breadcrumb a {
   font-weight: 400;
+  transition: 400ms;
+}
+.header__breadcrumb p {
+  transition: 400ms;
 }
 .header__icons {
   display: flex;
@@ -973,18 +977,21 @@ main section.project .project-info__resume__site p {
 }
 main section.project .project-info__resume__site a {
   text-decoration: underline;
+  transition: 400ms;
 }
 main section.project .project-info__resume__features {
   width: 30%;
   background-color: var(--light-main-color);
   padding: 20px;
   border-radius: 10px;
+  transition: 400ms;
 }
 main section.project .project-info__resume__features h2 {
   background: none;
   font-weight: 600;
   margin-bottom: 20px;
   font-size: 16px;
+  color: black;
 }
 main section.project .project-info__resume__features ul {
   line-height: 1.4;
@@ -993,6 +1000,7 @@ main section.project .project-info__resume__features ul li {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: black;
 }
 main section.project .project-info__resume__features ul li::before {
   content: "";
@@ -1015,19 +1023,18 @@ main section.project .project-info__site__images {
   overflow: scroll;
   display: flex;
   flex-wrap: wrap;
+  transition: 400ms;
 }
 main section.project .project-info__site__images img {
   width: 100%;
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-20px);
   max-height: 0;
   transition: 400ms;
 }
 main section.project .project-info__site__images img.show {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0px);
   max-height: fit-content;
 }
 main section.project .project-info__site__navigation {
@@ -1050,10 +1057,28 @@ main section.project .project-info__site__navigation button {
   background-color: var(--light-gray);
   padding: 10px 20px;
   border-radius: 100px;
-  transition: 200ms;
+  transition: 400ms;
 }
 main section.project .project-info__site__navigation button.selected {
+  color: black;
   background-color: var(--light-main-color);
+}
+main section.project .project-link {
+  display: flex;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  margin-top: 60px;
+  border: none;
+  background-color: var(--light-main-color);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main section.project .project-link i {
+  font-size: 24px;
+  color: black;
 }
 main .see-my-work {
   display: flex;
@@ -1175,6 +1200,14 @@ footer.bottom {
     width: 280px;
     height: 200px;
   }
+  main section.project .project-info__resume__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main section.project .project-info__site__images {
+    height: 300px;
+  }
 }
 @media screen and (max-width: 768px) {
   .header__nav {
@@ -1260,6 +1293,28 @@ footer.bottom {
   main section.contact .contact-form__inputs__content {
     height: 200px;
   }
+  main section.project .project-info__resume {
+    display: flex;
+    flex-direction: column;
+  }
+  main section.project .project-info__resume__site {
+    width: 100%;
+  }
+  main section.project .project-info__resume__features {
+    width: inherit;
+  }
+  main section.project .project-info__site {
+    flex-direction: column-reverse;
+  }
+  main section.project .project-info__site__images {
+    width: 100%;
+  }
+  main section.project .project-info__site__navigation {
+    width: 100%;
+    margin: 0;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
   footer {
     margin-bottom: 100px;
   }
@@ -1270,6 +1325,15 @@ footer.bottom {
   }
 }
 @media screen and (max-width: 480px) {
+  .header__breadcrumb {
+    overflow: hidden;
+    width: 60%;
+  }
+  .header__breadcrumb p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
   main section.profil {
     margin-top: 40px;
   }
@@ -1317,6 +1381,16 @@ footer.bottom {
   }
   main section.about-me .slideshow {
     height: 200px;
+  }
+  main section.project .project-info__site__images {
+    height: 200px;
+  }
+  main section.project .project-info__site__navigation {
+    gap: 10px;
+  }
+  main section.project .project-info__site__navigation button {
+    padding: 6px 10px;
+    font-size: 14px;
   }
   main .see-my-work p {
     font-size: 20px;

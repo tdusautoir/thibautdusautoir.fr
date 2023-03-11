@@ -266,7 +266,7 @@ $fast_transition: 200ms;
     justify-content: space-between;
     top: 50px;
     font-size: 18px;
-    transition: $fast_transition;
+    transition: opacity $transition;
 
     &__breadcrumb {
         font-weight: 600;
@@ -274,6 +274,11 @@ $fast_transition: 200ms;
 
         a {
             font-weight: 400;
+            transition: $transition;
+        }
+
+        p {
+            transition: $transition;
         }
     }
 
@@ -1160,7 +1165,6 @@ main {
             }
 
             .project-info {
-
                 &__resume {
                     display: flex;
                     justify-content: space-between;
@@ -1175,6 +1179,7 @@ main {
     
                         a {
                             text-decoration: underline;
+                            transition: $transition;
                         }
                     }
 
@@ -1183,12 +1188,14 @@ main {
                         background-color: var(--light-main-color);
                         padding: 20px;
                         border-radius: 10px;
+                        transition: $transition;
                         
                         h2 {
                             background: none;
                             font-weight: 600;
                             margin-bottom: 20px;
                             font-size: 16px;
+                            color: black;
                         }
     
                         ul {
@@ -1198,6 +1205,7 @@ main {
                                 display: flex;
                                 align-items: center;
                                 gap: 10px;
+                                color: black;
 
                                 &::before {
                                     content: '';
@@ -1225,17 +1233,16 @@ main {
                         overflow: scroll;
                         display: flex;
                         flex-wrap: wrap;
+                        transition: $transition;
     
                         img {
                             width: 100%;
                             @include hide;
-                            transform: translateY(-20px);
                             max-height: 0;
                             transition: $transition;
 
                             &.show {
                                 @include show;
-                                transform: translateY(0px);
                                 max-height: fit-content;
                             }
                         }
@@ -1261,16 +1268,33 @@ main {
                             background-color: var(--light-gray);
                             padding: 10px 20px;
                             border-radius: 100px;
-                            // background: linear-gradient(to top, var(--main-color) 0%, var(--main-color) 2px, transparent 2px) no-repeat;
-                            // background-size: 100% 100%;
-                            transition: $fast_transition;
+                            transition: $transition;
 
                             &.selected {
-                                // border: 2px solid var(--light-main-color);
+                                color: black;
                                 background-color: var(--light-main-color);
                             }
                         }
                     }
+                }
+            }
+
+            .project-link {
+                display: flex;
+                margin: 0 auto;
+                width: 80px;
+                height: 80px;
+                border-radius: 100px;
+                margin-top: 60px;
+                border: none;
+                background-color: var(--light-main-color);
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                i {
+                    font-size: 24px;
+                    color: black;
                 }
             }
         }
@@ -1437,6 +1461,25 @@ footer {
                     }
                 }
             }
+
+            &.project {
+                .project-info {
+                    &__resume {
+
+                        &__features {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                        }
+                    }
+
+                    &__site {
+                        &__images {
+                            height: 300px;
+                        }
+                    }
+                }
+            }
         }
     } 
 }
@@ -1566,6 +1609,38 @@ footer {
                     }
                 }
             }
+
+            &.project {
+                .project-info {
+                    &__resume {
+                        display: flex;
+                        flex-direction: column;
+
+                        &__site {
+                            width: 100%;
+                        }
+
+                        &__features {
+                            width: inherit;
+                        }
+                    }
+
+                    &__site {
+                        flex-direction: column-reverse;
+
+                        &__images {
+                            width: 100%;
+                        }
+
+                        &__navigation {
+                            width: 100%;
+                            margin: 0;
+                            flex-direction: row;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -1581,6 +1656,19 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    .header {
+        &__breadcrumb {
+            overflow: hidden;
+            width: 60%;
+
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
     main {
         section {
             &.profil {
@@ -1663,6 +1751,24 @@ footer {
                 }
             }
 
+            &.project {
+                .project-info {
+                    &__site {
+                        &__images {
+                            height: 200px;
+                        }
+
+                        &__navigation {
+                            gap: 10px;
+
+                            button {
+                                padding: 6px 10px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .see-my-work {
