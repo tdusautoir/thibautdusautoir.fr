@@ -974,6 +974,7 @@ main section.project .project-info__resume__site {
 }
 main section.project .project-info__resume__site p {
   line-height: 1.4;
+  font-size: 18px;
 }
 main section.project .project-info__resume__site a {
   text-decoration: underline;
@@ -981,8 +982,6 @@ main section.project .project-info__resume__site a {
 }
 main section.project .project-info__resume__features {
   width: 30%;
-  background-color: var(--light-main-color);
-  padding: 20px;
   border-radius: 10px;
   transition: 400ms;
 }
@@ -995,20 +994,26 @@ main section.project .project-info__resume__features h2 {
 }
 main section.project .project-info__resume__features ul {
   line-height: 1.4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 main section.project .project-info__resume__features ul li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   color: black;
-}
-main section.project .project-info__resume__features ul li::before {
-  content: "";
-  display: block;
-  background-color: black;
-  width: 10px;
-  height: 10px;
+  position: relative;
+  padding: 5px;
   border-radius: 5px;
+  background: var(--light-gray);
+}
+main section.project .project-info__resume__features ul li .icons {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  width: 20px;
+  font-size: 20px;
+  height: 20px;
+  display: flex;
 }
 main section.project .project-info__site {
   margin-top: 60px;
@@ -1200,10 +1205,17 @@ footer.bottom {
     width: 280px;
     height: 200px;
   }
-  main section.project .project-info__resume__features {
-    display: flex;
+  main section.project .project-info__resume {
     flex-direction: column;
-    justify-content: space-between;
+  }
+  main section.project .project-info__resume__site {
+    width: 100%;
+  }
+  main section.project .project-info__resume__features {
+    width: inherit;
+  }
+  main section.project .project-info__resume__features h2 {
+    margin-bottom: 40px;
   }
   main section.project .project-info__site__images {
     height: 300px;
@@ -1292,16 +1304,6 @@ footer.bottom {
   }
   main section.contact .contact-form__inputs__content {
     height: 200px;
-  }
-  main section.project .project-info__resume {
-    display: flex;
-    flex-direction: column;
-  }
-  main section.project .project-info__resume__site {
-    width: 100%;
-  }
-  main section.project .project-info__resume__features {
-    width: inherit;
   }
   main section.project .project-info__site {
     flex-direction: column-reverse;

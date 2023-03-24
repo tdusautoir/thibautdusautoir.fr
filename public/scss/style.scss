@@ -1175,6 +1175,7 @@ main {
 
                         p {
                             line-height: 1.4;
+                            font-size: 18px;
                         }
     
                         a {
@@ -1185,8 +1186,6 @@ main {
 
                     &__features {
                         width: 30%;
-                        background-color: var(--light-main-color);
-                        padding: 20px;
                         border-radius: 10px;
                         transition: $transition;
                         
@@ -1195,25 +1194,30 @@ main {
                             font-weight: 600;
                             margin-bottom: 20px;
                             font-size: 16px;
-                            color: black;
                         }
     
                         ul {
                             line-height: 1.4;
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-column-gap: 5px;
+                            grid-row-gap: 5px;
                             
                             li {
-                                display: flex;
-                                align-items: center;
-                                gap: 10px;
-                                color: black;
 
-                                &::before {
-                                    content: '';
-                                    display: block;
-                                    background-color: black;
-                                    width: 10px;
-                                    height: 10px;
-                                    border-radius: 5px;
+                                position: relative;
+                                padding: 5px;
+                                border-radius: 5px;
+                                background: var(--light-gray);
+
+                                .icons {
+                                    position: absolute;
+                                    top: -5px;
+                                    right: 20px;
+                                    width: 20px;
+                                    font-size: 20px;
+                                    height: 20px;
+                                    display: flex;
                                 }
                             }
                         }
@@ -1224,6 +1228,7 @@ main {
                     margin-top: 60px;
                     display: flex;
                     justify-content: center;
+                    align-items: center;
                     
                     &__images {
                         height: 450px;
@@ -1465,11 +1470,18 @@ footer {
             &.project {
                 .project-info {
                     &__resume {
+                        flex-direction: column;
+
+                        &__site {
+                            width: 100%;
+                        }
 
                         &__features {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-between;
+                            width: inherit;
+
+                            h2 {
+                                margin-bottom: 40px;
+                            }
                         }
                     }
 
@@ -1612,19 +1624,6 @@ footer {
 
             &.project {
                 .project-info {
-                    &__resume {
-                        display: flex;
-                        flex-direction: column;
-
-                        &__site {
-                            width: 100%;
-                        }
-
-                        &__features {
-                            width: inherit;
-                        }
-                    }
-
                     &__site {
                         flex-direction: column-reverse;
 

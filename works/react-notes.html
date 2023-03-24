@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bonjour, je m'appelle Thibaut, j'ai 20 ans et je suis passionné par le développement web ! Et voici mon projet : aupaysdescomptines">
+    <meta name="description" content="Bonjour, je m'appelle Thibaut, j'ai 20 ans et je suis passionné par le développement web ! Et voici mon projet : ourges">
     <meta name="keywords" content="Thibaut, Dusautoir, Développeur, Web, Alternance">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Thibaut Dusautoir - Développeur web junior">
-    <meta property="og:description" content="Bonjour, je m'appelle Thibaut, j'ai 20 ans et je suis passionné par le développement web ! Et voici mon projet : aupaysdescomptines">
+    <meta property="og:description" content="Bonjour, je m'appelle Thibaut, j'ai 20 ans et je suis passionné par le développement web ! Et voici mon projet : ourges">
     <meta property="og:url" content="https://www.thibautdusautoir.com/">
     <meta property="og:site_name" content="Thibaut Dusautoir">
     <link rel="canonical" href="https://www.thibautdusautoir.com/">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../public/lib/devicon/devicon.min.css">
     <script src="../public/js/script.js" defer></script>
     <script src="../public/js/project.js" defer></script>
-    <title>Thibaut Dusautoir - portfolio - aupaysdescomptines</title>
+    <title>Thibaut Dusautoir - portfolio - reactNotes</title>
 </head>
 <body>
     <nav class="header__nav">
@@ -36,7 +36,7 @@
             <div class="header__breadcrumb">
                 <a href="../index.html">@tdusautoir</a>
                 <a href="../works.html">/works</a>
-                <p>/aupaysdescomptines</p>
+                <p>/reactNotes</p>
             </div>
             <div class="header__icons">
                 <a class="header__icons__contact" href="../contact.html"><i class="fa-regular fa-address-card"></i></a>
@@ -48,43 +48,38 @@
         </header>
         <main>
             <section class="project">
-                <h1>Au pays des comptines</h1>
+                <h1>reactNotes</h1>
                 <div class="project-stacks">
-                    <div class="project-stacks__language" data-filter="html"><i class="devicon-html5-plain" title="html"></i></div>
-                    <div class="project-stacks__language" data-filter="css"><i class="devicon-css3-plain" title="css"></i></div>
-                    <div class="project-stacks__language" data-filter="javascript"><i class="devicon-javascript-plain" title="javascript"></i></div>
-                    <div class="project-stacks__language" data-filter="php"><i class="devicon-php-plain" title="php"></i></div>
+                    <div class="project-stacks__language" data-filter="sass"><i class="devicon-sass-original" title="sass"></i></div>
+                    <div class="project-stacks__language" data-filter="react"><i class="devicon-react-original" title="react"></i></div>
                 </div>
                 <div class="project-info">
                     <div class="project-info__resume">
                         <div class="project-info__resume__site">
-                            <p><a href="https://www.aupaysdescomptines.fr" target="_blank">aupaysdescomptines.fr</a> est un site vitrine développé pour la micro crèche « Au pays des comptines » de Beuvry-la-forêt.</p>
-                            <p>Ce site présente la crèche avec différentes informations comme l'adresse, les horaires, les periodes de fermetures, l'équipe... . Il dispose aussi d'un formulaire de contact donnant la possibilité au visiteur d'envoyer toutes demandes.</p>
+                            <p>ReactNotes est une application développée dans la cadre de mon apprentissage.</p>
+                            <p>Cette application est à but personnel et permet l'ecriture et la gestion de notes.</p>
+                            <p>Json-server a été utilisé pour ce projet, permettant d'avoir une REST API et une base de données rapidement.</p>
                         </div>
                         <div class="project-info__resume__features">
                             <h2>Fonctionnalités</h2>
                             <ul>
-                                <li>Site Vitrine <span class="icons"><i class="fa-solid fa-image"></i></span></li>
-                                <li>Formulaire <span class="icons"><i class="fa-solid fa-rectangle-list"></i></span></li>
+                                <li>Notes <span class="icons"><i class="fa-solid fa-note-sticky"></i></span></li>
+                                <li>Épinglées <span class="icons"><i class="fa-solid fa-thumbtack"></i></span></li>
+                                <li>Sauvegarde auto <span class="icons"><i class="fa-solid fa-rotate"></i></span></li>
                             </ul>
                         </div>
                     </div>
                     <div class="project-info__site">
                         <div class="project-info__site__images">
-                            <img class="show" src="../public/images/portfolio/aupaysdescomptines/image_1.png" data-nav="accueil" alt="page accueil - au pays des comptines">
-                            <img src="../public/images/portfolio/aupaysdescomptines/image_3.png" data-nav="equipe" alt="page equipe - au pays des comptines">
-                            <img src="../public/images/portfolio/aupaysdescomptines/image_2.png" data-nav="contact" alt="page contact - au pays des comptines">
+                            <img class="show" src="../public/images/portfolio/notes/home.png" data-nav="home" alt="page accueil - reactNotes">
+                            <img src="../public/images/portfolio/notes/note.png" data-nav="note" alt="page note - reactNotes">
                         </div>
                         <div class="project-info__site__navigation">
-                            <button class="selected" onclick="navigation(this, 'accueil')">Accueil</button>
-                            <button onclick="navigation(this, 'equipe')">Équipe</button>
-                            <button onclick="navigation(this, 'contact')">Contact</button>
+                            <button class="selected" onclick="navigation(this, 'home')">Accueil</button>
+                            <button onclick="navigation(this, 'note')">Note</button>
                         </div>
                     </div>
                 </div>
-                <a class="project-link" href="https://www.aupaysdescomptines.fr" target="_blank">
-                    <i class="fa-solid fa-link"></i>
-                </a>
             </section>
         </main>
         <footer>
