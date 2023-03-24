@@ -409,6 +409,7 @@ main section.experiences {
   border-radius: 5px;
   padding: 30px;
   position: relative;
+  transition: opacity 400ms;
 }
 main section.experiences .experiences-target {
   position: absolute;
@@ -960,6 +961,7 @@ main section.project .project-stacks__language {
   transition: 400ms;
   font-family: inherit;
   font-size: 16px;
+  color: var(--black);
 }
 main section.project .project-stacks__language::after {
   content: attr(data-filter);
@@ -978,19 +980,18 @@ main section.project .project-info__resume__site p {
 }
 main section.project .project-info__resume__site a {
   text-decoration: underline;
-  transition: 400ms;
+  transition: color 400ms;
 }
 main section.project .project-info__resume__features {
   width: 30%;
   border-radius: 10px;
-  transition: 400ms;
+  transition: background 400ms;
 }
 main section.project .project-info__resume__features h2 {
   background: none;
   font-weight: 600;
   margin-bottom: 20px;
   font-size: 16px;
-  color: black;
 }
 main section.project .project-info__resume__features ul {
   line-height: 1.4;
@@ -1000,11 +1001,12 @@ main section.project .project-info__resume__features ul {
   grid-row-gap: 5px;
 }
 main section.project .project-info__resume__features ul li {
-  color: black;
+  color: var(--black);
   position: relative;
   padding: 5px;
   border-radius: 5px;
   background: var(--light-gray);
+  transition: color 400ms, background 400ms;
 }
 main section.project .project-info__resume__features ul li .icons {
   position: absolute;
@@ -1019,6 +1021,7 @@ main section.project .project-info__site {
   margin-top: 60px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 main section.project .project-info__site__images {
   height: 450px;

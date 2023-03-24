@@ -500,6 +500,7 @@ main {
             border-radius: 5px;
             padding: 30px;
             position: relative;
+            transition: opacity $transition;
 
             .experiences-target {
                 position: absolute;
@@ -1157,6 +1158,7 @@ main {
                     transition: $transition;
                     font-family: inherit;
                     font-size: 16px;
+                    color: var(--black);
 
                     &::after {
                         content: attr(data-filter);
@@ -1180,14 +1182,14 @@ main {
     
                         a {
                             text-decoration: underline;
-                            transition: $transition;
+                            transition: color $transition;
                         }
                     }
 
                     &__features {
                         width: 30%;
                         border-radius: 10px;
-                        transition: $transition;
+                        transition: background $transition;
                         
                         h2 {
                             background: none;
@@ -1204,11 +1206,12 @@ main {
                             grid-row-gap: 5px;
                             
                             li {
-
+                                color: var(--black);
                                 position: relative;
                                 padding: 5px;
                                 border-radius: 5px;
                                 background: var(--light-gray);
+                                transition: color 400ms, background $transition;
 
                                 .icons {
                                     position: absolute;
