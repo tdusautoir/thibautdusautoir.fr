@@ -11,8 +11,11 @@
 /* variables */
 
 $slow_transition: 600ms;
+$slow_--webkit-transition: 600ms;
 $transition: 400ms;
+$--webkit-transition: 400ms;
 $fast_transition: 200ms;
+$fast_--webkit-transition: 200ms;
 
 /* mixin */
 
@@ -104,6 +107,7 @@ $fast_transition: 200ms;
         border-radius: 50px;
         background: #eae7e7;
         transition: $transition;
+        -webkit-transition: $transition;
         z-index: 2;
         gap: 30px;
 
@@ -114,6 +118,7 @@ $fast_transition: 200ms;
             border-radius: 100px;
             background: var(--main-color);
             transition: width $fast_transition, left $transition;
+            -webkit-transition: width $fast_transition, left $transition;
             z-index: -1;
         }
 
@@ -121,10 +126,12 @@ $fast_transition: 200ms;
             text-decoration: none;
             color: black;
             transition: $fast_transition;
+            -webkit-transition: $fast_transition;
             padding: 15px;
 
             span {
                 transition: $transition;
+                -webkit-transition: $transition;
             }
 
             i {
@@ -145,6 +152,7 @@ $fast_transition: 200ms;
                 display: inline-block;
                 color: var(--dark-gray);
                 transition: $fast_transition;
+                -webkit-transition: $fast_transition;
             }
 
             &::before {
@@ -183,6 +191,7 @@ $fast_transition: 200ms;
         border-radius: 50px;
         background: var(--main-color);
         transition: $fast_transition;
+        -webkit-transition: $fast_transition;
         cursor: pointer;
         z-index: 0;
 
@@ -191,10 +200,12 @@ $fast_transition: 200ms;
             position: absolute;
             @include hide;
             transition: $fast_transition;
+            -webkit-transition: $fast_transition;
         }
 
         span {
             transition: $fast_transition;
+            -webkit-transition: $fast_transition;
             cursor: pointer;
         }
 
@@ -228,12 +239,14 @@ $fast_transition: 200ms;
         & > a {
             @include hide;
             transition: $fast_transition;
+            -webkit-transition: $fast_transition;
         }
 
         .header__nav {
             &__link__container {
                 transform: translateX(70px);
                 transition: $transition;
+                -webkit-transition: $transition;
 
                 .nav__link {
                     &.unseen {
@@ -250,12 +263,14 @@ $fast_transition: 200ms;
                 @include hide;
                 transform: translateX(-50px);
                 transition: $fast_transition;
+                -webkit-transition: $fast_transition;
             }
         }
 
         .header__icons {
             @include hide;
             transition: $fast_transition;
+            -webkit-transition: $fast_transition;
         }
     }
 
@@ -276,6 +291,7 @@ $fast_transition: 200ms;
     top: 50px;
     font-size: 18px;
     transition: opacity $transition;
+    -webkit-transition: opacity $transition;
 
     &__breadcrumb {
         font-weight: 600;
@@ -284,10 +300,12 @@ $fast_transition: 200ms;
         a {
             font-weight: 400;
             transition: $transition;
+            -webkit-transition: $transition;
         }
 
         p {
             transition: $transition;
+            -webkit-transition: $transition;
         }
     }
 
@@ -315,6 +333,7 @@ $fast_transition: 200ms;
                 height: 30px;
                 width: 30px;
                 transition: $fast_transition;
+                -webkit-transition: $fast_transition;
     
                 &#nightmode_btn {
                     position: absolute;
@@ -326,6 +345,7 @@ $fast_transition: 200ms;
 
     &.unseen {
         transition: $fast_transition;
+        -webkit-transition: $fast_transition;
         @include hide;
     }
 }
@@ -342,6 +362,7 @@ $fast_transition: 200ms;
     border-radius: 100px;
     z-index: 1;
     transition: $transition;
+    -webkit-transition: $transition;
 
     &--success {
         display: flex;
@@ -431,6 +452,7 @@ main {
     section {
         &.profil {
             transition: 400ms;
+            -webkit-transition: 400ms;
 
             .profil-container {
                 display: flex;
@@ -470,6 +492,7 @@ main {
                     border: none;
                     background: var(--light-main-color);
                     transition: $transition;
+                    -webkit-transition: $transition;
                     cursor: pointer;
                     z-index: 1;
                     
@@ -487,6 +510,7 @@ main {
                 position: absolute;
                 border-radius: 100px;
                 background: var(--main-color);
+                transform: translate3d(0, 0, 0);
 
                 &-1 {
                     width: 250px;
@@ -512,6 +536,7 @@ main {
             padding: 30px;
             position: relative;
             transition: opacity $transition;
+            -webkit-transition: opacity $transition;
 
             .experiences-target {
                 position: absolute;
@@ -539,6 +564,7 @@ main {
                         padding: 20px;
                         background: var(--light-gray);
                         transition: background $transition;
+                        -webkit-transition: background $transition;
 
                         &__time {
                             flex-basis: 20%;
@@ -576,11 +602,13 @@ main {
                                 gap: 10px;
                                 overflow: hidden;
                                 transition: $transition;
+                                -webkit-transition: $transition;
 
                                 &::after {
                                     @include hide;
                                     content: attr(data-language);
                                     transition: $transition;
+                                    -webkit-transition: $transition;
                                 }
 
                                 img {
@@ -591,11 +619,13 @@ main {
 
                                 &:hover {
                                     transition: $transition;
+                                    -webkit-transition: $transition;
                                     max-width: 140px;
 
                                     &::after {
                                         @include show;
                                         transition: $fast_transition;
+                                        -webkit-transition: $fast_transition;
                                     }
                                 }
                             }
@@ -692,12 +722,14 @@ main {
                     gap: 10px;
                     overflow: hidden;
                     transition: $transition;
+                    -webkit-transition: $transition;
                     font-family: inherit;
                     font-size: 16px;
                     cursor: pointer;
 
                     &.selected {
                         transition: none;
+                        -webkit-transition: none;
                         outline: none;
                         border: 2px solid var(--main-color);
                     }
@@ -725,6 +757,7 @@ main {
                 margin: 0 auto;
                 gap: 40px;
                 transition: $transition;
+                -webkit-transition: $transition;
 
                 .card {
                     width: 350px;
@@ -736,6 +769,7 @@ main {
 
                     img {
                         transition: $fast_transition;
+                        -webkit-transition: $fast_transition;
                         width: 100%;
                         height: 100%;
                     }
@@ -745,6 +779,7 @@ main {
                         height: 100%;
                         background-color: rgb(0 0 0 / 60%);
                         transition: $fast_transition;
+                        -webkit-transition: $fast_transition;
                         color: white;
                         display: flex;
                         justify-content: center;
@@ -806,6 +841,7 @@ main {
                 height: 400px;
                 border-radius: 10px;
                 transition: $transition;
+                -webkit-transition: $transition;
 
                 &:hover {
                     box-shadow: 0 0 0 8px var(--background), 0 0 0 11px var(--main-color);
@@ -836,11 +872,13 @@ main {
                     gap: 20px;
                     background: var(--light-gray);
                     transition: background $transition, max-width $transition;
+                    -webkit-transition: background $transition, max-width $transition;
 
                     &__location {
                         width: fit-content;
                         white-space: nowrap;
                         transition: opacity $transition color $transition;
+                        -webkit-transition: opacity $transition color $transition;
                         @include hide;
 
                         &.visible {
@@ -880,6 +918,7 @@ main {
                                 border-radius: 100px;
                                 padding: 20px 20px;
                                 transition: $transition;
+                                -webkit-transition: $transition;
 
                                 &:focus-visible {
                                     outline: none;
@@ -897,6 +936,7 @@ main {
                                 top: 50%;
                                 transform: translateY(-50%);  
                                 transition: left $fast_transition, background $transition; 
+                                -webkit-transition: left $fast_transition, background $transition; 
                                 padding: 13px 20px;      
                                 color: inherit;
                                 border-radius: 100px;
@@ -945,6 +985,7 @@ main {
                             bottom: 10px;
                             left: 0px;
                             transition: left $fast_transition, background $transition;
+                            -webkit-transition: left $fast_transition, background $transition;
                             padding: 13px 20px;
                             z-index: 1;     
                             opacity: 0.6;
@@ -964,6 +1005,7 @@ main {
                             border-radius: 20px;
                             font-size: 16px;
                             transition: $transition;
+                            -webkit-transition: $transition;
 
                             &:focus-visible {
                                 outline: none;
@@ -1036,6 +1078,7 @@ main {
                             margin: 0px 10px;
                             transform: translateY(-50%);
                             transition: $fast_transition;
+                            -webkit-transition: $fast_transition;
                             overflow: hidden;
                             font-weight: 600;
                             pointer-events: none;
@@ -1167,6 +1210,7 @@ main {
                     gap: 10px;
                     overflow: hidden;
                     transition: $transition;
+                    -webkit-transition: $transition;
                     font-family: inherit;
                     font-size: 16px;
                     color: var(--black);
@@ -1194,6 +1238,7 @@ main {
                         a {
                             text-decoration: underline;
                             transition: color $transition;
+                            -webkit-transition: color $transition;
                         }
                     }
 
@@ -1201,6 +1246,7 @@ main {
                         width: 30%;
                         border-radius: 10px;
                         transition: background $transition;
+                        -webkit-transition: background $transition;
                         
                         h2 {
                             background: none;
@@ -1223,6 +1269,7 @@ main {
                                 border-radius: 5px;
                                 background: var(--light-gray);
                                 transition: color 400ms, background $transition;
+                                -webkit-transition: color 400ms, background $transition;
 
                                 .icons {
                                     position: absolute;
@@ -1253,12 +1300,14 @@ main {
                         display: flex;
                         flex-wrap: wrap;
                         transition: $transition;
+                        -webkit-transition: $transition;
     
                         img {
                             width: 100%;
                             @include hide;
                             max-height: 0;
                             transition: $transition;
+                            -webkit-transition: $transition;
 
                             &.show {
                                 @include show;
@@ -1288,6 +1337,7 @@ main {
                             padding: 10px 20px;
                             border-radius: 100px;
                             transition: $transition;
+                            -webkit-transition: $transition;
 
                             &.selected {
                                 color: black;
@@ -1340,6 +1390,7 @@ main {
             border-radius: 50px;
             background: var(--light-main-color);
             transition: $fast_transition;
+            -webkit-transition: $fast_transition;
             cursor: pointer;
             width: fit-content;
     
@@ -1348,10 +1399,12 @@ main {
                 position: absolute;
                 @include hide;
                 transition: $fast_transition;
+                -webkit-transition: $fast_transition;
             }
     
             span {
                 transition: $fast_transition;
+                -webkit-transition: $fast_transition;
                 cursor: pointer;
             }
     
@@ -1513,6 +1566,7 @@ footer {
 @media screen and (max-width: 768px) {
     .header__nav {
         transition: $transition;
+        -webkit-transition: $transition;
         top: inherit;
         bottom: 20px;
         transform: translateX(-32px);
@@ -1586,6 +1640,7 @@ footer {
                                     
                                     &::after {
                                         transition: none;
+                                        -webkit-transition: none;
                                         @include show;
                                     }
                                 }
