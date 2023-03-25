@@ -64,6 +64,15 @@ $fast_transition: 200ms;
     }
 }
 
+@keyframes showInit {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* nightmode */
 
 .night .formations-container .card * {
@@ -85,7 +94,7 @@ $fast_transition: 200ms;
     right: 0;
     margin: 0 auto;
     gap: 20px;
-    z-index: 2;
+    z-index: 2; 
 
     &__link__container {
         display: flex;
@@ -402,6 +411,7 @@ $fast_transition: 200ms;
 }
 
 main {
+    animation: showInit $transition;
     display: flex;
     flex-direction: column;
     margin: 60px 0;
@@ -450,6 +460,8 @@ main {
                 }
 
                 &__memoji {
+                    display: flex;
+                    justify-content: center;
                     width: 100px;
                     height: 100px;
                     padding: 0;
@@ -466,7 +478,6 @@ main {
                     }
 
                     img {
-                        width: 100%;
                         height: 100%;
                     }
                 }
@@ -777,7 +788,7 @@ main {
             }
         }
 
-        &.about-me {
+        &.about-me {            
             margin-top: 40px;
             margin-bottom: 40px;
 
@@ -1125,7 +1136,7 @@ main {
             }
         }
 
-        &.project {
+        &.project {            
             margin-top: 40px;
 
             h1 {
