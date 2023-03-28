@@ -10,7 +10,9 @@
     --background: white;
 
     --success: #028e00;
+    --success-background: #c2fac1;
     --danger: #d90000;
+    --danger-background: #ffc5c1;
 }
 
 
@@ -86,7 +88,9 @@ section:hover h2{
     --background: #1c2633;
 
     --success: #03c500;
+    --success-background: #153700;
     --danger: #ff0000;
+    --danger-background: #431210;
 }
 
 .night .header__nav__link__container {

@@ -45,8 +45,7 @@ function slide_show() {
                 slideshow_locations[j].classList.remove('visible');
             }
 
-            let location_index = slideshow_locations[i + 1] !== undefined ? i + 1 : 0;
-            console.log(location_index);
+            let location_index = slideshow_locations[i + 1] !== undefined ? i + 1 : 0;          
             slideshow_location.style = `max-width: ${slideshow_locations[location_index].getBoundingClientRect().width}px;`;
 
             slideshow_location.scroll({

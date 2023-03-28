@@ -369,7 +369,7 @@ $fast_--webkit-transition: 200ms;
     display: none;
     align-items: center;
     gap: 20px;
-    position: absolute;
+    position: fixed;
     top: 120px;
     right: 40px;
     background: white;
@@ -383,7 +383,7 @@ $fast_--webkit-transition: 200ms;
         display: flex;
         animation: slideIn $slow_transition;
         border: 2px solid var(--success);
-        background: #03c5005f;
+        background: var(--success-background);
 
         p {
             color: var(--success);
@@ -402,7 +402,7 @@ $fast_--webkit-transition: 200ms;
         display: flex;
         animation: slideIn $slow_transition;
         border: 2px solid var(--danger);
-        background: #ff000033;
+        background: var(--danger-background);
 
         p {
             color: var(--danger);

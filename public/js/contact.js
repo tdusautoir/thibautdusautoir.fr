@@ -79,7 +79,12 @@ if(contact_inputs.length > 0 && contact_submit) {
             } else {
                 setTimeout(() => {
                     contact_submit.classList.remove('pending');
-                    toast('danger', 'Une erreur est survenue');
+
+                    if(result.error) {
+                        toast('danger', result.error);
+                    } else {
+                        toast('danger', 'Une erreur est survenue, veuillez réessayer.');
+                    }
                 }, 400);
             }
         });

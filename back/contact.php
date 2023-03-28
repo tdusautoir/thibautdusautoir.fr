@@ -2,4 +2,4 @@
 
 header('Content-type: application/json');
 
-echo json_encode(['success' => 'test']);
+echo json_encode(['error' => 'test']);
