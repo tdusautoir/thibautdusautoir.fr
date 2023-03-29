@@ -131,7 +131,10 @@ if(contact_inputs.length > 0 && contact_submit) {
         if(nb_errors > 0) {
             contact_submit.classList.remove('pending');
         } else {
-            fetch('./back/contact.php').then((response) => response.json()).then((result) => {
+            fetch('./back/contact.php', {
+                method: 'POST',
+                body: formData,
+            }).then((response) => response.json()).then((result) => {
                 if(result.success) {
                     setTimeout(() => {
                         contact_submit.classList.remove('pending');
