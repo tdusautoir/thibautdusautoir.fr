@@ -813,7 +813,7 @@ main section.contact .contact-form__inputs__header div input {
 main section.contact .contact-form__inputs__header div input:focus-visible {
   outline: none;
   border: 2px solid var(--main-color);
-  background: transparent;
+  background: var(--background);
 }
 main section.contact .contact-form__inputs__header div label {
   position: absolute;
@@ -883,7 +883,7 @@ main section.contact .contact-form__inputs__content textarea {
 main section.contact .contact-form__inputs__content textarea:focus-visible {
   outline: none;
   border: 2px solid var(--main-color);
-  background: transparent;
+  background: var(--background);
 }
 main section.contact .contact-form__inputs__content.not-empty label, main section.contact .contact-form__inputs__content.focus label {
   opacity: 1;
@@ -1010,6 +1010,23 @@ main section.contact .contact-form__inputs__submit.success div .checkmark__circl
 }
 main section.contact .contact-form__inputs__submit.success div .checkmark__check {
   animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+main section.contact .contact-form__inputs__errors {
+  z-index: -1;
+  position: absolute;
+  left: 40px;
+  background: var(--danger-background);
+  padding: 4px;
+  border-radius: 5px;
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: 400ms;
+}
+main section.contact .contact-form__inputs__errors.show {
+  top: -26px;
+  visibility: visible;
+  opacity: 1;
 }
 main section.project {
   margin-top: 40px;

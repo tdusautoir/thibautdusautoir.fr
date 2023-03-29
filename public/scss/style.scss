@@ -963,7 +963,7 @@ main {
                                 &:focus-visible {
                                     outline: none;
                                     border: 2px solid var(--main-color);
-                                    background: transparent;
+                                    background: var(--background);
                                 }
                             }
 
@@ -1050,7 +1050,7 @@ main {
                             &:focus-visible {
                                 outline: none;
                                 border: 2px solid var(--main-color);
-                                background: transparent;
+                                background: var(--background);
                             }
                         }
 
@@ -1213,6 +1213,23 @@ main {
                                     }
                                 }
                             }
+                        }
+                    }
+
+                    &__errors {
+                        z-index: -1;
+                        position: absolute;
+                        left: 40px;
+                        background: var(--danger-background);
+                        padding: 4px;
+                        border-radius: 5px;
+                        top: 0;
+                        @include show;
+                        transition: $transition;
+
+                        &.show {
+                            top: -26px;
+                            @include show;
                         }
                     }
                 }

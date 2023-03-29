@@ -36,6 +36,7 @@
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
             <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
             <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            <p></p>
         </svg>
     </div>
     <div class="main-container">
@@ -81,23 +82,27 @@
                     <h2>Contactez moi !</h2>
                     <p class="contact-title__available"><span></span>Actuellement en recherche d'un contrat d'apprentissage !</p>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="contact-form__inputs">
                         <div class="contact-form__inputs__header">
                             <div class="contact-form__inputs__header__firstname">
-                                <input type="text" name="firstname">
+                                <p class="contact-form__inputs__errors"></p>
                                 <label for="firstname">Prénom</label>
+                                <input type="text" name="firstname" autocomplete="off">
                             </div>
                             <div class="contact-form__inputs__header__lastname">
+                                <p class="contact-form__inputs__errors"></p>
                                 <label for="lastname">Nom</label>
-                                <input type="text" name="lastname">
+                                <input type="text" name="lastname" autocomplete="off">
                             </div>
-                            <div class="contact-form__inputs__header__subject">
-                                <label for="subject">Sujet</label>
-                                <input type="text" name="subject">
+                            <div class="contact-form__inputs__header__email">
+                                <p class="contact-form__inputs__errors"></p>
+                                <label for="email">Email</label>
+                                <input type="text" name="email" autocomplete="off">
                             </div>
                         </div>
                         <div class="contact-form__inputs__content">
+                            <p class="contact-form__inputs__errors"></p>
                             <label for="content">Contenu</label>
                             <textarea name="content"></textarea>
                         </div>
