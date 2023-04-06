@@ -1,0 +1,12 @@
+{
+    "name": "thibaut/thibautdusautoir.fr",
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "authors": [
+        {
+            "name": "Thibaut Dusautoir",
+            "email": "tdusautoir@myges.fr"
+        }
+    ]
+}
