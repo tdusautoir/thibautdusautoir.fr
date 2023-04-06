@@ -88,7 +88,6 @@
   border-radius: 50px;
   background: #eae7e7;
   transition: 400ms;
-  -webkit-transition: 400ms;
   z-index: 2;
   gap: 30px;
 }
@@ -99,19 +98,16 @@
   border-radius: 100px;
   background: var(--main-color);
   transition: width 200ms, left 400ms;
-  -webkit-transition: width 200ms, left 400ms;
   z-index: -1;
 }
 .header__nav__link__container .nav__link {
   text-decoration: none;
   color: black;
   transition: 200ms;
-  -webkit-transition: 200ms;
   padding: 15px;
 }
 .header__nav__link__container .nav__link span {
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 .header__nav__link__container .nav__link i {
   display: none;
@@ -128,7 +124,6 @@
   display: inline-block;
   color: var(--dark-gray);
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 .header__nav__link__container .nav__link::before {
   content: "<";
@@ -158,7 +153,6 @@
   border-radius: 50px;
   background: var(--main-color);
   transition: 200ms;
-  -webkit-transition: 200ms;
   cursor: pointer;
   z-index: 0;
 }
@@ -168,11 +162,9 @@
   visibility: hidden;
   opacity: 0;
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 .header__nav__link__work span {
   transition: 200ms;
-  -webkit-transition: 200ms;
   cursor: pointer;
 }
 .header__nav__link__work:hover {
@@ -201,12 +193,10 @@
   visibility: hidden;
   opacity: 0;
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 .header__nav--sticky .header__nav__link__container {
   transform: translateX(70px);
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 .header__nav--sticky .header__nav__link__container .nav__link.unseen {
   opacity: 0.2;
@@ -219,13 +209,11 @@
   opacity: 0;
   transform: translateX(-50px);
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 .header__nav--sticky .header__icons {
   visibility: hidden;
   opacity: 0;
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 .header__nav--work .header__nav__link__container {
   transform: translateX(0px) !important;
@@ -239,7 +227,6 @@
   top: 50px;
   font-size: 18px;
   transition: opacity 400ms;
-  -webkit-transition: opacity 400ms;
 }
 .header__breadcrumb {
   font-weight: 600;
@@ -248,11 +235,9 @@
 .header__breadcrumb a {
   font-weight: 400;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 .header__breadcrumb p {
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 .header__icons {
   display: flex;
@@ -277,7 +262,6 @@
   height: 30px;
   width: 30px;
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 .header__icons__theme__img#nightmode_btn {
   position: absolute;
@@ -286,7 +270,6 @@
 }
 .header.unseen {
   transition: 200ms;
-  -webkit-transition: 200ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -303,7 +286,6 @@
   border-radius: 100px;
   z-index: 1;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 .toast--success {
   display: flex;
@@ -378,7 +360,6 @@ main .hero-banner {
 }
 main section.profil {
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.profil .profil-container {
   display: flex;
@@ -416,7 +397,6 @@ main section.profil .profil-container__memoji {
   border: none;
   background: var(--light-main-color);
   transition: 400ms;
-  -webkit-transition: 400ms;
   cursor: pointer;
   z-index: 1;
 }
@@ -452,7 +432,6 @@ main section.experiences {
   padding: 30px;
   position: relative;
   transition: opacity 400ms;
-  -webkit-transition: opacity 400ms;
 }
 main section.experiences .experiences-target {
   position: absolute;
@@ -480,7 +459,6 @@ main section.experiences .experiences-container__cards .card {
   padding: 20px;
   background: var(--light-gray);
   transition: background 400ms;
-  -webkit-transition: background 400ms;
 }
 main section.experiences .experiences-container__cards .card__time {
   flex-basis: 20%;
@@ -514,14 +492,12 @@ main section.experiences .experiences-container__cards .card__stack__language {
   gap: 10px;
   overflow: hidden;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.experiences .experiences-container__cards .card__stack__language::after {
   visibility: hidden;
   opacity: 0;
   content: attr(data-language);
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.experiences .experiences-container__cards .card__stack__language img {
   width: 16px;
@@ -530,14 +506,12 @@ main section.experiences .experiences-container__cards .card__stack__language im
 }
 main section.experiences .experiences-container__cards .card__stack__language:hover {
   transition: 400ms;
-  -webkit-transition: 400ms;
   max-width: 140px;
 }
 main section.experiences .experiences-container__cards .card__stack__language:hover::after {
   visibility: visible;
   opacity: 1;
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 main section.skills {
   margin-top: -50px;
@@ -617,14 +591,12 @@ main section.portfolio .filters__btn {
   gap: 10px;
   overflow: hidden;
   transition: 400ms;
-  -webkit-transition: 400ms;
   font-family: inherit;
   font-size: 16px;
   cursor: pointer;
 }
 main section.portfolio .filters__btn.selected {
   transition: none;
-  -webkit-transition: none;
   outline: none;
   border: 2px solid var(--main-color);
 }
@@ -638,6 +610,7 @@ main section.portfolio .filters__btn i {
 }
 main section.portfolio .filters__btn::after {
   content: attr(data-filter);
+  color: var(--black);
 }
 main section.portfolio .portfolio-container {
   display: flex;
@@ -646,7 +619,6 @@ main section.portfolio .portfolio-container {
   margin: 0 auto;
   gap: 40px;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.portfolio .portfolio-container .card {
   width: 350px;
@@ -658,7 +630,6 @@ main section.portfolio .portfolio-container .card {
 }
 main section.portfolio .portfolio-container .card img {
   transition: 200ms;
-  -webkit-transition: 200ms;
   width: 100%;
   height: 100%;
 }
@@ -667,7 +638,6 @@ main section.portfolio .portfolio-container .card__info {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   transition: 200ms;
-  -webkit-transition: 200ms;
   color: white;
   display: flex;
   justify-content: center;
@@ -716,7 +686,6 @@ main section.about-me .slideshow {
   height: 400px;
   border-radius: 10px;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.about-me .slideshow:hover {
   box-shadow: 0 0 0 8px var(--background), 0 0 0 11px var(--main-color);
@@ -724,12 +693,15 @@ main section.about-me .slideshow:hover {
 main section.about-me .slideshow__imgs {
   height: 100%;
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
   gap: 20px;
 }
 main section.about-me .slideshow__imgs__img {
   height: 100%;
   border-radius: 10px;
+}
+main section.about-me .slideshow__imgs::-webkit-scrollbar {
+  display: none;
 }
 main section.about-me .slideshow__locations {
   position: absolute;
@@ -740,23 +712,25 @@ main section.about-me .slideshow__locations {
   height: 16px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: scroll;
   gap: 20px;
   background: var(--light-gray);
   transition: background 400ms, max-width 400ms;
-  -webkit-transition: background 400ms, max-width 400ms;
 }
 main section.about-me .slideshow__locations__location {
   width: fit-content;
   white-space: nowrap;
   transition: opacity 400ms color 400ms;
-  -webkit-transition: opacity 400ms color 400ms;
+  color: var(--black);
   visibility: hidden;
   opacity: 0;
 }
 main section.about-me .slideshow__locations__location.visible {
   visibility: visible;
   opacity: 1;
+}
+main section.about-me .slideshow__locations::-webkit-scrollbar {
+  display: none;
 }
 main section.contact .contact-title {
   display: flex;
@@ -808,7 +782,6 @@ main section.contact .contact-form__inputs__header div input {
   border-radius: 100px;
   padding: 20px 20px;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.contact .contact-form__inputs__header div input:focus-visible {
   outline: none;
@@ -824,7 +797,6 @@ main section.contact .contact-form__inputs__header div label {
   top: 50%;
   transform: translateY(-50%);
   transition: left 200ms, background 400ms;
-  -webkit-transition: left 200ms, background 400ms;
   padding: 13px 20px;
   color: inherit;
   border-radius: 100px;
@@ -859,12 +831,11 @@ main section.contact .contact-form__inputs__content label {
   bottom: 10px;
   left: 0px;
   transition: left 200ms, background 400ms;
-  -webkit-transition: left 200ms, background 400ms;
   padding: 13px 20px;
   z-index: 1;
   opacity: 0.6;
   color: inherit;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 main section.contact .contact-form__inputs__content textarea {
   font-family: inherit;
@@ -875,10 +846,9 @@ main section.contact .contact-form__inputs__content textarea {
   font-size: 16px;
   background: var(--light-gray);
   border: 2px solid var(--background);
-  border-radius: 20px;
+  border-radius: 30px;
   font-size: 16px;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.contact .contact-form__inputs__content textarea:focus-visible {
   outline: none;
@@ -935,7 +905,6 @@ main section.contact .contact-form__inputs__submit__arrow {
   margin: 0px 10px;
   transform: translateY(-50%);
   transition: 200ms;
-  -webkit-transition: 200ms;
   overflow: hidden;
   font-weight: 600;
   pointer-events: none;
@@ -1019,8 +988,8 @@ main section.contact .contact-form__inputs__errors {
   padding: 4px;
   border-radius: 5px;
   top: 0;
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
   transition: 400ms;
 }
 main section.contact .contact-form__inputs__errors.show {
@@ -1059,13 +1028,13 @@ main section.project .project-stacks__language {
   gap: 10px;
   overflow: hidden;
   transition: 400ms;
-  -webkit-transition: 400ms;
   font-family: inherit;
   font-size: 16px;
   color: var(--black);
 }
 main section.project .project-stacks__language::after {
   content: attr(data-filter);
+  color: var(--black);
 }
 main section.project .project-info__resume {
   display: flex;
@@ -1082,13 +1051,11 @@ main section.project .project-info__resume__site p {
 main section.project .project-info__resume__site a {
   text-decoration: underline;
   transition: color 400ms;
-  -webkit-transition: color 400ms;
 }
 main section.project .project-info__resume__features {
   width: 30%;
   border-radius: 10px;
   transition: background 400ms;
-  -webkit-transition: background 400ms;
 }
 main section.project .project-info__resume__features h2 {
   background: none;
@@ -1110,12 +1077,12 @@ main section.project .project-info__resume__features ul li {
   border-radius: 5px;
   background: var(--light-gray);
   transition: color 400ms, background 400ms;
-  -webkit-transition: color 400ms, background 400ms;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 main section.project .project-info__resume__features ul li .icons {
-  position: absolute;
-  top: -5px;
-  right: 20px;
+  margin-right: 5px;
   width: 20px;
   font-size: 20px;
   height: 20px;
@@ -1136,7 +1103,6 @@ main section.project .project-info__site__images {
   display: flex;
   flex-wrap: wrap;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.project .project-info__site__images img {
   width: 100%;
@@ -1144,7 +1110,6 @@ main section.project .project-info__site__images img {
   opacity: 0;
   max-height: 0;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.project .project-info__site__images img.show {
   visibility: visible;
@@ -1172,7 +1137,6 @@ main section.project .project-info__site__navigation button {
   padding: 10px 20px;
   border-radius: 100px;
   transition: 400ms;
-  -webkit-transition: 400ms;
 }
 main section.project .project-info__site__navigation button.selected {
   color: black;
@@ -1215,7 +1179,6 @@ main .see-my-work a {
   border-radius: 50px;
   background: var(--light-main-color);
   transition: 200ms;
-  -webkit-transition: 200ms;
   cursor: pointer;
   width: fit-content;
 }
@@ -1225,11 +1188,9 @@ main .see-my-work a i {
   visibility: hidden;
   opacity: 0;
   transition: 200ms;
-  -webkit-transition: 200ms;
 }
 main .see-my-work a span {
   transition: 200ms;
-  -webkit-transition: 200ms;
   cursor: pointer;
 }
 main .see-my-work a:hover span {
@@ -1252,8 +1213,6 @@ footer img {
   width: 75px;
   height: 75px;
   border: none;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
   border-radius: 50px;
 }
 footer .footer__links {
@@ -1337,7 +1296,6 @@ footer.bottom {
 @media screen and (max-width: 768px) {
   .header__nav {
     transition: 400ms;
-    -webkit-transition: 400ms;
     top: inherit;
     bottom: 20px;
     transform: translateX(-32px);
@@ -1388,21 +1346,14 @@ footer.bottom {
   }
   main section.experiences .experiences-container__cards .card__stack__language::after {
     transition: none;
-    -webkit-transition: none;
     visibility: visible;
     opacity: 1;
   }
   main section.skills .skills-container {
     margin: 50px 10%;
   }
-  main section.portfolio {
-    margin-top: 100px;
-  }
   main section.portfolio .portfolio-container {
     max-width: 744px;
-  }
-  main section.about-me {
-    margin-top: 100px;
   }
   main section.about-me .slideshow {
     height: 300px;

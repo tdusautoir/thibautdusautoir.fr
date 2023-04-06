@@ -7,6 +7,20 @@ const slideshow = document.querySelector('.slideshow__imgs');
 const slideshow_location = document.querySelector('.slideshow__locations');
 const slideshow_length = slideshow_img.length;
 
+const disableScroll = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+}
+
+//disable scroll for imgs
+slideshow.addEventListener("wheel", disableScroll, {passive: false});
+slideshow.addEventListener("touchmove", disableScroll, {passive: false});
+
+//disable scroll for location
+slideshow_location.addEventListener("wheel", disableScroll, {passive: false});
+slideshow.addEventListener("touchmove", disableScroll, {passive: false});
+
 slide_show();
 
 function slide_show() {

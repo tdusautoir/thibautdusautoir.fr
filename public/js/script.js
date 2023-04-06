@@ -1,3 +1,5 @@
+const windowWith = window.innerWidth;
+
 /* HEADER */
 
 const header = document.querySelector("header");
@@ -6,19 +8,21 @@ const headerNavLinkContainer = document.querySelector(".header__nav__link__conta
 const headerNavHighlight = document.getElementById('nav-highlight');
 const headerNavLinks = document.getElementsByClassName("nav__link");
 
+const headerLimit = windowWith < 767 ? 10 : 40;
+
 window.addEventListener("scroll", function () {
   if(header) {
-    header.classList.toggle("unseen", window.scrollY > 40);
+    header.classList.toggle("unseen", window.scrollY > headerLimit);
     if (headerNav) {
-      headerNav.classList.toggle("header__nav--sticky", window.scrollY > 40);
+      headerNav.classList.toggle("header__nav--sticky", window.scrollY > headerLimit);
     }
   }
 });
 
 if(header) {
-  header.classList.toggle("unseen", window.scrollY > 40);
+  header.classList.toggle("unseen", window.scrollY > headerLimit);
   if (headerNav) {
-    headerNav.classList.toggle("header__nav--sticky", window.scrollY > 40);
+    headerNav.classList.toggle("header__nav--sticky", window.scrollY > headerLimit);
   }
 }
 
@@ -88,7 +92,7 @@ let observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.2,
+    threshold: windowWith < 767 ? 0.05 : 0.2,
   }
 );
 

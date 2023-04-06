@@ -2,9 +2,11 @@
 
 const contact_inputs = document.querySelectorAll(".contact-form input, .contact-form textarea");
 const contact_inputs_errors = document.querySelectorAll('.contact-form .contact-form__inputs__errors');
+const contact_inputs_arrow = document.querySelector('.contact-form .contact-form__inputs__submit__arrow');
+
 const contact_submit = document.querySelector('.contact-form .contact-form__inputs__submit');
 const contact_submit_btn = document.querySelector('.contact-form .contact-form__inputs__submit button');
-const contact_inputs_arrow = document.querySelector('.contact-form .contact-form__inputs__submit__arrow');
+
 const contact_form = document.getElementById('contact-form');
 
 if(contact_inputs.length > 0 && contact_submit) {
