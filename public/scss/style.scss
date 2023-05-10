@@ -30,19 +30,19 @@ $fast_transition: 200ms;
 
 @keyframes rotate {
     from {
-      transform: translateY(-50%) rotate(0deg);
+        transform: translateY(-50%) rotate(0deg);
     }
     to {
-      transform: translateY(-50%) rotate(360deg);
+        transform: translateY(-50%) rotate(360deg);
     }
 }
 
 @keyframes slideIn {
     from {
-      transform: translateX(500px);
+        transform: translateX(500px);
     }
     to {
-      transform: translateX(0px);
+        transform: translateX(0px);
     }
 }
 
@@ -50,7 +50,7 @@ $fast_transition: 200ms;
     0% {
         transform: translateX(0px);
     }
-    75%{
+    75% {
         transform: translateX(-40px);
     }
     100% {
@@ -75,18 +75,17 @@ $fast_transition: 200ms;
 
 @keyframes available {
     0% {
-      box-shadow: 0 0 0 0 rgb(236, 161, 0.7);
+        box-shadow: 0 0 0 0 rgb(236, 161, 0.7);
     }
-    
+
     70% {
-      box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
+        box-shadow: 0 0 0 10px rgba(255, 121, 63, 0);
     }
-    
+
     100% {
-      box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+        box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
     }
 }
-
 
 /* nightmode */
 
@@ -109,7 +108,7 @@ $fast_transition: 200ms;
     right: 0;
     margin: 0 auto;
     gap: 20px;
-    z-index: 2; 
+    z-index: 2;
 
     &__link__container {
         display: flex;
@@ -147,14 +146,15 @@ $fast_transition: 200ms;
             }
 
             &.disable {
-                opacity: 0.2!important;
+                opacity: 0.2 !important;
             }
 
             &.active {
                 opacity: 1;
             }
-            
-            &::before, &::after {
+
+            &::before,
+            &::after {
                 opacity: 0;
                 position: absolute;
                 display: inline-block;
@@ -277,7 +277,7 @@ $fast_transition: 200ms;
     &--work {
         .header__nav {
             &__link__container {
-                transform: translateX(0px)!important;
+                transform: translateX(0px) !important;
             }
         }
     }
@@ -325,12 +325,12 @@ $fast_transition: 200ms;
             width: 30px;
             overflow: hidden;
             cursor: pointer;
-    
+
             &__img {
                 height: 30px;
                 width: 30px;
                 transition: $fast_transition;
-    
+
                 &#nightmode_btn {
                     position: absolute;
                     @include hide;
@@ -387,7 +387,6 @@ $fast_transition: 200ms;
             color: var(--danger);
         }
 
-
         .checkmark {
             stroke: var(--danger);
 
@@ -430,10 +429,6 @@ main {
     display: flex;
     flex-direction: column;
     margin: 60px 0;
-
-    h1 {
-        @include hide;
-    }
 
     .hero-banner {
         height: 80vh;
@@ -487,7 +482,7 @@ main {
                     transition: $transition;
                     cursor: pointer;
                     z-index: 1;
-                    
+
                     &:hover {
                         box-shadow: 0 0 0 8px var(--background), 0 0 0 11px var(--light-main-color);
                     }
@@ -805,7 +800,7 @@ main {
             }
         }
 
-        &.about-me {            
+        &.about-me {
             margin-top: 40px;
             margin-bottom: 40px;
 
@@ -946,14 +941,15 @@ main {
                                 opacity: 0.6;
                                 font-size: 16px;
                                 top: 50%;
-                                transform: translateY(-50%);  
-                                transition: left $fast_transition, background $transition; 
-                                padding: 13px 20px;      
+                                transform: translateY(-50%);
+                                transition: left $fast_transition, background $transition;
+                                padding: 13px 20px;
                                 color: inherit;
                                 border-radius: 100px;
                             }
 
-                            &.not-empty, &.focus {
+                            &.not-empty,
+                            &.focus {
                                 label {
                                     left: var(--left-value);
                                     opacity: 1;
@@ -982,7 +978,7 @@ main {
                             }
                         }
                     }
-    
+
                     &__content {
                         width: 100%;
                         display: flex;
@@ -997,10 +993,10 @@ main {
                             left: 0px;
                             transition: left $fast_transition, background $transition;
                             padding: 13px 20px;
-                            z-index: 1;     
+                            z-index: 1;
                             opacity: 0.6;
-                            color: inherit;    
-                            border-radius: 30px;      
+                            color: inherit;
+                            border-radius: 30px;
                         }
 
                         textarea {
@@ -1023,8 +1019,9 @@ main {
                             }
                         }
 
-                        &.not-empty, &.focus {
-                            label { 
+                        &.not-empty,
+                        &.focus {
+                            label {
                                 opacity: 1;
                                 left: var(--left-value);
                                 background: var(--main-color);
@@ -1059,7 +1056,7 @@ main {
                         margin-top: 20px;
                         border-radius: 100px;
                         float: right;
-                        
+
                         button {
                             width: 100%;
                             height: 100%;
@@ -1135,7 +1132,7 @@ main {
                                 }
                             }
                         }
-                         
+
                         &.hover {
                             div {
                                 left: 0px;
@@ -1165,9 +1162,8 @@ main {
                                 max-width: 40px;
 
                                 i {
-                                    display: none
+                                    display: none;
                                 }
-
 
                                 .checkmark {
                                     @include show;
@@ -1204,7 +1200,7 @@ main {
             }
         }
 
-        &.project {            
+        &.project {
             margin-top: 40px;
 
             h1 {
@@ -1214,7 +1210,7 @@ main {
                 margin-bottom: 40px;
                 @include show;
             }
-            
+
             .project-stacks {
                 display: flex;
                 justify-content: center;
@@ -1259,7 +1255,7 @@ main {
                             line-height: 1.4;
                             font-size: 18px;
                         }
-    
+
                         a {
                             text-decoration: underline;
                             transition: color $transition;
@@ -1270,21 +1266,21 @@ main {
                         width: 30%;
                         border-radius: 10px;
                         transition: background $transition;
-                        
+
                         h2 {
                             background: none;
                             font-weight: 600;
                             margin-bottom: 20px;
                             font-size: 16px;
                         }
-    
+
                         ul {
                             line-height: 1.4;
                             display: grid;
                             grid-template-columns: repeat(2, 1fr);
                             grid-column-gap: 5px;
                             grid-row-gap: 5px;
-                            
+
                             li {
                                 color: var(--black);
                                 position: relative;
@@ -1313,7 +1309,7 @@ main {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    
+
                     &__images {
                         height: 450px;
                         width: 750px;
@@ -1323,7 +1319,7 @@ main {
                         display: flex;
                         flex-wrap: wrap;
                         transition: $transition;
-    
+
                         img {
                             width: 100%;
                             @include hide;
@@ -1412,24 +1408,24 @@ main {
             transition: $fast_transition;
             cursor: pointer;
             width: fit-content;
-    
+
             i {
                 transform: translateX(40px) rotate(180deg);
                 position: absolute;
                 @include hide;
                 transition: $fast_transition;
             }
-    
+
             span {
                 transition: $fast_transition;
                 cursor: pointer;
             }
-    
+
             &:hover {
                 span {
                     @include hide;
                 }
-    
+
                 i {
                     transform: translateX(0);
                     @include show;
@@ -1449,14 +1445,14 @@ footer {
         width: 75px;
         height: 75px;
         border: none;
-        border-radius : 50px;
+        border-radius: 50px;
     }
 
     .footer__links {
         display: flex;
         justify-content: space-around;
         gap: 50px;
-        
+
         a {
             display: flex;
             flex-direction: row;
@@ -1496,7 +1492,6 @@ footer {
             .header__nav {
                 &__link__container {
                     transform: inherit;
-
                 }
             }
         }
@@ -1507,7 +1502,7 @@ footer {
             &.profil {
                 .profil-container {
                     font-size: 32px;
-                    
+
                     .profil-container__text {
                         strong {
                             font-size: 42px;
@@ -1575,7 +1570,7 @@ footer {
                 }
             }
         }
-    } 
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1604,14 +1599,9 @@ footer {
                     display: none;
                 }
 
-                &:hover {
-                    &::after {
-                        display: none;
-                    }
-        
-                    &::before {
-                        display: none;
-                    }
+                &::after,
+                &::before {
+                    display: none;
                 }
             }
         }
@@ -1651,7 +1641,7 @@ footer {
 
                                 &__language {
                                     max-width: 140px;
-                                    
+
                                     &::after {
                                         transition: none;
                                         @include show;
@@ -1738,7 +1728,7 @@ footer {
             }
         }
     }
-    
+
     footer {
         margin-bottom: 100px;
 
@@ -1768,7 +1758,7 @@ footer {
         section {
             &.profil {
                 margin-top: 40px;
-                    
+
                 .profil-container {
                     .profil-container__text {
                         strong {
@@ -1803,7 +1793,7 @@ footer {
 
                             &__stack {
                                 gap: 5px;
-    
+
                                 &__language {
                                     font-size: 14px;
                                     padding: 6px;

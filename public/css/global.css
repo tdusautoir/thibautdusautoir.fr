@@ -4,7 +4,7 @@
 
     --dark-gray: #9f9f9f;
     --littledark-gray: #d7d7d7;
-    --gray : #dedede;
+    --gray: #dedede;
     --light-gray: #f3f3f3;
     --black: #4f4f4f;
     --background: white;
@@ -14,7 +14,6 @@
     --danger: #d90000;
     --danger-background: #ffc5c1;
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -42,7 +41,7 @@ strong {
     font-weight: 600;
 }
 
-section.active{
+section.active {
     opacity: 0;
     transition: 400ms;
 }
@@ -51,7 +50,7 @@ section {
     transition: 400ms;
 }
 
-section h2, h1 {
+section h2 {
     font-size: 18px;
     display: inline-block;
     margin-bottom: 4px;
@@ -60,7 +59,7 @@ section h2, h1 {
     background-size: 100% 100%;
 }
 
-section:hover h2{
+section:hover h2 {
     background-size: 50% 100%;
     transition: ease 0.2s;
 }
@@ -81,7 +80,7 @@ section:hover h2{
     --light-main-color: #f5c765;
 
     --dark-gray: #9f9f9f;
-    --gray : #dedede;
+    --gray: #dedede;
     --littledark-gray: #131b24;
     --light-gray: #293340;
     --black: #ffffff;
@@ -97,7 +96,8 @@ section:hover h2{
     background: #2b3644;
 }
 
-.night .header__nav__link__work span, .night .header__nav__link__work i {
+.night .header__nav__link__work span,
+.night .header__nav__link__work i {
     color: black;
 }
 
@@ -112,7 +112,8 @@ section:hover h2{
     opacity: 0;
 }
 
-.night main section.experiences .experiences-container__cards .card__stack__language img, .night main section.skills .skills-container img {
+.night main section.experiences .experiences-container__cards .card__stack__language img,
+.night main section.skills .skills-container img {
     transition: 200ms;
     filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(235deg) brightness(106%) contrast(109%);
 }
@@ -123,109 +124,148 @@ section:hover h2{
 
 /* icons */
 
-main img, main i {
+main img,
+main i {
     transition: 200ms;
     color: var(--black);
 }
 
-.card__stack__language[data-language="laravel"]:hover img, img[title="laravel"]:hover {
+.card__stack__language[data-language='laravel']:hover img,
+img[title='laravel']:hover {
     transition: 600ms;
-    filter: invert(38%) sepia(78%) saturate(5826%) hue-rotate(347deg) brightness(97%) contrast(110%)!important;
+    filter: invert(38%) sepia(78%) saturate(5826%) hue-rotate(347deg) brightness(97%) contrast(110%) !important;
 }
 
-.card__stack__language[data-language="lumen"]:hover img, img[title="lumen"]:hover {
+.card__stack__language[data-language='lumen']:hover img,
+img[title='lumen']:hover {
     transition: 600ms;
-    filter: invert(55%) sepia(80%) saturate(3773%) hue-rotate(328deg) brightness(110%) contrast(91%)!important;
+    filter: invert(55%) sepia(80%) saturate(3773%) hue-rotate(328deg) brightness(110%) contrast(91%) !important;
 }
 
-.card__stack__language[data-language="css"]:hover i, i:hover.devicon-css3-plain, .filters__btn.selected i.devicon-css3-plain {
+.card__stack__language[data-language='css']:hover i,
+i:hover.devicon-css3-plain,
+.filters__btn.selected i.devicon-css3-plain {
     transition: 200ms;
-    color: #2465f1!important;
+    color: #2465f1 !important;
 }
 
-.card__stack__language[data-language="html"]:hover i, i:hover.devicon-html5-plain, .filters__btn.selected i.devicon-html5-plain {
+.card__stack__language[data-language='html']:hover i,
+i:hover.devicon-html5-plain,
+.filters__btn.selected i.devicon-html5-plain {
     transition: 200ms;
-    color: #f26524!important;
+    color: #f26524 !important;
 }
 
-.card__stack__language[data-language="javascript"]:hover i, i:hover.devicon-javascript-plain, .filters__btn.selected i.devicon-javascript-plain {
+.card__stack__language[data-language='javascript']:hover i,
+i:hover.devicon-javascript-plain,
+.filters__btn.selected i.devicon-javascript-plain {
     transition: 200ms;
-    color: #ffd739!important;
+    color: #ffd739 !important;
 }
 
-.card__stack__language[data-language="mySql"]:hover i, i:hover.devicon-mysql-plain, .filters__btn.selected i.devicon-mysql-plain {
+.card__stack__language[data-language='mySql']:hover i,
+i:hover.devicon-mysql-plain,
+.filters__btn.selected i.devicon-mysql-plain {
     transition: 200ms;
-    color: #016089!important;
+    color: #016089 !important;
 }
 
-.card__stack__language[data-language="php"]:hover i, i:hover.devicon-php-plain, .filters__btn.selected i.devicon-php-plain {
+.card__stack__language[data-language='php']:hover i,
+i:hover.devicon-php-plain,
+.filters__btn.selected i.devicon-php-plain {
     transition: 200ms;
-    color: #787cb4!important;
+    color: #787cb4 !important;
 }
 
-.card__stack__language[data-language="scss"]:hover i, i:hover.devicon-sass-original, .filters__btn.selected i.devicon-sass-original {
+.card__stack__language[data-language='scss']:hover i,
+i:hover.devicon-sass-original,
+.filters__btn.selected i.devicon-sass-original {
     transition: 200ms;
-    color: #f06292!important;
+    color: #f06292 !important;
 }
 
-.card__stack__language[data-language="gitlab"]:hover i, i:hover.devicon-gitlab-plain, .filters__btn.selected i.devicon-gitlab-plain{
+.card__stack__language[data-language='gitlab']:hover i,
+i:hover.devicon-gitlab-plain,
+.filters__btn.selected i.devicon-gitlab-plain {
     transition: 200ms;
-    color: #fc6d25!important;
+    color: #fc6d25 !important;
 }
 
-.card__stack__language[data-language="woocommerce"]:hover i, i:hover.devicon-woocommerce-plain, .filters__btn.selected i.devicon-woocommerce-plain {
+.card__stack__language[data-language='woocommerce']:hover i,
+i:hover.devicon-woocommerce-plain,
+.filters__btn.selected i.devicon-woocommerce-plain {
     transition: 200ms;
-    color: #8053b4!important;
+    color: #8053b4 !important;
 }
 
-.card__stack__language[data-language="wordpress"]:hover i, i:hover.devicon-wordpress-plain, .filters__btn.selected i.devicon-wordpress-plain {
+.card__stack__language[data-language='wordpress']:hover i,
+i:hover.devicon-wordpress-plain,
+.filters__btn.selected i.devicon-wordpress-plain {
     transition: 200ms;
-    color: #1b769c!important;
+    color: #1b769c !important;
 }
 
-.card__stack__language[data-language="jQuery"]:hover i, i:hover.devicon-jquery-plain, .filters__btn.selected i.devicon-jquery-plain {
+.card__stack__language[data-language='jQuery']:hover i,
+i:hover.devicon-jquery-plain,
+.filters__btn.selected i.devicon-jquery-plain {
     transition: 200ms;
-    color: #1168ae!important;
+    color: #1168ae !important;
 }
 
-.card__stack__language[data-language="nodejs"]:hover i, i:hover.devicon-nodejs-plain, .filters__btn.selected i.devicon-nodejs-plain {
+.card__stack__language[data-language='nodejs']:hover i,
+i:hover.devicon-nodejs-plain,
+.filters__btn.selected i.devicon-nodejs-plain {
     transition: 200ms;
-    color: #68a063!important;
+    color: #68a063 !important;
 }
 
-.card__stack__language[data-language="react"]:hover i, i:hover.devicon-react-original, .filters__btn.selected i.devicon-react-original {
+.card__stack__language[data-language='react']:hover i,
+i:hover.devicon-react-original,
+.filters__btn.selected i.devicon-react-original {
     transition: 200ms;
-    color: #60dbfb!important;
+    color: #60dbfb !important;
 }
 
-.card__stack__language[data-language="bootstrap"]:hover i, i:hover.devicon-bootstrap-plain, .filters__btn.selected i.devicon-bootstrap-plain {
+.card__stack__language[data-language='bootstrap']:hover i,
+i:hover.devicon-bootstrap-plain,
+.filters__btn.selected i.devicon-bootstrap-plain {
     transition: 200ms;
-    color: #7f09f9!important;
+    color: #7f09f9 !important;
 }
 
-.card__stack__language[data-language="git"]:hover i, i:hover.devicon-git-plain, .filters__btn.selected i.devicon-git-plain {
+.card__stack__language[data-language='git']:hover i,
+i:hover.devicon-git-plain,
+.filters__btn.selected i.devicon-git-plain {
     transition: 200ms;
-    color: #f44d27!important;
+    color: #f44d27 !important;
 }
 
-.card__stack__language[data-language="linux"]:hover i, i:hover.devicon-linux-plain, .filters__btn.selected i.devicon-linux-plain {
+.card__stack__language[data-language='linux']:hover i,
+i:hover.devicon-linux-plain,
+.filters__btn.selected i.devicon-linux-plain {
     transition: 200ms;
-    color: #f9c220!important;
+    color: #f9c220 !important;
 }
 
-.card__stack__language[data-language="npm"]:hover i, i:hover.devicon-npm-original-wordmark, .filters__btn.selected i.devicon-npm-original-wordmark {
+.card__stack__language[data-language='npm']:hover i,
+i:hover.devicon-npm-original-wordmark,
+.filters__btn.selected i.devicon-npm-original-wordmark {
     transition: 200ms;
-    color: #cc3533!important;
+    color: #cc3533 !important;
 }
 
-.card__stack__language[data-language="docker"]:hover i, i:hover.devicon-docker-plain, .filters__btn.selected i.devicon-docker-plain {
+.card__stack__language[data-language='docker']:hover i,
+i:hover.devicon-docker-plain,
+.filters__btn.selected i.devicon-docker-plain {
     transition: 200ms;
-    color: #2597ec!important;
+    color: #2597ec !important;
 }
 
-.card__stack__language[data-language="npm"]:hover i, i:hover.devicon-figma-plain, .filters__btn.selected i.devicon-figma-plain {
+.card__stack__language[data-language='npm']:hover i,
+i:hover.devicon-figma-plain,
+.filters__btn.selected i.devicon-figma-plain {
     transition: 200ms;
-    background: linear-gradient(180deg, rgba(10,201,127,1) 0%, rgba(157,86,246,1) 50%, rgba(248,109,96,1) 100%);
+    background: linear-gradient(180deg, rgba(10, 201, 127, 1) 0%, rgba(157, 86, 246, 1) 50%, rgba(248, 109, 96, 1) 100%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -239,6 +279,6 @@ main img, main i {
     }
 
     footer .footer__links {
-        gap: 30px!important;
+        gap: 30px !important;
     }
 }

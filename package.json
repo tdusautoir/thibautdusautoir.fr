@@ -1,24 +1,27 @@
 {
-  "name": "thibautdusautoir.fr",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "sass --watch ./public/scss/style.scss:./public/css/style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tdusautoir/thibautdusautoir.fr.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tdusautoir/thibautdusautoir.fr/issues"
-  },
-  "homepage": "https://github.com/tdusautoir/thibautdusautoir.fr#readme",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
-    "sass": "^1.57.1"
-  }
+    "name": "thibautdusautoir.fr",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "sass --watch ./public/scss/style.scss:./public/css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tdusautoir/thibautdusautoir.fr.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tdusautoir/thibautdusautoir.fr/issues"
+    },
+    "homepage": "https://github.com/tdusautoir/thibautdusautoir.fr#readme",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.2.1",
+        "sass": "^1.57.1"
+    },
+    "devDependencies": {
+        "prettier": "2.8.8"
+    }
 }

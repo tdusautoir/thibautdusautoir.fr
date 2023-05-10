@@ -53,9 +53,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL-2.1-only"
-            ],
+            "license": ["LGPL-2.1-only"],
             "authors": [
                 {
                     "name": "Marcus Bointon",
