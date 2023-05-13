@@ -277,8 +277,4 @@ i:hover.devicon-figma-plain,
     body {
         padding: 20px 30px;
     }
-
-    footer .footer__links {
-        gap: 30px !important;
-    }
 }

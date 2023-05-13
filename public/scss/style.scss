@@ -1448,6 +1448,29 @@ footer {
         border-radius: 50px;
     }
 
+    .footer__head {
+        display: flex;
+        gap: 20px;
+
+        .cv_link {
+            display: flex;
+            margin: 0 auto;
+            width: 75px;
+            height: 75px;
+            border-radius: 100px;
+            border: none;
+            background-color: var(--light-main-color);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            i {
+                font-size: 22px;
+                color: black;
+            }
+        }
+    }
+
     .footer__links {
         display: flex;
         justify-content: space-around;
@@ -1737,6 +1760,11 @@ footer {
             margin-top: 100px;
             position: inherit;
         }
+
+        .footer__links {
+            gap: 20px;
+            font-size: 12px;
+        }
     }
 }
 
@@ -1860,6 +1888,16 @@ footer {
             p {
                 font-size: 20px;
             }
+        }
+    }
+
+    footer {
+        .footer__links {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-self: baseline;
+            margin-left: 20px;
         }
     }
 }

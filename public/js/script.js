@@ -135,7 +135,6 @@ let imageObserver = new IntersectionObserver((entries) => {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
             var image = entry.target;
-            console.log(image.src);
             let splittedSrc = image.src.split('/');
             let index = splittedSrc.indexOf('lowres');
             if (index > -1) {
