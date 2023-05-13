@@ -691,6 +691,8 @@ main section.about-me .slideshow__imgs {
   display: flex;
   overflow: scroll;
   gap: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 main section.about-me .slideshow__imgs__img {
   height: 100%;
@@ -712,6 +714,8 @@ main section.about-me .slideshow__locations {
   gap: 20px;
   background: var(--light-gray);
   transition: background 400ms, max-width 400ms;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 main section.about-me .slideshow__locations__location {
   width: fit-content;
@@ -1222,7 +1226,7 @@ footer .footer__head .cv_link {
   height: 75px;
   border-radius: 100px;
   border: none;
-  background-color: var(--light-main-color);
+  background-color: var(--main-color);
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -1495,7 +1499,7 @@ footer.bottom {
   main .see-my-work p {
     font-size: 20px;
   }
-  footer .footer__links {
+  footer:has(.footer__head) .footer__links {
     display: flex;
     justify-content: space-around;
     flex-direction: column;

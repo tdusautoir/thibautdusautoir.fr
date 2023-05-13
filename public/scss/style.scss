@@ -834,9 +834,13 @@ main {
                         border-radius: 10px;
                     }
 
+                    // hide scrollbar
                     &::-webkit-scrollbar {
                         display: none;
                     }
+
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
                 }
 
                 &__locations {
@@ -865,9 +869,13 @@ main {
                         }
                     }
 
+                    // hide scrollbar
                     &::-webkit-scrollbar {
                         display: none;
                     }
+
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
                 }
             }
         }
@@ -1459,7 +1467,7 @@ footer {
             height: 75px;
             border-radius: 100px;
             border: none;
-            background-color: var(--light-main-color);
+            background-color: var(--main-color);
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -1891,7 +1899,7 @@ footer {
         }
     }
 
-    footer {
+    footer:has(.footer__head) {
         .footer__links {
             display: flex;
             justify-content: space-around;
